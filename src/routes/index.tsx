@@ -24,13 +24,13 @@ const NAV_LINKS = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CleaningBusiness.ai — AI Sales Assistant for Canadian Cleaning Businesses" },
+      { title: "CleaningBusiness.ai · AI Sales Assistant for Canadian Cleaning Businesses" },
       {
         name: "description",
         content:
-          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada — find daily opportunities, send professional estimates, and own your data.",
+          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada. Find daily opportunities, send professional estimates, and own your data.",
       },
-      { property: "og:title", content: "CleaningBusiness.ai — AI Sales Assistant for Cleaning Businesses" },
+      { property: "og:title", content: "CleaningBusiness.ai · AI Sales Assistant for Cleaning Businesses" },
       {
         property: "og:description",
         content:
@@ -46,33 +46,23 @@ export const Route = createFileRoute("/")({
 
 function CTAButton({
   children,
-  variant = "primary",
   size = "lg",
   className = "",
 }: {
   children: React.ReactNode;
-  variant?: "primary" | "ghost";
   size?: "lg" | "xl";
   className?: string;
 }) {
-  const base =
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 whitespace-nowrap";
   const sizes = {
-    lg: "px-6 py-3 text-sm",
-    xl: "px-8 py-4 text-base",
-  };
-  const variants = {
-    primary:
-      "bg-accent text-accent-foreground hover:brightness-110 shadow-[var(--shadow-accent)] hover:-translate-y-0.5",
-    ghost:
-      "bg-transparent text-primary-foreground border border-white/30 hover:bg-white/10",
+    lg: "px-5 py-2.5 text-sm sm:px-6 sm:py-3",
+    xl: "px-6 py-3.5 text-base sm:px-8 sm:py-4",
   };
   return (
     <a
       href={STRIPE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap bg-accent text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 ${sizes[size]} ${className}`}
     >
       {children}
     </a>
@@ -96,9 +86,9 @@ function LandingPage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
-          <div className="flex items-center gap-4 sm:gap-6">
-            <Wordmark className="text-xl sm:text-2xl" />
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <div className="flex items-center gap-3 sm:gap-5">
+            <Wordmark className="text-lg sm:text-2xl" />
             <div className="hidden h-8 w-px bg-border md:block" />
             <div className="hidden items-center gap-2 md:flex">
               <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
@@ -107,70 +97,58 @@ function LandingPage() {
               <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
             </div>
           </div>
-          <nav className="hidden items-center gap-7 lg:flex">
-            {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-          <CTAButton size="lg">
-            Sign Up <ArrowRight className="h-4 w-4" />
-          </CTAButton>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <nav className="hidden items-center gap-5 lg:flex">
+              {NAV_LINKS.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+            <CTAButton size="lg">
+              Sign Up <ArrowRight className="h-4 w-4" />
+            </CTAButton>
+          </div>
         </div>
       </header>
 
-      {/* HERO — owner as full background */}
+      {/* HERO */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--gradient-hero)" }}
       >
-        <div className="pointer-events-none absolute inset-0 flex items-end justify-end">
-          <img
-            src={ownerPortrait}
-            alt="Cleaning business owners"
-            className="h-[110%] w-auto max-w-none object-contain object-bottom opacity-95 [mask-image:linear-gradient(to_left,black_60%,transparent_98%)]"
-          />
-        </div>
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, var(--paper) 0%, color-mix(in oklab, var(--paper) 85%, transparent) 42%, transparent 72%)",
-          }}
-        />
-
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-36">
-          <div className="lg:col-span-7">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
+          {/* Copy */}
+          <div className="lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-6 text-5xl font-black uppercase leading-[0.92] tracking-[-0.035em] text-primary sm:text-6xl lg:text-7xl xl:text-[5.75rem]">
+            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-primary sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               Turn Local Cleaning Opportunities Into{" "}
               <span className="text-accent italic font-black">
                 New Contracts
               </span>
             </h1>
-            <p className="mt-5 text-xl font-medium text-primary/80">
+            <p className="mt-5 text-lg font-medium text-primary/80 sm:text-xl">
               Your AI Sales Assistant for Cleaning Business Growth
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Active ISSA Canada members can now access a specialized Cleaning Business AI
-              Assistant — built to monitor your service area, surface real opportunities,
-              and help you respond faster than anyone else.
+              Active ISSA Canada members can now access a specialized Cleaning Business
+              AI Assistant. It monitors your service area, surfaces real opportunities,
+              and helps you respond faster than anyone else.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">
                 Sign Up Today <ArrowRight className="h-5 w-5" />
               </CTAButton>
               <a
                 href="#features"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-primary hover:text-accent"
               >
                 See what's included →
               </a>
@@ -178,6 +156,24 @@ function LandingPage() {
             <p className="mt-5 text-xs text-muted-foreground">
               Limited-time offer for active ISSA Canada members.
             </p>
+          </div>
+
+          {/* Image column, stays right of copy on desktop, below on mobile */}
+          <div className="relative lg:col-span-5 xl:col-span-5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl bg-card/40 lg:max-w-none">
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at 50% 60%, color-mix(in oklab, var(--brand-blue-soft) 80%, transparent), transparent 70%)",
+                }}
+              />
+              <img
+                src={ownerPortrait}
+                alt="Diverse team of cleaning professionals"
+                className="relative h-full w-full object-contain object-bottom"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -191,12 +187,12 @@ function LandingPage() {
               "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
           }}
         />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
               Why CleaningBusiness.ai
             </div>
-            <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
               More Leads.{" "}
               <span className="italic text-accent">Better Follow-Up.</span>{" "}
               More Wins.
@@ -207,7 +203,7 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 md:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:mt-14 md:grid-cols-3">
             {[
               {
                 strike: "Guessing where to look.",
@@ -244,7 +240,7 @@ function LandingPage() {
       </section>
 
       {/* FEATURES */}
-      <section id="features" className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
+      <section id="features" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Built for cleaning businesses
@@ -257,27 +253,27 @@ function LandingPage() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: Radar,
               title: "AI that monitors your service area",
               body:
-                "Your assistant watches your local market 24/7 — picking up postings, signals, and conversations from people looking for cleaning. So you can respond faster than the competition.",
+                "Your assistant watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
             },
             {
               icon: MessageCircle,
               title: "Chat with your AI 24/7 on messenger",
               body:
-                "Talk to your custom AI assistant any time, right from WhatsApp, Messenger, SMS, or Telegram. Ask for leads, draft a quote, or get follow-up advice — wherever you are.",
+                "Talk to your custom AI assistant any time, right from WhatsApp, Messenger, SMS, or Telegram. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
               proof: "Always on. Always in your pocket.",
             },
             {
               icon: FileText,
               title: "Professional, profitable estimates",
               body:
-                "Generate clean, professional estimates priced for your business — backed by ISSA Canada's industry expertise on scope, productivity rates, and margin standards.",
+                "Generate clean, professional estimates priced for your business, backed by ISSA Canada expertise on scope, productivity rates, and margin standards.",
               proof: "Quote with confidence, every time.",
             },
             {
@@ -290,7 +286,7 @@ function LandingPage() {
           ].map((f) => (
             <div
               key={f.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-[var(--shadow-elegant)]"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-[var(--shadow-elegant)] sm:p-7"
             >
               <div
                 className="flex h-12 w-12 items-center justify-center rounded-xl text-primary-foreground"
@@ -309,24 +305,50 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* PRICING — single card with discount inline */}
-      <section id="pricing" className="bg-secondary/60">
-        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+      {/* PRICING */}
+      <section
+        id="pricing"
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(180deg, var(--paper) 0%, color-mix(in oklab, var(--brand-blue-soft) 75%, var(--paper)) 100%)",
+        }}
+      >
+        {/* Decorative blobs */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-70"
+          style={{
+            background:
+              "radial-gradient(circle at 12% 18%, color-mix(in oklab, var(--brand-blue-bright) 22%, transparent), transparent 45%), radial-gradient(circle at 88% 82%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 50%)",
+          }}
+        />
+        {/* Subtle grid */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, var(--primary) 1px, transparent 1px), linear-gradient(to bottom, var(--primary) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+            maskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent backdrop-blur">
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> Exclusive ISSA Canada Member Offer
             </div>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
               One price. Built for ISSA Canada members.
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Save over 65% versus standard pricing — same AI assistant, same support.
+              Save over 65% versus standard pricing. Same AI assistant, same support.
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)]">
-            {/* Top banner */}
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-7 py-4">
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-6 py-4 sm:px-7">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
                 <Sparkles className="h-4 w-4" /> Limited-Time Member Price
               </div>
@@ -335,14 +357,13 @@ function LandingPage() {
               </div>
             </div>
 
-            <div className="grid gap-8 p-8 md:grid-cols-5 md:p-10">
-              {/* Price column */}
+            <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-5 md:p-10">
               <div className="md:col-span-2">
                 <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   Monthly subscription
                 </div>
                 <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-6xl font-black text-primary">$299</span>
+                  <span className="text-5xl font-black text-primary sm:text-6xl">$299</span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
                 <div className="mt-1 text-sm text-muted-foreground">
@@ -372,7 +393,6 @@ function LandingPage() {
                 </div>
               </div>
 
-              {/* Features column */}
               <div className="md:col-span-3 md:border-l md:border-border md:pl-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   What's included
@@ -382,9 +402,9 @@ function LandingPage() {
                     "Daily AI-sourced sales opportunities in your service area",
                     "24/7 chat with your AI assistant on WhatsApp, Messenger, SMS & Telegram",
                     "Professional estimates backed by ISSA Canada expertise",
-                    "Outreach & follow-up assistance",
-                    "Your data stays yours — private by design",
-                    "Onboarding & setup support included",
+                    "Outreach and follow-up assistance",
+                    "Your data stays yours. Private by design.",
+                    "Onboarding and setup support included",
                   ].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-primary">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={3} />
@@ -398,7 +418,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FINAL CTA — styled to match Why section */}
+      {/* FINAL CTA */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 opacity-40"
@@ -407,11 +427,11 @@ function LandingPage() {
               "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
           }}
         />
-        <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6">
+        <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24">
           <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Ready when you are
           </div>
-          <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
             Start Building Your{" "}
             <span className="italic text-accent">Sales Pipeline</span> Today
           </h2>
@@ -419,7 +439,7 @@ function LandingPage() {
             Get daily opportunities, professional estimates, and an AI sales assistant
             designed specifically for cleaning businesses.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4">
+          <div className="mt-9 flex flex-col items-center gap-4">
             <CTAButton size="xl">
               Sign Up Today <ArrowRight className="h-5 w-5" />
             </CTAButton>
@@ -430,16 +450,36 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER — 2 columns */}
       <footer className="border-t border-border bg-background">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-12 sm:px-6">
-          <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
-          <Wordmark className="text-2xl" />
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <img src={owLogo.url} alt="Order of Work" className="h-7 w-7 rounded" />
-            <span>Powered by Order of Work · In partnership with ISSA Canada</span>
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2">
+          {/* Left column: brand */}
+          <div className="flex flex-col items-start gap-4">
+            <Wordmark className="text-2xl" />
+            <p className="max-w-sm text-sm text-muted-foreground">
+              The AI sales assistant built for Canadian cleaning businesses. Powered
+              by Order of Work.
+            </p>
+            <div className="flex items-center gap-3 text-xs text-muted-foreground">
+              <img src={owLogo.url} alt="Order of Work" className="h-7 w-7 rounded" />
+              <span>Order of Work</span>
+            </div>
           </div>
-          <div className="text-xs text-muted-foreground">
+
+          {/* Right column: partnership */}
+          <div className="flex flex-col items-start gap-4 md:items-end md:text-right">
+            <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              In partnership with
+            </div>
+            <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            <p className="max-w-sm text-sm text-muted-foreground">
+              Built with industry expertise from ISSA Canada to help members grow
+              profitable cleaning businesses.
+            </p>
+          </div>
+        </div>
+        <div className="border-t border-border">
+          <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-muted-foreground sm:px-6">
             © {new Date().getFullYear()} Order of Work. All rights reserved.
           </div>
         </div>
