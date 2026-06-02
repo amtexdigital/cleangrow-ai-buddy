@@ -2,11 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   CheckCircle,
   ArrowLeft,
-  Mail,
-  Sparkles,
   ClipboardList,
   Clock,
   Send,
+  HelpCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/payment-received")({
