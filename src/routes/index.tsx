@@ -168,14 +168,28 @@ function LandingPage() {
           </div>
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
-          <div className="relative z-0 -mb-10 self-end lg:col-span-5 lg:-mb-40 xl:-mb-48 xl:col-span-5">
+          <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
             <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
-              {/* Faded growth-sales arrow behind subject, on her right */}
-              <TrendingUp
+              {/* Faded growth-sales chart behind subject, on her right */}
+              <svg
                 aria-hidden
-                className="pointer-events-none absolute right-[2%] top-[8%] h-[70%] w-auto text-accent/15"
-                strokeWidth={1.25}
-              />
+                viewBox="0 0 200 160"
+                className="pointer-events-none absolute right-[2%] top-[6%] h-[72%] w-auto text-accent/25"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={3}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {/* Ascending bars */}
+                <rect x="20" y="115" width="18" height="35" rx="2" fill="currentColor" opacity="0.25" stroke="none" />
+                <rect x="50" y="95" width="18" height="55" rx="2" fill="currentColor" opacity="0.35" stroke="none" />
+                <rect x="80" y="70" width="18" height="80" rx="2" fill="currentColor" opacity="0.5" stroke="none" />
+                <rect x="110" y="45" width="18" height="105" rx="2" fill="currentColor" opacity="0.65" stroke="none" />
+                {/* Trend arrow */}
+                <polyline points="20,110 60,85 100,60 140,35 180,15" />
+                <polyline points="155,15 180,15 180,40" />
+              </svg>
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
