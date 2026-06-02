@@ -430,9 +430,9 @@ function LandingPage() {
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-primary">$575</span>
-                    <span className="text-xs text-muted-foreground line-through decoration-accent decoration-2">
-                      $1,750
-                    </span>
+                  </div>
+                  <div className="mt-1 text-lg font-bold text-muted-foreground">
+                    Regularly $1,750
                   </div>
                 </div>
 
