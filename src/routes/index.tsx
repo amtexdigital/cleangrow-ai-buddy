@@ -216,11 +216,11 @@ function LandingPage() {
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
-            <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-2xl sm:max-w-xl lg:ml-auto lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full translate-x-[18%] object-contain object-bottom object-right drop-shadow-2xl lg:translate-x-[28%]"
+                className="relative h-full w-full scale-110 object-contain object-bottom object-center drop-shadow-2xl sm:scale-100 sm:translate-x-[18%] sm:object-right lg:translate-x-[28%]"
               />
             </div>
           </div>
@@ -420,9 +420,8 @@ function LandingPage() {
                   <span className="text-5xl font-black text-primary sm:text-6xl">$299</span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-1 text-sm text-muted-foreground">
-                  Regular{" "}
-                  <span className="line-through decoration-accent decoration-2">$875/mo</span>
+                <div className="mt-2 text-lg font-bold text-muted-foreground">
+                  Regularly $875/month
                 </div>
 
                 <div className="mt-6 rounded-xl bg-secondary/80 p-4">
@@ -431,9 +430,9 @@ function LandingPage() {
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-primary">$575</span>
-                    <span className="text-xs text-muted-foreground line-through decoration-accent decoration-2">
-                      $1,750
-                    </span>
+                  </div>
+                  <div className="mt-1 text-lg font-bold text-muted-foreground">
+                    Regularly $1,750
                   </div>
                 </div>
 
