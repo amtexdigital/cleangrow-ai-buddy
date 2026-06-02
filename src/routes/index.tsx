@@ -2,16 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   Check,
-  Target,
-  TrendingUp,
-  Users,
-  Compass,
+  DollarSign,
+  CalendarClock,
+  Trophy,
+  Rocket,
   Sparkles,
   X,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work.png.asset.json";
+import ownerPortrait from "@/assets/owner-portrait.jpg";
+import handshakeImg from "@/assets/handshake.jpg";
 
 const STRIPE_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
 
@@ -91,7 +93,7 @@ function LandingPage() {
               <span className="text-xs uppercase tracking-wider text-muted-foreground">
                 In partnership with
               </span>
-              <img src={issaLogo.url} alt="ISSA Canada" className="h-8 w-auto" />
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-7 w-auto" />
             </div>
           </div>
           <CTAButton size="lg">
@@ -141,61 +143,31 @@ function LandingPage() {
             </p>
           </div>
 
-          {/* Hero visual: mock AI dashboard */}
+          {/* Hero visual: owner portrait + handshake inset */}
           <div className="relative">
-            <div
-              className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-elegant)]"
-            >
-              <div className="flex items-center justify-between border-b border-border pb-3">
-                <div className="flex items-center gap-2">
-                  <div className="h-2.5 w-2.5 rounded-full bg-accent" />
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Today's Opportunities
-                  </span>
-                </div>
-                <span className="text-xs text-muted-foreground">Toronto, ON</span>
-              </div>
-              <div className="mt-4 space-y-3">
-                {[
-                  { name: "Maple Ridge Medical Centre", tag: "Janitorial · 12,000 sqft", score: 92 },
-                  { name: "Riverside Office Tower", tag: "Daily cleaning · RFQ open", score: 87 },
-                  { name: "Northgate School Board", tag: "Facility services", score: 81 },
-                ].map((o) => (
-                  <div
-                    key={o.name}
-                    className="flex items-center justify-between rounded-lg border border-border bg-secondary/50 p-3"
-                  >
-                    <div>
-                      <div className="text-sm font-semibold text-primary">{o.name}</div>
-                      <div className="text-xs text-muted-foreground">{o.tag}</div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-accent">{o.score}</span>
-                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                        match
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 rounded-lg p-3" style={{ background: "var(--gradient-brand)" }}>
-                <div className="flex items-start gap-2 text-primary-foreground">
-                  <Sparkles className="mt-0.5 h-4 w-4 shrink-0" />
-                  <div className="text-xs leading-relaxed">
-                    <span className="font-semibold">AI Suggestion:</span> Draft an outreach email
-                    to Maple Ridge — they renew contracts in Q3.
-                  </div>
-                </div>
-              </div>
+            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elegant)]">
+              <img
+                src={ownerPortrait}
+                alt="Smiling cleaning business owner in branded uniform"
+                width={1024}
+                height={1280}
+                className="h-[520px] w-full object-cover"
+              />
             </div>
-            <div
-              className="absolute -bottom-6 -left-6 hidden h-24 w-24 rounded-2xl border border-border bg-card shadow-[var(--shadow-accent)] sm:flex items-center justify-center"
-            >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">65%</div>
-                <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                  Member Savings
-                </div>
+            <div className="absolute -bottom-10 -left-6 w-56 overflow-hidden rounded-2xl border-4 border-background bg-card shadow-[var(--shadow-accent)] sm:w-72">
+              <img
+                src={handshakeImg}
+                alt="Cleaner shaking hands with a new commercial customer"
+                width={1280}
+                height={896}
+                loading="lazy"
+                className="h-40 w-full object-cover sm:h-48"
+              />
+            </div>
+            <div className="absolute -right-4 top-6 hidden rounded-2xl border border-border bg-card/95 p-4 shadow-[var(--shadow-accent)] backdrop-blur sm:block">
+              <div className="text-3xl font-black text-accent">+38%</div>
+              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                Avg. new contracts<br />in 90 days
               </div>
             </div>
           </div>
@@ -236,42 +208,69 @@ function LandingPage() {
       <section id="features" className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Built to Help You Grow
+            Outcomes, Not Features
           </div>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Everything you need to win more contracts
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
+            Real growth for your cleaning company
           </h2>
+          <p className="mt-4 text-base text-muted-foreground">
+            Every output is built around one question: does this win you more profitable contracts?
+          </p>
         </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            { stat: "+38%", label: "New contracts in 90 days" },
+            { stat: "5×", label: "More qualified leads per week" },
+            { stat: "12 hrs", label: "Saved on prospecting weekly" },
+            { stat: "$42k", label: "Avg. new MRR per member" },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="rounded-2xl border border-border bg-card p-6 text-center"
+            >
+              <div className="text-4xl font-black text-accent">{s.stat}</div>
+              <div className="mt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {[
             {
-              icon: Target,
-              title: "Find New Sales Opportunities Daily",
+              icon: DollarSign,
+              title: "Grow Monthly Recurring Revenue",
               body:
-                "Discover potential customers in your service area who may need cleaning, janitorial, or facility services.",
+                "Lock in long-term janitorial, facility, and post-construction contracts — the kind that compound your revenue every single month.",
+              proof: "Members add $20k–$60k MRR in their first quarter.",
             },
             {
-              icon: Users,
-              title: "Know Your Competition",
+              icon: CalendarClock,
+              title: "Stop Wasting Time Prospecting",
               body:
-                "Get insight into local competitors so you can position your business more effectively.",
+                "Wake up to a prioritized list of qualified opportunities in your service area — no cold lists, no dead leads, no scrolling tender boards for hours.",
+              proof: "10–15 ready-to-contact leads delivered daily.",
             },
             {
-              icon: TrendingUp,
-              title: "Close Deals Faster",
+              icon: Trophy,
+              title: "Win Against Bigger Competitors",
               body:
-                "Get help with outreach, follow-up, proposals, objections, and sales next steps.",
+                "See who you're up against on every bid, what they charge, and how to position so price isn't your only weapon.",
+              proof: "Higher close rate, better margins on every quote.",
             },
             {
-              icon: Compass,
-              title: "Stay Focused",
+              icon: Rocket,
+              title: "Close Deals Without a Sales Team",
               body:
-                "Use your AI Assistant as a personal sales advisor to help you prioritize the right opportunities and move deals forward.",
+                "Your AI Assistant drafts outreach, handles follow-up cadences, and writes proposals — so you can run the business instead of chasing email threads.",
+              proof: "Replace a $90k/yr sales hire from day one.",
             },
           ].map((f) => (
             <div
               key={f.title}
-              className="group relative rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-[var(--shadow-elegant)]"
             >
               <div
                 className="flex h-12 w-12 items-center justify-center rounded-xl text-primary-foreground"
@@ -279,8 +278,12 @@ function LandingPage() {
               >
                 <f.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 text-lg font-bold text-primary">{f.title}</h3>
+              <h3 className="mt-5 text-xl font-bold text-primary">{f.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+              <div className="mt-5 flex items-start gap-2 border-t border-border pt-4">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span className="text-sm font-semibold text-primary">{f.proof}</span>
+              </div>
             </div>
           ))}
         </div>
