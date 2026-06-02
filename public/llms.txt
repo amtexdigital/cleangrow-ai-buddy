@@ -1,0 +1,7 @@
+# CleaningBusiness.ai
+
+> An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada, CleaningBusiness.ai monitors your service area daily for new cleaning opportunities, helps you respond faster with professional estimates, and turns local leads into new contracts.
+
+## Pages
+
+- [Home](/): Learn about the AI sales assistant, explore features, pricing, and sign up for exclusive ISSA Canada member pricing.
