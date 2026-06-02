@@ -126,27 +126,74 @@ function LandingPage() {
       </header>
 
       {/* HERO */}
-      <section
-        className="relative overflow-hidden"
-        style={{ background: "var(--gradient-hero)" }}
-      >
+      <section className="relative overflow-hidden bg-[var(--brand-navy)] text-paper">
+        {/* Layered background: deep navy base, aurora glows, dot grid, diagonal sheen */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(60% 80% at 85% 10%, color-mix(in oklab, var(--brand-blue-bright) 55%, transparent), transparent 70%), radial-gradient(45% 60% at 10% 90%, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 65%), linear-gradient(160deg, var(--brand-navy) 0%, oklch(0.18 0.10 258) 60%, var(--brand-navy) 100%)",
+          }}
+        />
+        {/* Dot grid */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, color-mix(in oklab, var(--brand-blue-bright) 80%, transparent) 1px, transparent 1px)",
+            backgroundSize: "26px 26px",
+            maskImage:
+              "radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 80%)",
+          }}
+        />
+        {/* Soft floating orbs */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
+          style={{ background: "color-mix(in oklab, var(--brand-blue-bright) 55%, transparent)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-1/3 bottom-0 h-80 w-80 rounded-full opacity-40 blur-3xl"
+          style={{ background: "color-mix(in oklab, var(--brand-blue) 60%, transparent)" }}
+        />
+        {/* Diagonal sheen line */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(115deg, transparent 35%, color-mix(in oklab, white 6%, transparent) 50%, transparent 65%)",
+          }}
+        />
+        {/* Bottom fade into next section */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
+          }}
+        />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-accent" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-primary sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               Turn Local Cleaning Opportunities Into{" "}
-              <span className="text-accent italic font-black">
+              <span className="text-[var(--brand-blue-soft)] italic font-black">
                 New Contracts
               </span>
             </h1>
-            <p className="mt-5 text-lg font-medium text-primary/80 sm:text-xl">
+            <p className="mt-5 text-lg font-medium text-white/85 sm:text-xl">
               Your AI Sales Assistant for Cleaning Business Growth
             </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
               Active ISSA Canada members can now access a specialized Cleaning Business
               AI Assistant. It monitors your service area, surfaces real opportunities,
               and helps you respond faster than anyone else.
@@ -157,15 +204,16 @@ function LandingPage() {
               </CTAButton>
               <a
                 href="#features"
-                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-primary hover:text-accent"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
               >
                 See what's included →
               </a>
             </div>
-            <p className="mt-5 text-xs text-muted-foreground">
+            <p className="mt-5 text-xs text-white/60">
               Limited-time offer for active ISSA Canada members.
             </p>
           </div>
+
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
@@ -174,7 +222,7 @@ function LandingPage() {
               <svg
                 aria-hidden
                 viewBox="0 0 220 180"
-                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-accent/30"
+                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-white/35"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
