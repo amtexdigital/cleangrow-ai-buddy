@@ -160,18 +160,11 @@ function LandingPage() {
 
           {/* Image column, stays right of copy on desktop, below on mobile */}
           <div className="relative lg:col-span-5 xl:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl bg-card/40 lg:max-w-none">
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at 50% 60%, color-mix(in oklab, var(--brand-blue-soft) 80%, transparent), transparent 70%)",
-                }}
-              />
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-lg lg:max-w-none lg:scale-110 xl:scale-125 lg:origin-bottom">
               <img
                 src={ownerPortrait}
                 alt="Diverse team of cleaning professionals"
-                className="relative h-full w-full object-contain object-bottom"
+                className="relative h-full w-full object-contain object-bottom drop-shadow-2xl"
               />
             </div>
           </div>
@@ -460,9 +453,9 @@ function LandingPage() {
               The AI sales assistant built for Canadian cleaning businesses. Powered
               by Order of Work.
             </p>
-            <div className="flex items-center gap-3 text-xs text-muted-foreground">
-              <img src={owLogo.url} alt="Order of Work" className="h-7 w-7 rounded" />
-              <span>Order of Work</span>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <img src={owLogo.url} alt="Order of Work" className="h-16 w-16 rounded" />
+              <span className="font-semibold">Order of Work</span>
             </div>
           </div>
 
