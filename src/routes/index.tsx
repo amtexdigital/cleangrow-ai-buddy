@@ -453,7 +453,6 @@ function LandingPage() {
                 <ul className="mt-4 space-y-3 text-sm">
                   {[
                     "Daily AI-sourced sales opportunities in your service area",
-                    "24/7 chat with your AI assistant on WhatsApp, Messenger, SMS & Telegram",
                     "Professional estimates backed by ISSA Canada expertise",
                     "Outreach and follow-up assistance",
                     "Your data stays yours. Private by design.",
