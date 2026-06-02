@@ -13,7 +13,7 @@ import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work-new.png.asset.json";
 
 const OW_URL = "https://orderofwork.com";
-const ISSA_URL = "https://www.issa-canada.com";
+const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 import ownerPortrait from "@/assets/owner-portrait.png";
 
 const STRIPE_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
