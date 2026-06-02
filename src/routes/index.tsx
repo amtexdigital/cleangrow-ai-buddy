@@ -170,10 +170,16 @@ function LandingPage() {
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-10 self-end lg:col-span-5 lg:-mb-40 xl:-mb-48 xl:col-span-5">
             <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
+              {/* Faded growth-sales arrow behind subject, on her right */}
+              <TrendingUp
+                aria-hidden
+                className="pointer-events-none absolute right-[2%] top-[8%] h-[70%] w-auto text-accent/15"
+                strokeWidth={1.25}
+              />
               <img
                 src={ownerPortrait}
-                alt="Diverse team of cleaning professionals"
-                className="relative h-full w-full object-contain object-bottom object-right drop-shadow-2xl"
+                alt="Professional cleaner reviewing opportunities on her phone"
+                className="relative h-full w-full translate-x-[6%] object-contain object-bottom object-right drop-shadow-2xl lg:translate-x-[10%]"
               />
             </div>
           </div>
