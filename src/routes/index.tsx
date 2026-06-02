@@ -170,25 +170,37 @@ function LandingPage() {
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
             <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
-              {/* Faded growth-sales chart behind subject, on her right */}
+              {/* Faded growth-sales chart, tucked into top-right corner so it stays clear of hero copy */}
               <svg
                 aria-hidden
-                viewBox="0 0 200 160"
-                className="pointer-events-none absolute right-[2%] top-[6%] h-[72%] w-auto text-accent/25"
+                viewBox="0 0 220 180"
+                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-accent/30"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth={3}
+                strokeWidth={2.5}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                {/* Ascending bars */}
-                <rect x="20" y="115" width="18" height="35" rx="2" fill="currentColor" opacity="0.25" stroke="none" />
-                <rect x="50" y="95" width="18" height="55" rx="2" fill="currentColor" opacity="0.35" stroke="none" />
-                <rect x="80" y="70" width="18" height="80" rx="2" fill="currentColor" opacity="0.5" stroke="none" />
-                <rect x="110" y="45" width="18" height="105" rx="2" fill="currentColor" opacity="0.65" stroke="none" />
-                {/* Trend arrow */}
-                <polyline points="20,110 60,85 100,60 140,35 180,15" />
-                <polyline points="155,15 180,15 180,40" />
+                <defs>
+                  <linearGradient id="growthFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stopColor="currentColor" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                {/* Soft area under the curve */}
+                <path
+                  d="M15,150 C55,140 80,120 110,90 C140,60 170,40 205,20 L205,160 L15,160 Z"
+                  fill="url(#growthFill)"
+                  stroke="none"
+                />
+                {/* The growth curve */}
+                <path d="M15,150 C55,140 80,120 110,90 C140,60 170,40 205,20" />
+                {/* Arrow head */}
+                <polyline points="180,18 205,18 205,45" />
+                {/* Subtle data dots */}
+                <circle cx="60" cy="138" r="3" fill="currentColor" />
+                <circle cx="110" cy="90" r="3" fill="currentColor" />
+                <circle cx="160" cy="50" r="3" fill="currentColor" />
               </svg>
               <img
                 src={ownerPortrait}
