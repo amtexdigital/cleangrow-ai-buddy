@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Sparkles,
   MessageCircle,
-  TrendingUp,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
@@ -218,42 +217,10 @@ function LandingPage() {
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
             <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.6] xl:scale-[1.85] lg:origin-bottom-right">
-              {/* Faded growth-sales chart, tucked into top-right corner so it stays clear of hero copy */}
-              <svg
-                aria-hidden
-                viewBox="0 0 220 180"
-                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-white/35"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <defs>
-                  <linearGradient id="growthFill" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="currentColor" stopOpacity="0.5" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                {/* Soft area under the curve */}
-                <path
-                  d="M15,150 C55,140 80,120 110,90 C140,60 170,40 205,20 L205,160 L15,160 Z"
-                  fill="url(#growthFill)"
-                  stroke="none"
-                />
-                {/* The growth curve */}
-                <path d="M15,150 C55,140 80,120 110,90 C140,60 170,40 205,20" />
-                {/* Arrow head */}
-                <polyline points="180,18 205,18 205,45" />
-                {/* Subtle data dots */}
-                <circle cx="60" cy="138" r="3" fill="currentColor" />
-                <circle cx="110" cy="90" r="3" fill="currentColor" />
-                <circle cx="160" cy="50" r="3" fill="currentColor" />
-              </svg>
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full translate-x-[6%] object-contain object-bottom object-right drop-shadow-2xl lg:translate-x-[10%]"
+                className="relative h-full w-full translate-x-[18%] object-contain object-bottom object-right drop-shadow-2xl lg:translate-x-[28%]"
               />
             </div>
           </div>
