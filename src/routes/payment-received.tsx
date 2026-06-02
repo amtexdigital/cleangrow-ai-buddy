@@ -142,6 +142,25 @@ function PaymentReceivedPage() {
             </ul>
           </div>
 
+          {/* Support */}
+          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <HelpCircle className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-semibold text-primary">Have a Question or Need Support?</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Contact{" "}
+                <a
+                  href="mailto:support@orderofwork.com"
+                  className="font-medium text-accent underline underline-offset-2 hover:text-accent/80"
+                >
+                  Order of Work at support@orderofwork.com
+                </a>
+              </p>
+            </div>
+          </div>
+
           {/* Reference */}
           {search.session_id && (
             <p className="mt-6 text-center text-xs text-muted-foreground">
