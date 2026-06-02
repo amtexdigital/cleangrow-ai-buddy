@@ -131,7 +131,7 @@ function LandingPage() {
       >
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
           {/* Copy */}
-          <div className="lg:col-span-7 xl:col-span-7">
+          <div className="relative z-10 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
               In partnership with ISSA Canada
@@ -167,12 +167,12 @@ function LandingPage() {
           </div>
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
-          <div className="relative -mb-10 self-end lg:col-span-5 lg:-mb-24 xl:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.45] xl:scale-[1.65] lg:origin-bottom-right">
+          <div className="relative z-0 -mb-10 self-end lg:col-span-5 lg:-mb-24 xl:col-span-5">
+            <div className="relative ml-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-[1.7] xl:scale-[1.95] lg:origin-bottom-right">
               <img
                 src={ownerPortrait}
                 alt="Diverse team of cleaning professionals"
-                className="relative h-full w-full object-contain object-bottom drop-shadow-2xl"
+                className="relative h-full w-full object-contain object-bottom object-right drop-shadow-2xl"
               />
             </div>
           </div>
