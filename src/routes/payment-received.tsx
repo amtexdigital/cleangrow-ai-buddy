@@ -61,9 +61,9 @@ function PaymentReceivedPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* Header */}
       <header className="border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <Link to="/" className="flex items-center gap-3">
-            <Wordmark className="text-lg sm:text-2xl" />
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-5 sm:px-6 sm:py-6">
+          <Link to="/">
+            <Wordmark className="text-2xl sm:text-4xl" />
           </Link>
         </div>
       </header>
