@@ -2,11 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   CheckCircle,
   ArrowLeft,
-  Mail,
-  Sparkles,
   ClipboardList,
   Clock,
   Send,
+  HelpCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/payment-received")({
@@ -62,9 +61,9 @@ function PaymentReceivedPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* Header */}
       <header className="border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <Link to="/" className="flex items-center gap-3">
-            <Wordmark className="text-lg sm:text-2xl" />
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-5 sm:px-6 sm:py-6">
+          <Link to="/">
+            <Wordmark className="text-2xl sm:text-4xl" />
           </Link>
         </div>
       </header>
@@ -141,6 +140,25 @@ function PaymentReceivedPage() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Support */}
+          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <HelpCircle className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-semibold text-primary">Have a Question or Need Support?</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Contact{" "}
+                <a
+                  href="mailto:support@orderofwork.com"
+                  className="font-medium text-accent underline underline-offset-2 hover:text-accent/80"
+                >
+                  Order of Work at support@orderofwork.com
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Reference */}
