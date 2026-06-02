@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Cleaning Business AI Assistant" },
+      { name: "description", content: "Get daily opportunities, competitor insights, and sales support designed specifically for cleaning businesses." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Cleaning Business AI Assistant" },
+      { property: "og:description", content: "Get daily opportunities, competitor insights, and sales support designed specifically for cleaning businesses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Cleaning Business AI Assistant" },
+      { name: "twitter:description", content: "Get daily opportunities, competitor insights, and sales support designed specifically for cleaning businesses." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d50c68f3-ed00-4553-bdde-2a4a3d6af28f/id-preview-efbfab35--b6340a24-115f-42e2-9a7d-2fe6be043647.lovable.app-1780417011528.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d50c68f3-ed00-4553-bdde-2a4a3d6af28f/id-preview-efbfab35--b6340a24-115f-42e2-9a7d-2fe6be043647.lovable.app-1780417011528.png" },
     ],
     links: [
       {
