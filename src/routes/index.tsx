@@ -2,17 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   Check,
-  DollarSign,
-  CalendarClock,
-  Trophy,
-  Rocket,
+  Radar,
+  FileText,
+  ShieldCheck,
   Sparkles,
-  X,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work.png.asset.json";
-import ownerPortrait from "@/assets/owner-portrait.jpg";
+import ownerPortrait from "@/assets/owner-portrait.png";
 import handshakeImg from "@/assets/handshake.jpg";
 
 const STRIPE_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
@@ -24,13 +22,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada — find daily opportunities, know your competition, and close more deals.",
+          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada — find daily opportunities, send professional estimates, and own your data.",
       },
       { property: "og:title", content: "CleaningBusiness.ai — AI Sales Assistant for Cleaning Businesses" },
       {
         property: "og:description",
         content:
-          "Exclusive ISSA Canada member pricing. Daily sales opportunities, competitor insights, and outreach support — purpose-built for cleaning businesses.",
+          "Exclusive ISSA Canada member pricing. AI monitors your service area for new cleaning opportunities so you can respond faster and win more contracts.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -75,6 +73,18 @@ function CTAButton({
   );
 }
 
+function Wordmark({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
+    >
+      <span className="text-primary">Cleaning</span>
+      <span className="text-primary/60">Business</span>
+      <span className="italic text-accent">.ai</span>
+    </span>
+  );
+}
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -82,15 +92,13 @@ function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3 sm:gap-5">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <img src={owLogo.url} alt="Order of Work" className="h-9 w-9 rounded-md" />
-              <span className="hidden text-base font-semibold tracking-tight sm:inline">
-                CleaningBusiness<span className="text-accent">.ai</span>
-              </span>
+              <Wordmark className="hidden text-xl sm:inline sm:text-2xl" />
             </div>
             <div className="hidden h-8 w-px bg-border sm:block" />
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="text-xs uppercase tracking-wider text-muted-foreground">
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
                 In partnership with
               </span>
               <img src={issaLogo.url} alt="ISSA Canada" className="h-7 w-auto" />
@@ -102,18 +110,35 @@ function LandingPage() {
         </div>
       </header>
 
-      {/* HERO */}
+      {/* HERO — owner as full background */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--gradient-hero)" }}
       >
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
+        {/* Owner background image */}
+        <div className="pointer-events-none absolute inset-0 flex items-end justify-end">
+          <img
+            src={ownerPortrait}
+            alt="Smiling cleaning business owner"
+            className="h-[105%] w-auto max-w-none object-contain object-bottom opacity-90 [mask-image:linear-gradient(to_left,black_55%,transparent_95%)]"
+          />
+        </div>
+        {/* Soft paper wash on the left to keep copy legible */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, var(--paper) 0%, color-mix(in oklab, var(--paper) 85%, transparent) 38%, transparent 70%)",
+          }}
+        />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-32">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-6 text-5xl font-black uppercase leading-[0.92] tracking-[-0.03em] text-primary sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="mt-6 text-5xl font-black uppercase leading-[0.92] tracking-[-0.035em] text-primary sm:text-6xl lg:text-7xl xl:text-[5.75rem]">
               Turn Local Cleaning Opportunities Into{" "}
               <span className="text-accent italic font-black">
                 New Contracts
@@ -124,8 +149,8 @@ function LandingPage() {
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
               Active ISSA Canada members can now access a specialized Cleaning Business AI
-              Assistant built to help you find more opportunities, understand your market,
-              and close more deals.
+              Assistant — built to monitor your service area, surface real opportunities,
+              and help you respond faster than anyone else.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CTAButton size="xl">
@@ -142,62 +167,78 @@ function LandingPage() {
               Limited-time offer for active ISSA Canada members.
             </p>
           </div>
+        </div>
 
-          {/* Hero visual: owner portrait + handshake inset */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elegant)]">
-              <img
-                src={ownerPortrait}
-                alt="Smiling cleaning business owner in branded uniform"
-                width={1024}
-                height={1280}
-                className="h-[520px] w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-6 w-56 overflow-hidden rounded-2xl border-4 border-background bg-card shadow-[var(--shadow-accent)] sm:w-72">
-              <img
-                src={handshakeImg}
-                alt="Cleaner shaking hands with a new commercial customer"
-                width={1280}
-                height={896}
-                loading="lazy"
-                className="h-40 w-full object-cover sm:h-48"
-              />
-            </div>
-            <div className="absolute -right-4 top-6 hidden rounded-2xl border border-border bg-card/95 p-4 shadow-[var(--shadow-accent)] backdrop-blur sm:block">
-              <div className="text-3xl font-black text-accent">+38%</div>
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Avg. new contracts<br />in 90 days
-              </div>
-            </div>
+        {/* Lower hero image: handshake */}
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+          <div className="ml-auto w-full max-w-md overflow-hidden rounded-2xl border-4 border-background bg-card shadow-[var(--shadow-elegant)]">
+            <img
+              src={handshakeImg}
+              alt="Cleaner shaking hands with a new customer"
+              width={1280}
+              height={896}
+              loading="lazy"
+              className="h-56 w-full object-cover sm:h-64"
+            />
           </div>
         </div>
       </section>
 
-      {/* VALUE STRIP */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-          <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-            More Leads. Better Follow-Up. More Wins.
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-primary-foreground/70">
-            Your AI Assistant works daily to uncover sales opportunities in your service area
-            and help you take action faster.
-          </p>
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
+      {/* VALUE STRIP — redesigned */}
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              Why CleaningBusiness.ai
+            </div>
+            <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+              More Leads.{" "}
+              <span className="italic text-accent">Better Follow-Up.</span>{" "}
+              More Wins.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
+              Your AI Assistant works daily to uncover sales opportunities in your service
+              area and help you take action faster.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 md:grid-cols-3">
             {[
-              "No more guessing where to look.",
-              "No more missing potential contracts.",
-              "No more trying to manage sales alone.",
-            ].map((line) => (
+              {
+                strike: "Guessing where to look.",
+                replace: "AI scans your service area every day.",
+              },
+              {
+                strike: "Missing potential contracts.",
+                replace: "Real-time alerts on new opportunities.",
+              },
+              {
+                strike: "Managing sales alone.",
+                replace: "A full AI sales assistant in your corner.",
+              },
+            ].map((item) => (
               <div
-                key={line}
-                className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4"
+                key={item.strike}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.07]"
               >
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
-                  <X className="h-4 w-4 text-accent" />
+                <div className="text-sm uppercase tracking-wider text-primary-foreground/40 line-through decoration-accent decoration-2">
+                  {item.strike}
                 </div>
-                <span className="text-sm font-medium">{line}</span>
+                <div className="mt-3 flex items-start gap-2.5">
+                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                  </div>
+                  <p className="text-lg font-semibold leading-snug">
+                    {item.replace}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -208,64 +249,38 @@ function LandingPage() {
       <section id="features" className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Outcomes, Not Features
+            Built for cleaning businesses
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Real growth for your cleaning company
+            Find opportunities. Win them professionally.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Every output is built around one question: does this win you more profitable contracts?
+            An AI assistant that knows your market, knows your industry, and works only for you.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            { stat: "+38%", label: "New contracts in 90 days" },
-            { stat: "5×", label: "More qualified leads per week" },
-            { stat: "12 hrs", label: "Saved on prospecting weekly" },
-            { stat: "$42k", label: "Avg. new MRR per member" },
-          ].map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl border border-border bg-card p-6 text-center"
-            >
-              <div className="text-4xl font-black text-accent">{s.stat}</div>
-              <div className="mt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
             {
-              icon: DollarSign,
-              title: "Grow Monthly Recurring Revenue",
+              icon: Radar,
+              title: "AI that monitors your service area",
               body:
-                "Lock in long-term janitorial, facility, and post-construction contracts — the kind that compound your revenue every single month.",
-              proof: "Members add $20k–$60k MRR in their first quarter.",
+                "Your assistant watches your local market 24/7 — picking up postings, signals, and conversations from people looking for cleaning. So you can respond faster than the competition.",
+              proof: "Be the first one in the door.",
             },
             {
-              icon: CalendarClock,
-              title: "Stop Wasting Time Prospecting",
+              icon: FileText,
+              title: "Professional, profitable estimates",
               body:
-                "Wake up to a prioritized list of qualified opportunities in your service area — no cold lists, no dead leads, no scrolling tender boards for hours.",
-              proof: "10–15 ready-to-contact leads delivered daily.",
+                "Generate clean, professional estimates priced for your business — backed by ISSA Canada's industry expertise on scope, productivity rates, and margin standards.",
+              proof: "Quote with confidence, every time.",
             },
             {
-              icon: Trophy,
-              title: "Win Against Bigger Competitors",
+              icon: ShieldCheck,
+              title: "Your data stays your own",
               body:
-                "See who you're up against on every bid, what they charge, and how to position so price isn't your only weapon.",
-              proof: "Higher close rate, better margins on every quote.",
-            },
-            {
-              icon: Rocket,
-              title: "Close Deals Without a Sales Team",
-              body:
-                "Your AI Assistant drafts outreach, handles follow-up cadences, and writes proposals — so you can run the business instead of chasing email threads.",
-              proof: "Replace a $90k/yr sales hire from day one.",
+                "This is an AI you own. Your opportunities, your customers, and your pricing never get pooled, resold, or shared with competitors.",
+              proof: "Private by design. Yours by default.",
             },
           ].map((f) => (
             <div
@@ -344,9 +359,9 @@ function LandingPage() {
               <ul className="mt-6 space-y-3 text-sm">
                 {[
                   "Daily AI-sourced sales opportunities",
-                  "Competitor insights for your service area",
-                  "Outreach, follow-up & proposal assistance",
-                  "Personal AI sales advisor",
+                  "Professional estimates backed by ISSA expertise",
+                  "Outreach & follow-up assistance",
+                  "Your data stays yours — always",
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2 text-primary">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -378,8 +393,8 @@ function LandingPage() {
             Start Building Your Sales Pipeline Today
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/80">
-            Get daily opportunities, competitor insights, and sales support designed
-            specifically for cleaning businesses.
+            Get daily opportunities, professional estimates, and an AI sales assistant
+            designed specifically for cleaning businesses.
           </p>
           <div className="mt-9 flex flex-col items-center gap-4">
             <CTAButton size="xl">
@@ -398,8 +413,8 @@ function LandingPage() {
           <div className="flex items-center gap-4">
             <img src={owLogo.url} alt="Order of Work" className="h-8 w-8 rounded" />
             <div className="text-sm">
-              <div className="font-semibold text-primary">CleaningBusiness.ai</div>
-              <div className="text-xs text-muted-foreground">
+              <Wordmark className="text-base" />
+              <div className="mt-1 text-xs text-muted-foreground">
                 Powered by Order of Work · In partnership with ISSA Canada
               </div>
             </div>
