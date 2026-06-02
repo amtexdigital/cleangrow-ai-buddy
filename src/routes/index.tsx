@@ -180,20 +180,20 @@ function LandingPage() {
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-accent" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-primary sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               Turn Local Cleaning Opportunities Into{" "}
-              <span className="text-accent italic font-black">
+              <span className="text-[var(--brand-blue-soft)] italic font-black">
                 New Contracts
               </span>
             </h1>
-            <p className="mt-5 text-lg font-medium text-primary/80 sm:text-xl">
+            <p className="mt-5 text-lg font-medium text-white/85 sm:text-xl">
               Your AI Sales Assistant for Cleaning Business Growth
             </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
               Active ISSA Canada members can now access a specialized Cleaning Business
               AI Assistant. It monitors your service area, surfaces real opportunities,
               and helps you respond faster than anyone else.
@@ -204,15 +204,16 @@ function LandingPage() {
               </CTAButton>
               <a
                 href="#features"
-                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-primary hover:text-accent"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
               >
                 See what's included →
               </a>
             </div>
-            <p className="mt-5 text-xs text-muted-foreground">
+            <p className="mt-5 text-xs text-white/60">
               Limited-time offer for active ISSA Canada members.
             </p>
           </div>
+
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
