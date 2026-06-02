@@ -10,7 +10,10 @@ import {
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
-import owLogo from "@/assets/order-of-work.png.asset.json";
+import owLogo from "@/assets/order-of-work-new.png.asset.json";
+
+const OW_URL = "https://orderofwork.com";
+const ISSA_URL = "https://www.issa-canada.com";
 import ownerPortrait from "@/assets/owner-portrait.png";
 
 const STRIPE_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
@@ -90,12 +93,17 @@ function LandingPage() {
           <div className="flex items-center gap-3 sm:gap-5">
             <Wordmark className="text-lg sm:text-2xl" />
             <div className="hidden h-8 w-px bg-border md:block" />
-            <div className="hidden items-center gap-2 md:flex">
+            <a
+              href={ISSA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden items-center gap-2 md:flex"
+            >
               <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
                 Partnered with
               </span>
               <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
-            </div>
+            </a>
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
             <nav className="hidden items-center gap-5 lg:flex">
@@ -158,9 +166,9 @@ function LandingPage() {
             </p>
           </div>
 
-          {/* Image column, stays right of copy on desktop, below on mobile */}
-          <div className="relative lg:col-span-5 xl:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-lg lg:max-w-none lg:scale-110 xl:scale-125 lg:origin-bottom">
+          {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
+          <div className="relative -mb-10 self-end lg:col-span-5 lg:-mb-24 xl:col-span-5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-xl lg:max-w-none lg:scale-125 xl:scale-[1.4] lg:origin-bottom">
               <img
                 src={ownerPortrait}
                 alt="Diverse team of cleaning professionals"
@@ -329,9 +337,14 @@ function LandingPage() {
 
         <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent backdrop-blur">
+            <a
+              href={ISSA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent backdrop-blur transition hover:bg-card"
+            >
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> Exclusive ISSA Canada Member Offer
-            </div>
+            </a>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
               One price. Built for ISSA Canada members.
             </h2>
@@ -453,10 +466,14 @@ function LandingPage() {
               The AI sales assistant built for Canadian cleaning businesses. Powered
               by Order of Work.
             </p>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <img src={owLogo.url} alt="Order of Work" className="h-16 w-16 rounded" />
-              <span className="font-semibold">Order of Work</span>
-            </div>
+            <a
+              href={OW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-sm text-muted-foreground transition hover:text-primary"
+            >
+              <img src={owLogo.url} alt="Order of Work" className="h-10 w-auto" />
+            </a>
           </div>
 
           {/* Right column: partnership */}
@@ -464,7 +481,9 @@ function LandingPage() {
             <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               In partnership with
             </div>
-            <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            <a href={ISSA_URL} target="_blank" rel="noopener noreferrer" className="transition hover:opacity-80">
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            </a>
             <p className="max-w-sm text-sm text-muted-foreground">
               Built with industry expertise from ISSA Canada to help members grow
               profitable cleaning businesses.
