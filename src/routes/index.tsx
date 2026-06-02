@@ -222,7 +222,7 @@ function LandingPage() {
               <svg
                 aria-hidden
                 viewBox="0 0 220 180"
-                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-accent/30"
+                className="pointer-events-none absolute -right-2 top-0 h-[55%] w-auto text-white/35"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
