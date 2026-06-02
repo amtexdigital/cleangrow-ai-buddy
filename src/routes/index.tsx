@@ -6,14 +6,20 @@ import {
   FileText,
   ShieldCheck,
   Sparkles,
+  MessageCircle,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
-import handshakeImg from "@/assets/handshake.jpg";
 
 const STRIPE_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
+
+const NAV_LINKS = [
+  { label: "Features", href: "#features" },
+  { label: "How It Works", href: "#why" },
+  { label: "Pricing", href: "#pricing" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,20 +96,28 @@ function LandingPage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <div className="flex items-center gap-3 sm:gap-5">
-            <div className="flex items-center gap-2.5">
-              <img src={owLogo.url} alt="Order of Work" className="h-9 w-9 rounded-md" />
-              <Wordmark className="hidden text-xl sm:inline sm:text-2xl" />
-            </div>
-            <div className="hidden h-8 w-px bg-border sm:block" />
-            <div className="hidden items-center gap-2 sm:flex">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Wordmark className="text-xl sm:text-2xl" />
+            <div className="hidden h-8 w-px bg-border md:block" />
+            <div className="hidden items-center gap-2 md:flex">
               <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                In partnership with
+                Partnered with
               </span>
-              <img src={issaLogo.url} alt="ISSA Canada" className="h-7 w-auto" />
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
             </div>
           </div>
+          <nav className="hidden items-center gap-7 lg:flex">
+            {NAV_LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
           <CTAButton size="lg">
             Sign Up <ArrowRight className="h-4 w-4" />
           </CTAButton>
@@ -115,24 +129,22 @@ function LandingPage() {
         className="relative overflow-hidden"
         style={{ background: "var(--gradient-hero)" }}
       >
-        {/* Owner background image */}
         <div className="pointer-events-none absolute inset-0 flex items-end justify-end">
           <img
             src={ownerPortrait}
-            alt="Smiling cleaning business owner"
-            className="h-[105%] w-auto max-w-none object-contain object-bottom opacity-90 [mask-image:linear-gradient(to_left,black_55%,transparent_95%)]"
+            alt="Cleaning business owners"
+            className="h-[110%] w-auto max-w-none object-contain object-bottom opacity-95 [mask-image:linear-gradient(to_left,black_60%,transparent_98%)]"
           />
         </div>
-        {/* Soft paper wash on the left to keep copy legible */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, var(--paper) 0%, color-mix(in oklab, var(--paper) 85%, transparent) 38%, transparent 70%)",
+              "linear-gradient(to right, var(--paper) 0%, color-mix(in oklab, var(--paper) 85%, transparent) 42%, transparent 72%)",
           }}
         />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-32">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:py-36">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
@@ -168,24 +180,10 @@ function LandingPage() {
             </p>
           </div>
         </div>
-
-        {/* Lower hero image: handshake */}
-        <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6">
-          <div className="ml-auto w-full max-w-md overflow-hidden rounded-2xl border-4 border-background bg-card shadow-[var(--shadow-elegant)]">
-            <img
-              src={handshakeImg}
-              alt="Cleaner shaking hands with a new customer"
-              width={1280}
-              height={896}
-              loading="lazy"
-              className="h-56 w-full object-cover sm:h-64"
-            />
-          </div>
-        </div>
       </section>
 
-      {/* VALUE STRIP — redesigned */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      {/* VALUE STRIP */}
+      <section id="why" className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 opacity-40"
           style={{
@@ -259,7 +257,7 @@ function LandingPage() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: Radar,
@@ -267,6 +265,13 @@ function LandingPage() {
               body:
                 "Your assistant watches your local market 24/7 — picking up postings, signals, and conversations from people looking for cleaning. So you can respond faster than the competition.",
               proof: "Be the first one in the door.",
+            },
+            {
+              icon: MessageCircle,
+              title: "Chat with your AI 24/7 on messenger",
+              body:
+                "Talk to your custom AI assistant any time, right from WhatsApp, Messenger, SMS, or Telegram. Ask for leads, draft a quote, or get follow-up advice — wherever you are.",
+              proof: "Always on. Always in your pocket.",
             },
             {
               icon: FileText,
@@ -304,99 +309,117 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section className="bg-secondary/60">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+      {/* PRICING — single card with discount inline */}
+      <section id="pricing" className="bg-secondary/60">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
-              <img src={issaLogo.url} alt="" className="h-4 w-auto" /> Exclusive ISSA Canada Member Offer
+              <img src={issaLogo.url} alt="" className="h-5 w-auto" /> Exclusive ISSA Canada Member Offer
             </div>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Save over 65% as an active member
+              One price. Built for ISSA Canada members.
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Same product, same AI assistant — exclusive pricing for the ISSA Canada community.
+              Save over 65% versus standard pricing — same AI assistant, same support.
             </p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-            {/* Regular price */}
-            <div className="rounded-2xl border border-border bg-card/60 p-8 opacity-80">
-              <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Regular Price
+          <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)]">
+            {/* Top banner */}
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-7 py-4">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
+                <Sparkles className="h-4 w-4" /> Limited-Time Member Price
               </div>
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-5xl font-bold text-muted-foreground line-through decoration-accent/60 decoration-2">
-                  $875
-                </span>
-                <span className="text-sm text-muted-foreground">/month</span>
+              <div className="rounded-full bg-accent px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-foreground">
+                Save 65%
               </div>
-              <div className="mt-2 text-sm text-muted-foreground line-through">
-                $1,750 setup fee
-              </div>
-              <div className="mt-6 h-px bg-border" />
-              <p className="mt-6 text-sm text-muted-foreground">
-                Standard CleaningBusiness.ai pricing for non-members.
-              </p>
             </div>
 
-            {/* Member price */}
-            <div
-              className="relative rounded-2xl border-2 border-accent bg-card p-8 shadow-[var(--shadow-accent)]"
-            >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-foreground">
-                Limited-Time Member Price
-              </div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                ISSA Canada Members
-              </div>
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-5xl font-bold text-primary">$299</span>
-                <span className="text-sm text-muted-foreground">/month</span>
-              </div>
-              <div className="mt-2 text-sm font-medium text-primary">$575 setup fee</div>
+            <div className="grid gap-8 p-8 md:grid-cols-5 md:p-10">
+              {/* Price column */}
+              <div className="md:col-span-2">
+                <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Monthly subscription
+                </div>
+                <div className="mt-2 flex items-baseline gap-2">
+                  <span className="text-6xl font-black text-primary">$299</span>
+                  <span className="text-sm text-muted-foreground">/month</span>
+                </div>
+                <div className="mt-1 text-sm text-muted-foreground">
+                  Regular{" "}
+                  <span className="line-through decoration-accent decoration-2">$875/mo</span>
+                </div>
 
-              <ul className="mt-6 space-y-3 text-sm">
-                {[
-                  "Daily AI-sourced sales opportunities",
-                  "Professional estimates backed by ISSA expertise",
-                  "Outreach & follow-up assistance",
-                  "Your data stays yours — always",
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-primary">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+                <div className="mt-6 rounded-xl bg-secondary/80 p-4">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    One-time setup
+                  </div>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="text-2xl font-bold text-primary">$575</span>
+                    <span className="text-xs text-muted-foreground line-through decoration-accent decoration-2">
+                      $1,750
+                    </span>
+                  </div>
+                </div>
 
-              <div className="mt-8">
-                <CTAButton size="xl" className="w-full">
-                  Sign Up Today <ArrowRight className="h-5 w-5" />
-                </CTAButton>
+                <div className="mt-6">
+                  <CTAButton size="xl" className="w-full">
+                    Sign Up Today <ArrowRight className="h-5 w-5" />
+                  </CTAButton>
+                  <p className="mt-3 text-center text-xs text-muted-foreground">
+                    Active ISSA Canada members only.
+                  </p>
+                </div>
               </div>
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                Active ISSA Canada members only.
-              </p>
+
+              {/* Features column */}
+              <div className="md:col-span-3 md:border-l md:border-border md:pl-10">
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
+                  What's included
+                </div>
+                <ul className="mt-4 space-y-3 text-sm">
+                  {[
+                    "Daily AI-sourced sales opportunities in your service area",
+                    "24/7 chat with your AI assistant on WhatsApp, Messenger, SMS & Telegram",
+                    "Professional estimates backed by ISSA Canada expertise",
+                    "Outreach & follow-up assistance",
+                    "Your data stays yours — private by design",
+                    "Onboarding & setup support included",
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-2.5 text-primary">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={3} />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section
-        className="relative overflow-hidden"
-        style={{ background: "var(--gradient-brand)" }}
-      >
-        <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-5xl">
-            Start Building Your Sales Pipeline Today
+      {/* FINAL CTA — styled to match Why section */}
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6">
+          <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+            Ready when you are
+          </div>
+          <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+            Start Building Your{" "}
+            <span className="italic text-accent">Sales Pipeline</span> Today
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/80">
+          <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
             Get daily opportunities, professional estimates, and an AI sales assistant
             designed specifically for cleaning businesses.
           </p>
-          <div className="mt-9 flex flex-col items-center gap-4">
+          <div className="mt-10 flex flex-col items-center gap-4">
             <CTAButton size="xl">
               Sign Up Today <ArrowRight className="h-5 w-5" />
             </CTAButton>
@@ -409,18 +432,12 @@ function LandingPage() {
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-background">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 sm:px-6 md:flex-row">
-          <div className="flex items-center gap-4">
-            <img src={owLogo.url} alt="Order of Work" className="h-8 w-8 rounded" />
-            <div className="text-sm">
-              <Wordmark className="text-base" />
-              <div className="mt-1 text-xs text-muted-foreground">
-                Powered by Order of Work · In partnership with ISSA Canada
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <img src={issaLogo.url} alt="ISSA Canada" className="h-9 w-auto" />
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-12 sm:px-6">
+          <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+          <Wordmark className="text-2xl" />
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <img src={owLogo.url} alt="Order of Work" className="h-7 w-7 rounded" />
+            <span>Powered by Order of Work · In partnership with ISSA Canada</span>
           </div>
           <div className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Order of Work. All rights reserved.
