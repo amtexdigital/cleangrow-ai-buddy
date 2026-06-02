@@ -420,9 +420,8 @@ function LandingPage() {
                   <span className="text-5xl font-black text-primary sm:text-6xl">$299</span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-1 text-sm text-muted-foreground">
-                  Regular{" "}
-                  <span className="line-through decoration-accent decoration-2">$875/mo</span>
+                <div className="mt-2 text-lg font-bold text-muted-foreground">
+                  Regularly $875/month
                 </div>
 
                 <div className="mt-6 rounded-xl bg-secondary/80 p-4">
