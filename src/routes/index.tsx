@@ -315,7 +315,7 @@ function LandingPage() {
               icon: MessageCircle,
               title: "Chat with your AI 24/7 on messenger",
               body:
-                "Talk to your custom AI assistant any time, right from WhatsApp, Messenger, SMS, or Telegram. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
+                "Talk to your custom AI assistant any time, right from your preferred channel. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
               proof: "Always on. Always in your pocket.",
             },
             {
@@ -389,7 +389,7 @@ function LandingPage() {
               href={ISSA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent backdrop-blur transition hover:bg-card"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-base font-semibold uppercase tracking-wider text-accent backdrop-blur transition hover:bg-card"
             >
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> Exclusive ISSA Canada Member Offer
             </a>
@@ -429,7 +429,7 @@ function LandingPage() {
                     One-time setup
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-primary">$575</span>
+                    <span className="text-5xl font-black text-primary sm:text-6xl">$575</span>
                   </div>
                   <div className="mt-1 text-lg font-bold text-muted-foreground">
                     Regularly $1,750
@@ -450,7 +450,7 @@ function LandingPage() {
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   What's included
                 </div>
-                <ul className="mt-4 space-y-3 text-sm">
+                <ul className="mt-4 space-y-4 text-base sm:text-lg">
                   {[
                     "Daily AI-sourced sales opportunities in your service area",
                     "Professional estimates backed by ISSA Canada expertise",
@@ -459,7 +459,7 @@ function LandingPage() {
                     "Onboarding and setup support included",
                   ].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-primary">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={3} />
+                      <Check className="mt-1 h-5 w-5 shrink-0 text-accent" strokeWidth={3} />
                       <span>{f}</span>
                     </li>
                   ))}
