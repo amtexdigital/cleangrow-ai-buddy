@@ -466,10 +466,14 @@ function LandingPage() {
               The AI sales assistant built for Canadian cleaning businesses. Powered
               by Order of Work.
             </p>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <img src={owLogo.url} alt="Order of Work" className="h-16 w-16 rounded" />
-              <span className="font-semibold">Order of Work</span>
-            </div>
+            <a
+              href={OW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-sm text-muted-foreground transition hover:text-primary"
+            >
+              <img src={owLogo.url} alt="Order of Work" className="h-10 w-auto" />
+            </a>
           </div>
 
           {/* Right column: partnership */}
@@ -477,7 +481,9 @@ function LandingPage() {
             <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               In partnership with
             </div>
-            <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            <a href={ISSA_URL} target="_blank" rel="noopener noreferrer" className="transition hover:opacity-80">
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            </a>
             <p className="max-w-sm text-sm text-muted-foreground">
               Built with industry expertise from ISSA Canada to help members grow
               profitable cleaning businesses.
