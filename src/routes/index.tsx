@@ -461,10 +461,13 @@ function LandingPage() {
                     One-time setup
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-primary sm:text-6xl">$575</span>
+                    <span className="text-5xl font-black text-primary sm:text-6xl">$775</span>
                   </div>
                   <div className="mt-1 text-lg font-bold text-muted-foreground">
                     Regularly $1,750
+                  </div>
+                  <div className="mt-2 text-sm font-semibold text-accent">
+                    Includes a 1-year ISSA / CHHA membership
                   </div>
                 </div>
 
@@ -489,6 +492,7 @@ function LandingPage() {
                     "Outreach and follow-up assistance",
                     "Your data stays yours. Private by design.",
                     "Onboarding and setup support included",
+                    "1-year ISSA / CHHA membership included with setup",
                   ].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-primary">
                       <Check className="mt-1 h-5 w-5 shrink-0 text-accent" strokeWidth={3} />
@@ -497,6 +501,7 @@ function LandingPage() {
                   ))}
                 </ul>
               </div>
+
             </div>
           </div>
         </div>
