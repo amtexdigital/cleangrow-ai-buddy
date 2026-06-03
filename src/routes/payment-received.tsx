@@ -50,7 +50,7 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 transition hover:opacity-80"
         >
-          <img src={owIcon.url} alt="Order of Work" className="h-3.5 w-auto" />
+          <img src={owIcon.url} alt="Order of Work" className="h-4 w-auto" />
           <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
             An Order of Work Product
           </span>
