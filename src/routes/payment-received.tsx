@@ -31,15 +31,32 @@ export const Route = createFileRoute("/payment-received")({
   component: PaymentReceivedPage,
 });
 
-function Wordmark({ className = "" }: { className?: string }) {
+import owIcon from "@/assets/ow-icon.png.asset.json";
+
+function Wordmark({ className = "", withTagline = false }: { className?: string; withTagline?: boolean }) {
   return (
-    <span
-      className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
-    >
-      <span className="text-primary">Cleaning</span>
-      <span className="text-primary/60">Business</span>
-      <span className="italic text-accent">.ai</span>
-    </span>
+    <div className="inline-flex flex-col items-center gap-1">
+      <span
+        className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
+      >
+        <span className="text-primary">Cleaning</span>
+        <span className="text-primary/60">Business</span>
+        <span className="italic text-accent">.ai</span>
+      </span>
+      {withTagline && (
+        <a
+          href="https://orderofwork.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 transition hover:opacity-80"
+        >
+          <img src={owIcon.url} alt="Order of Work" className="h-3.5 w-auto" />
+          <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+            An Order of Work Product
+          </span>
+        </a>
+      )}
+    </div>
   );
 }
 
@@ -63,7 +80,7 @@ function PaymentReceivedPage() {
       <header className="border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-5 sm:px-6 sm:py-6">
           <Link to="/">
-            <Wordmark className="text-2xl sm:text-4xl" />
+            <Wordmark className="text-3xl sm:text-5xl" withTagline />
           </Link>
         </div>
       </header>

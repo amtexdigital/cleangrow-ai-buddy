@@ -13,6 +13,7 @@ import {
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work-new.png.asset.json";
+import owIcon from "@/assets/ow-icon.png.asset.json";
 
 const OW_URL = "https://orderofwork.com";
 const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
@@ -74,15 +75,30 @@ function CTAButton({
   );
 }
 
-function Wordmark({ className = "" }: { className?: string }) {
+function Wordmark({ className = "", withTagline = false }: { className?: string; withTagline?: boolean }) {
   return (
-    <span
-      className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
-    >
-      <span className="text-primary">Cleaning</span>
-      <span className="text-primary/60">Business</span>
-      <span className="italic text-accent">.ai</span>
-    </span>
+    <div className="inline-flex flex-col items-start gap-1">
+      <span
+        className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
+      >
+        <span className="text-primary">Cleaning</span>
+        <span className="text-primary/60">Business</span>
+        <span className="italic text-accent">.ai</span>
+      </span>
+      {withTagline && (
+        <a
+          href={OW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 transition hover:opacity-80"
+        >
+          <img src={owIcon.url} alt="Order of Work" className="h-3.5 w-auto" />
+          <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+            An Order of Work Product
+          </span>
+        </a>
+      )}
+    </div>
   );
 }
 
@@ -93,7 +109,7 @@ function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3 sm:gap-5">
-            <Wordmark className="text-lg sm:text-2xl" />
+            <Wordmark className="text-2xl sm:text-3xl" withTagline />
             <div className="hidden h-8 w-px bg-border md:block" />
             <a
               href={ISSA_URL}
@@ -523,7 +539,7 @@ function LandingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2">
           {/* Left column: brand */}
           <div className="flex flex-col items-start gap-4">
-            <Wordmark className="text-2xl" />
+            <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
               The AI sales assistant built for Canadian cleaning businesses. Powered
               by Order of Work.
