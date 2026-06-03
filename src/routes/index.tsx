@@ -13,6 +13,7 @@ import {
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owLogo from "@/assets/order-of-work-new.png.asset.json";
+import owIcon from "@/assets/ow-icon.png.asset.json";
 
 const OW_URL = "https://orderofwork.com";
 const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
