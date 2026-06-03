@@ -75,15 +75,30 @@ function CTAButton({
   );
 }
 
-function Wordmark({ className = "" }: { className?: string }) {
+function Wordmark({ className = "", withTagline = false }: { className?: string; withTagline?: boolean }) {
   return (
-    <span
-      className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
-    >
-      <span className="text-primary">Cleaning</span>
-      <span className="text-primary/60">Business</span>
-      <span className="italic text-accent">.ai</span>
-    </span>
+    <div className="inline-flex flex-col items-start gap-1">
+      <span
+        className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
+      >
+        <span className="text-primary">Cleaning</span>
+        <span className="text-primary/60">Business</span>
+        <span className="italic text-accent">.ai</span>
+      </span>
+      {withTagline && (
+        <a
+          href={OW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 transition hover:opacity-80"
+        >
+          <img src={owIcon.url} alt="Order of Work" className="h-3.5 w-auto" />
+          <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+            An Order of Work Product
+          </span>
+        </a>
+      )}
+    </div>
   );
 }
 
