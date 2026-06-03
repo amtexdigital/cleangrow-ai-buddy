@@ -7,6 +7,8 @@ import {
   ShieldCheck,
   Sparkles,
   MessageCircle,
+  GraduationCap,
+  Library,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
