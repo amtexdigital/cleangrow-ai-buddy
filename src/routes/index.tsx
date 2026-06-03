@@ -336,7 +336,7 @@ function LandingPage() {
             },
             {
               icon: GraduationCap,
-              title: "Access daily workshops",
+              title: "Daily Support Calls",
               body:
                 "Join live sessions designed to help you tune, prompt, and improve your AI assistant. Learn best practices from other cleaning business owners and get hands-on guidance from our team.",
               proof: "Keep your assistant sharp.",
