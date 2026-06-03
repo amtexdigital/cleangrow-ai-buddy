@@ -304,7 +304,7 @@ function LandingPage() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               icon: Radar,
@@ -333,6 +333,20 @@ function LandingPage() {
               body:
                 "This is an AI you own. Your opportunities, your customers, and your pricing never get pooled, resold, or shared with competitors.",
               proof: "Private by design. Yours by default.",
+            },
+            {
+              icon: GraduationCap,
+              title: "Access daily workshops",
+              body:
+                "Join live sessions designed to help you tune, prompt, and improve your AI assistant. Learn best practices from other cleaning business owners and get hands-on guidance from our team.",
+              proof: "Keep your assistant sharp.",
+            },
+            {
+              icon: Library,
+              title: "Up skill your assistant",
+              body:
+                "Unlock a members-only library of skills, prompts, and workflows updated weekly. Add new capabilities to your assistant as your business grows and your needs change.",
+              proof: "New skills, every week.",
             },
           ].map((f) => (
             <div
