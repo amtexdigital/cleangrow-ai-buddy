@@ -194,7 +194,7 @@ function LandingPage() {
               "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-2 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-0">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-20">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
