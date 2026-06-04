@@ -309,11 +309,12 @@ function LandingPage() {
             Built for cleaning businesses
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Find opportunities. Win them professionally.
+            Your Own AI Assistant for Your Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            An AI assistant that knows your market, knows your industry, and works only for you.
+            Knows your market, knows your industry, and works only for you to grow your business.
           </p>
+
         </div>
 
         <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
