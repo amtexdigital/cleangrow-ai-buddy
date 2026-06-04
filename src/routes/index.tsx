@@ -194,7 +194,7 @@ function LandingPage() {
               "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-6 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-10">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-2 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-0">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
@@ -224,18 +224,15 @@ function LandingPage() {
             <p className="mt-5 text-xs text-white/60">
               Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
-
           </div>
 
-
-          {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
-          {/* Image column. Crop to stomach: overflow-hidden + object-top + upscale so head/torso fills the frame and the bottom border sits at the stomach. */}
-          <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden sm:max-w-lg lg:ml-auto lg:max-w-none">
+          {/* Image column. On desktop, stretch full grid row so head aligns with copy top and bottom flush with section. */}
+          <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5 lg:self-stretch">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden sm:max-w-lg lg:ml-auto lg:h-full lg:max-w-none lg:aspect-auto">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full origin-top scale-[1.4] object-contain object-top drop-shadow-2xl sm:scale-[1.5] lg:scale-[1.7] xl:scale-[1.8]"
+                className="relative h-full w-full origin-top scale-[1.4] object-contain object-top drop-shadow-2xl sm:scale-[1.5] lg:scale-100 xl:scale-100"
               />
             </div>
           </div>
