@@ -3,9 +3,11 @@ import {
   CheckCircle,
   ArrowLeft,
   ClipboardList,
-  Clock,
-  Send,
+  Mail,
+  Zap,
   HelpCircle,
+  Sparkles,
+  FileText,
 } from "lucide-react";
 
 export const Route = createFileRoute("/payment-received")({
@@ -71,6 +73,27 @@ const PREP_ITEMS = [
   "Competitor list with websites",
 ];
 
+const TIMELINE_STEPS = [
+  {
+    icon: Mail,
+    title: "Onboarding email",
+    body: "You will receive a detailed questionnaire by email. Set aside about an hour to complete it thoroughly — the more detail you provide, the better your custom agent will perform.",
+    accent: "bg-[var(--brand-blue-bright)]/10 text-[var(--brand-blue-soft)]",
+  },
+  {
+    icon: FileText,
+    title: "We build & train your agent",
+    body: "Once you submit your questionnaire, our team will configure and train your custom AI Sales Assistant. This takes up to 2 business days.",
+    accent: "bg-[var(--brand-blue)]/10 text-[var(--brand-blue-soft)]",
+  },
+  {
+    icon: Zap,
+    title: "Your agent goes live",
+    body: "Your AI Sales Assistant is ready to engage. It will start monitoring your service area, surfacing opportunities, and helping you respond faster than the competition.",
+    accent: "bg-white/10 text-[var(--brand-blue-soft)]",
+  },
+];
+
 function PaymentReceivedPage() {
   const search = Route.useSearch() as { session_id?: string };
 
@@ -85,59 +108,124 @@ function PaymentReceivedPage() {
         </div>
       </header>
 
-      {/* Success content */}
-      <main className="flex flex-1 px-4 py-12 sm:px-6 sm:py-16">
-        <div className="mx-auto w-full max-w-2xl">
-          {/* Top hero card */}
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/5 via-background to-accent/5 p-8 text-center shadow-sm sm:p-12">
-            {/* Decorative orbs */}
-            <div className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl" />
-            <div className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
+      {/* Hero success section — matches main site hero colour scheme */}
+      <section className="relative overflow-hidden bg-[var(--brand-navy)] text-paper">
+        {/* Layered background: deep navy base, aurora glows, dot grid, diagonal sheen */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(60% 80% at 85% 10%, color-mix(in oklab, var(--brand-blue-bright) 55%, transparent), transparent 70%), radial-gradient(45% 60% at 10% 90%, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 65%), linear-gradient(160deg, var(--brand-navy) 0%, oklch(0.18 0.10 258) 60%, var(--brand-navy) 100%)",
+          }}
+        />
+        {/* Dot grid */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, color-mix(in oklab, var(--brand-blue-bright) 80%, transparent) 1px, transparent 1px)",
+            backgroundSize: "26px 26px",
+            maskImage:
+              "radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 80%)",
+          }}
+        />
+        {/* Soft floating orbs */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
+          style={{ background: "color-mix(in oklab, var(--brand-blue-bright) 55%, transparent)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-1/3 bottom-0 h-80 w-80 rounded-full opacity-40 blur-3xl"
+          style={{ background: "color-mix(in oklab, var(--brand-blue) 60%, transparent)" }}
+        />
+        {/* Diagonal sheen line */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(115deg, transparent 35%, color-mix(in oklab, white 6%, transparent) 50%, transparent 65%)",
+          }}
+        />
+        {/* Bottom fade into next section */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
+          }}
+        />
 
-            {/* Success icon */}
-            <div className="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/15 ring-4 ring-accent/10 sm:h-24 sm:w-24">
-              <CheckCircle className="h-10 w-10 text-accent sm:h-12 sm:w-12" />
-            </div>
-
-            <h1 className="relative mt-6 text-4xl font-black uppercase tracking-[-0.03em] text-primary sm:text-5xl">
-              Payment Received
-            </h1>
-            <p className="relative mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Thank you for joining{" "}
-              <span className="font-semibold text-primary">CleaningBusiness.ai</span>.
-              Your payment was successful and your AI Sales Assistant is being prepared.
-            </p>
+        <div className="relative mx-auto max-w-3xl px-4 pt-12 pb-10 text-center sm:px-6 sm:pt-20 sm:pb-16">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
+            Welcome to CleaningBusiness.ai
           </div>
 
-          {/* Timeline / next steps */}
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                <Clock className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <p className="font-semibold text-primary">Membership confirmation</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  Your membership will be confirmed within{" "}
-                  <span className="font-medium text-foreground">1 business day</span>.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
-                <Send className="h-5 w-5 text-accent" />
-              </div>
-              <div>
-                <p className="font-semibold text-primary">Onboarding email</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  Once confirmed, you will receive an onboarding email with next steps to complete and have your agent set up.
-                </p>
-              </div>
-            </div>
+          <div className="mx-auto mt-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/10 ring-4 ring-white/10 sm:h-24 sm:w-24">
+            <CheckCircle className="h-10 w-10 text-[var(--brand-blue-soft)] sm:h-12 sm:w-12" />
+          </div>
+
+          <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] tracking-[-0.03em] text-white sm:text-5xl">
+            Payment Received
+          </h1>
+          <p className="mt-3 text-xl font-semibold text-[var(--brand-blue-soft)] sm:text-2xl">
+            What to expect next
+          </p>
+          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
+            Thank you for joining{" "}
+            <span className="font-semibold text-white">CleaningBusiness.ai</span>.
+            Your payment was successful, your ISSA / CHHA membership is included, and your AI Sales Assistant is being prepared.
+          </p>
+        </div>
+      </section>
+
+      {/* Timeline / next steps */}
+      <main className="flex flex-1 px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto w-full max-w-2xl">
+          <h2 className="text-center text-2xl font-bold text-primary">
+            Your setup timeline
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-center text-sm text-muted-foreground">
+            Here is exactly what happens now — and how long each step takes.
+          </p>
+
+          <div className="mt-8 space-y-6">
+            {TIMELINE_STEPS.map((step, i) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.title}
+                  className="relative flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm sm:gap-5 sm:p-6"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-12 sm:w-12">
+                    <Icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                        {i + 1}
+                      </span>
+                      <p className="text-base font-semibold text-primary sm:text-lg">
+                        {step.title}
+                      </p>
+                    </div>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      {step.body}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Prep checklist */}
-          <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+          <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                 <ClipboardList className="h-5 w-5 text-primary" />
@@ -146,6 +234,9 @@ function PaymentReceivedPage() {
                 While you wait, gather these items
               </h2>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">
+              You will need these details for the onboarding questionnaire. Having them ready will save you time.
+            </p>
             <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
               {PREP_ITEMS.map((item) => (
                 <li
