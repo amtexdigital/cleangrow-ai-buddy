@@ -202,18 +202,13 @@ function LandingPage() {
               In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
-              Turn Local Cleaning Opportunities Into{" "}
+              AI Sales Agent for{" "}
               <span className="text-[var(--brand-blue-soft)] italic font-black">
-                New Contracts
+                Cleaning Businesses
               </span>
             </h1>
-            <p className="mt-5 text-lg font-medium text-white/85 sm:text-xl">
-              Your AI Sales Assistant for Cleaning Business Growth
-            </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
-              Active ISSA Canada members can now access a specialized Cleaning Business
-              AI Assistant. It monitors your service area, surfaces real opportunities,
-              and helps you respond faster than anyone else.
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+              Find local leads, create profitable estimates, and close more cleaning contracts — with an AI agent built for the cleaning industry.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">
@@ -227,8 +222,9 @@ function LandingPage() {
               </a>
             </div>
             <p className="mt-5 text-xs text-white/60">
-              Limited-time offer for active ISSA Canada members.
+              Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
+
           </div>
 
 
