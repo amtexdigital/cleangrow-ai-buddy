@@ -230,7 +230,7 @@ function LandingPage() {
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-6 lg:-mb-56 xl:-mb-64 xl:col-span-6">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:ml-auto lg:max-w-none lg:scale-[1.33] xl:scale-[1.44] lg:origin-bottom-right lg:translate-x-[8%] xl:translate-x-[10%]">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:ml-auto lg:max-w-none lg:scale-[1.47] xl:scale-[1.58] lg:origin-bottom-right lg:translate-x-[12%] xl:translate-x-[14%]">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
