@@ -201,7 +201,31 @@ function LandingPage() {
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               In partnership with ISSA Canada
             </div>
-...
+            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+              AI Sales Agent for{" "}
+              <span className="text-[var(--brand-blue-soft)] italic font-black">
+                Cleaning Businesses
+              </span>
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+              Find local leads, create profitable estimates, and close more cleaning contracts — with an AI agent built for the cleaning industry.
+            </p>
+            <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <CTAButton size="xl">
+                Sign Up Today <ArrowRight className="h-5 w-5" />
+              </CTAButton>
+              <a
+                href="#features"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
+              >
+                See what's included →
+              </a>
+            </div>
+            <p className="mt-5 text-xs text-white/60">
+              Limited-time ISSA Canada member offer: $299/month + setup.
+            </p>
+          </div>
+
           {/* Image column. On desktop, stretch full grid row so head aligns with copy top and bottom flush with section. */}
           <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5 lg:self-stretch">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden sm:max-w-lg lg:ml-auto lg:h-full lg:max-w-none lg:aspect-auto">
