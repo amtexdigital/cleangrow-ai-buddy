@@ -202,18 +202,13 @@ function LandingPage() {
               In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
-              Turn Local Cleaning Opportunities Into{" "}
+              AI Sales Agent for{" "}
               <span className="text-[var(--brand-blue-soft)] italic font-black">
-                New Contracts
+                Cleaning Businesses
               </span>
             </h1>
-            <p className="mt-5 text-lg font-medium text-white/85 sm:text-xl">
-              Your AI Sales Assistant for Cleaning Business Growth
-            </p>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
-              Active ISSA Canada members can now access a specialized Cleaning Business
-              AI Assistant. It monitors your service area, surfaces real opportunities,
-              and helps you respond faster than anyone else.
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+              Find local leads, create profitable estimates, and close more cleaning contracts — with an AI agent built for the cleaning industry.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">
@@ -227,8 +222,9 @@ function LandingPage() {
               </a>
             </div>
             <p className="mt-5 text-xs text-white/60">
-              Limited-time offer for active ISSA Canada members.
+              Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
+
           </div>
 
 
@@ -245,66 +241,9 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* VALUE STRIP */}
-      <section id="why" className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            background:
-              "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
-          }}
-        />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-              Why CleaningBusiness.ai
-            </div>
-            <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
-              More Leads.{" "}
-              <span className="italic text-accent">Better Follow-Up.</span>{" "}
-              More Wins.
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-              Your AI Assistant works daily to uncover sales opportunities in your service
-              area and help you take action faster.
-            </p>
-          </div>
+      {/* (Why section moved below Pricing) */}
+      <div id="why" />
 
-          <div className="mt-12 grid gap-4 sm:mt-14 md:grid-cols-3">
-            {[
-              {
-                strike: "Guessing where to look.",
-                replace: "AI scans your service area every day.",
-              },
-              {
-                strike: "Missing potential contracts.",
-                replace: "Real-time alerts on new opportunities.",
-              },
-              {
-                strike: "Managing sales alone.",
-                replace: "A full AI sales assistant in your corner.",
-              },
-            ].map((item) => (
-              <div
-                key={item.strike}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.07]"
-              >
-                <div className="text-sm uppercase tracking-wider text-primary-foreground/40 line-through decoration-accent decoration-2">
-                  {item.strike}
-                </div>
-                <div className="mt-3 flex items-start gap-2.5">
-                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
-                  </div>
-                  <p className="text-lg font-semibold leading-snug">
-                    {item.replace}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FEATURES */}
       <section id="features" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
@@ -313,25 +252,26 @@ function LandingPage() {
             Built for cleaning businesses
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Find opportunities. Win them professionally.
+            Your Own AI Assistant for Your Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            An AI assistant that knows your market, knows your industry, and works only for you.
+            Knows your market, knows your industry, and works only for you to grow your business.
           </p>
+
         </div>
 
         <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               icon: Radar,
-              title: "AI that monitors your service area",
+              title: "Learns and monitors your service area",
               body:
                 "Your assistant watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
             },
             {
               icon: MessageCircle,
-              title: "Chat with your AI 24/7 on messenger",
+              title: "Available 24/7 through Chat",
               body:
                 "Talk to your custom AI assistant any time, right from your preferred channel. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
               proof: "Always on. Always in your pocket.",
@@ -507,7 +447,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* WHY / VALUE STRIP (below pricing) */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 opacity-40"
@@ -516,19 +456,57 @@ function LandingPage() {
               "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
           }}
         />
-        <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24">
-          <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-            Ready when you are
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              Why CleaningBusiness.ai
+            </div>
+            <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+              More Leads.{" "}
+              <span className="italic text-accent">Better Follow-Up.</span>{" "}
+              More Wins.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
+              Your AI Assistant works daily to uncover sales opportunities in your service
+              area and help you take action faster.
+            </p>
           </div>
-          <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
-            Start Building Your{" "}
-            <span className="italic text-accent">Sales Pipeline</span> Today
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-            Get daily opportunities, professional estimates, and an AI sales assistant
-            designed specifically for cleaning businesses.
-          </p>
-          <div className="mt-9 flex flex-col items-center gap-4">
+
+          <div className="mt-12 grid gap-4 sm:mt-14 md:grid-cols-3">
+            {[
+              {
+                strike: "Guessing where to look.",
+                replace: "AI scans your service area every day.",
+              },
+              {
+                strike: "Missing potential contracts.",
+                replace: "Real-time alerts on new opportunities.",
+              },
+              {
+                strike: "Managing sales alone.",
+                replace: "A full AI sales assistant in your corner.",
+              },
+            ].map((item) => (
+              <div
+                key={item.strike}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.07]"
+              >
+                <div className="text-sm uppercase tracking-wider text-primary-foreground/40 line-through decoration-accent decoration-2">
+                  {item.strike}
+                </div>
+                <div className="mt-3 flex items-start gap-2.5">
+                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                  </div>
+                  <p className="text-lg font-semibold leading-snug">
+                    {item.replace}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">
               Sign Up Today <ArrowRight className="h-5 w-5" />
             </CTAButton>
@@ -538,6 +516,7 @@ function LandingPage() {
           </div>
         </div>
       </section>
+
 
       {/* FOOTER — 2 columns */}
       <footer className="border-t border-border bg-background">
