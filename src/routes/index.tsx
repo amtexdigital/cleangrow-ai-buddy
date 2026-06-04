@@ -447,7 +447,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* WHY / VALUE STRIP (below pricing) */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 opacity-40"
@@ -456,19 +456,57 @@ function LandingPage() {
               "radial-gradient(ellipse at 10% 0%, color-mix(in oklab, var(--brand-blue-bright) 60%, transparent), transparent 55%), radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--brand-blue) 50%, transparent), transparent 55%)",
           }}
         />
-        <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24">
-          <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-            Ready when you are
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              Why CleaningBusiness.ai
+            </div>
+            <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
+              More Leads.{" "}
+              <span className="italic text-accent">Better Follow-Up.</span>{" "}
+              More Wins.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
+              Your AI Assistant works daily to uncover sales opportunities in your service
+              area and help you take action faster.
+            </p>
           </div>
-          <h2 className="mt-4 text-3xl font-black uppercase tracking-[-0.025em] sm:text-5xl lg:text-6xl">
-            Start Building Your{" "}
-            <span className="italic text-accent">Sales Pipeline</span> Today
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-            Get daily opportunities, professional estimates, and an AI sales assistant
-            designed specifically for cleaning businesses.
-          </p>
-          <div className="mt-9 flex flex-col items-center gap-4">
+
+          <div className="mt-12 grid gap-4 sm:mt-14 md:grid-cols-3">
+            {[
+              {
+                strike: "Guessing where to look.",
+                replace: "AI scans your service area every day.",
+              },
+              {
+                strike: "Missing potential contracts.",
+                replace: "Real-time alerts on new opportunities.",
+              },
+              {
+                strike: "Managing sales alone.",
+                replace: "A full AI sales assistant in your corner.",
+              },
+            ].map((item) => (
+              <div
+                key={item.strike}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.07]"
+              >
+                <div className="text-sm uppercase tracking-wider text-primary-foreground/40 line-through decoration-accent decoration-2">
+                  {item.strike}
+                </div>
+                <div className="mt-3 flex items-start gap-2.5">
+                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                  </div>
+                  <p className="text-lg font-semibold leading-snug">
+                    {item.replace}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">
               Sign Up Today <ArrowRight className="h-5 w-5" />
             </CTAButton>
@@ -478,6 +516,7 @@ function LandingPage() {
           </div>
         </div>
       </section>
+
 
       {/* FOOTER — 2 columns */}
       <footer className="border-t border-border bg-background">
