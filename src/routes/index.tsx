@@ -423,23 +423,20 @@ function LandingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-base font-semibold uppercase tracking-wider text-accent backdrop-blur transition hover:bg-card"
             >
-              <img src={issaLogo.url} alt="" className="h-5 w-auto" /> Exclusive ISSA Canada Member Offer
+              <img src={issaLogo.url} alt="" className="h-5 w-auto" /> In partnership with ISSA Canada
             </a>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              One price. Built for ISSA Canada members.
+              Win more cleaning contracts every month, without chasing leads.
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Save over 65% versus standard pricing. Same AI assistant, same support.
+              One simple price. Your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership, all included.
             </p>
           </div>
 
           <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-6 py-4 sm:px-7">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <Sparkles className="h-4 w-4" /> Limited-Time Member Price
-              </div>
-              <div className="rounded-full bg-accent px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-foreground">
-                Save 65%
+                <Sparkles className="h-4 w-4" /> Limited-Time Offer
               </div>
             </div>
 
@@ -452,7 +449,7 @@ function LandingPage() {
                   <span className="text-5xl font-black text-primary sm:text-6xl">$299</span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-2 text-lg font-bold text-muted-foreground">
+                <div className="mt-2 text-xs font-medium text-muted-foreground">
                   Regularly $875/month
                 </div>
 
@@ -461,9 +458,9 @@ function LandingPage() {
                     One-time setup
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-primary sm:text-6xl">$775</span>
+                    <span className="text-5xl font-black text-primary sm:text-6xl">$875</span>
                   </div>
-                  <div className="mt-1 text-lg font-bold text-muted-foreground">
+                  <div className="mt-1 text-xs font-medium text-muted-foreground">
                     Regularly $1,750
                   </div>
                   <div className="mt-2 text-sm font-semibold text-accent">
@@ -475,13 +472,10 @@ function LandingPage() {
                   <CTAButton size="xl" className="w-full">
                     Sign Up Today <ArrowRight className="h-5 w-5" />
                   </CTAButton>
-                  <p className="mt-3 text-center text-xs text-muted-foreground">
-                    Active ISSA Canada members only.
-                  </p>
                 </div>
               </div>
 
-              <div className="md:col-span-3 md:border-l md:border-border md:pl-10">
+              <div className="md:col-span-3 md:flex md:flex-col md:border-l md:border-border md:pl-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   What's included
                 </div>
@@ -500,6 +494,12 @@ function LandingPage() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-4 md:mt-auto">
+                  <p className="text-sm text-primary">
+                    <span className="font-semibold text-accent">Active ISSA Canada member?</span>{" "}
+                    Ask us for your promo code to reduce the one-time setup fee from $875 to $575.
+                  </p>
+                </div>
               </div>
 
             </div>
