@@ -232,7 +232,7 @@ function LandingPage() {
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full origin-top scale-[1.4] object-contain object-top drop-shadow-2xl sm:scale-[1.5] lg:scale-100 xl:scale-100"
+                className="relative h-full w-full origin-bottom scale-[1.6] object-contain object-bottom drop-shadow-2xl sm:scale-[1.7] lg:scale-125 xl:scale-125"
               />
             </div>
           </div>
