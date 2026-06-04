@@ -194,7 +194,7 @@ function LandingPage() {
               "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-20">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
@@ -224,15 +224,17 @@ function LandingPage() {
             <p className="mt-5 text-xs text-white/60">
               Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
+
           </div>
 
-          {/* Image column. On desktop, stretch full grid row so head aligns with copy top and bottom flush with section. */}
-          <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5 lg:self-stretch">
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-md sm:max-w-lg lg:ml-auto lg:h-full lg:max-w-none lg:aspect-auto lg:min-h-[640px]">
+
+          {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
+          <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:ml-auto lg:max-w-none lg:scale-125 xl:scale-[1.35] lg:origin-bottom-right">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="absolute inset-x-0 bottom-0 mx-auto h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl"
+                className="relative h-full w-full scale-110 object-contain object-bottom object-center drop-shadow-2xl sm:scale-100"
               />
             </div>
           </div>
