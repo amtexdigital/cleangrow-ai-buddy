@@ -229,12 +229,13 @@ function LandingPage() {
 
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
-          <div className="relative z-0 -mb-16 self-end lg:col-span-5 lg:-mb-56 xl:-mb-64 xl:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:ml-auto lg:max-w-none lg:scale-125 xl:scale-[1.35] lg:origin-bottom-right">
+          {/* Image column. Crop to stomach: overflow-hidden + object-top + upscale so head/torso fills the frame and the bottom border sits at the stomach. */}
+          <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden sm:max-w-lg lg:ml-auto lg:max-w-none">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full scale-110 object-contain object-bottom object-center drop-shadow-2xl sm:scale-100"
+                className="relative h-full w-full scale-[1.6] object-contain object-top drop-shadow-2xl sm:scale-[1.7] lg:scale-[1.9] xl:scale-[2]"
               />
             </div>
           </div>
