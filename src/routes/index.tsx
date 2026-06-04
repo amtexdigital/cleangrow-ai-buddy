@@ -194,7 +194,7 @@ function LandingPage() {
               "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-2 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-0">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-20 lg:pb-20">
           {/* Copy */}
           <div className="relative z-10 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
@@ -232,7 +232,7 @@ function LandingPage() {
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="relative h-full w-full origin-top scale-[1.4] object-contain object-top drop-shadow-2xl sm:scale-[1.5] lg:scale-100 xl:scale-100"
+                className="relative h-full w-full origin-bottom scale-[1.6] object-contain object-bottom drop-shadow-2xl sm:scale-[1.7] lg:scale-125 xl:scale-125"
               />
             </div>
           </div>
