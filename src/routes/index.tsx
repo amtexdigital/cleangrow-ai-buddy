@@ -328,7 +328,7 @@ function LandingPage() {
             },
             {
               icon: MessageCircle,
-              title: "Chat with your AI 24/7 on messenger",
+              title: "Available 24/7 through Chat",
               body:
                 "Talk to your custom AI assistant any time, right from your preferred channel. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
               proof: "Always on. Always in your pocket.",
