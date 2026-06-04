@@ -479,13 +479,13 @@ function LandingPage() {
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   What's included
                 </div>
-                <ul className="mt-4 space-y-3 text-sm sm:text-base">
+                <ul className="mt-4 space-y-3 text-xs sm:text-sm">
                   {[
-                    "Easily create professional estimates, backed by ISSA Canada expertise",
-                    "Weekday Support included",
+                    "Daily AI-sourced sales opportunities in your service area",
+                    "Easily create professional estimates, backed by ISSA Canada and CHHA expertise",
+                    "Weekday support available to keep your AI running",
                     "Access to a growing library of custom skills for your AI",
                     "Your data stays yours. Private by design.",
-                    "Onboarding and setup support included",
                     "1-year ISSA / CHHA membership included with setup",
                   ].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-primary">
