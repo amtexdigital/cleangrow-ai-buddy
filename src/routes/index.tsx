@@ -228,11 +228,11 @@ function LandingPage() {
 
           {/* Image column. On desktop, stretch full grid row so head aligns with copy top and bottom flush with section. */}
           <div className="relative z-0 self-end lg:col-span-5 xl:col-span-5 lg:self-stretch">
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-md sm:max-w-lg lg:ml-auto lg:h-full lg:max-w-none lg:aspect-auto lg:min-h-[560px]">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-md sm:max-w-lg lg:ml-auto lg:h-full lg:max-w-none lg:aspect-auto lg:min-h-[640px]">
               <img
                 src={ownerPortrait}
                 alt="Professional cleaner reviewing opportunities on her phone"
-                className="absolute inset-0 h-full w-full object-contain object-bottom drop-shadow-2xl"
+                className="absolute inset-x-0 bottom-0 mx-auto h-[115%] w-auto max-w-none object-contain object-bottom drop-shadow-2xl lg:h-[125%]"
               />
             </div>
           </div>
