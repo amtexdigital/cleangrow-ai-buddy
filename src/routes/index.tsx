@@ -526,6 +526,7 @@ function LandingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2">
           {/* Left column: brand */}
           <div className="flex flex-col items-start gap-4">
+            <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
               The AI sales assistant built for Canadian cleaning businesses. Powered
               by Order of Work.
