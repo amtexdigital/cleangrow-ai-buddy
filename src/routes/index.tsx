@@ -266,7 +266,7 @@ function LandingPage() {
           {[
             {
               icon: Radar,
-              title: "Learns and monitors your service area",
+              title: "Monitors your service area",
               body:
                 "Your assistant watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
