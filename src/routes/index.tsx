@@ -138,7 +138,7 @@ function LandingPage() {
               ))}
             </nav>
             <CTAButton size="lg">
-              Sign Up <ArrowRight className="h-4 w-4" />
+              Apply to Join <ArrowRight className="h-4 w-4" />
             </CTAButton>
           </div>
         </div>
