@@ -69,9 +69,7 @@ function CTAButton({
   };
   return (
     <a
-      href={STRIPE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={APPLY_ANCHOR}
       className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap bg-accent text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 ${sizes[size]} ${className}`}
     >
       {children}
