@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
-import owLogo from "@/assets/order-of-work-new.png.asset.json";
+
 import owIcon from "@/assets/ow-icon.png.asset.json";
 import { submitContactApplication } from "@/lib/contact.functions";
 
