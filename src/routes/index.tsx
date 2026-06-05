@@ -375,10 +375,10 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
+          <div id="apply" className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-6 py-4 sm:px-7">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <Sparkles className="h-4 w-4" /> Limited-Time Offer
+                <Sparkles className="h-4 w-4" /> Early Access Program
               </div>
             </div>
 
@@ -410,38 +410,25 @@ function LandingPage() {
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <CTAButton size="xl" className="w-full">
-                    Sign Up Today <ArrowRight className="h-5 w-5" />
-                  </CTAButton>
+                <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-4">
+                  <p className="text-sm text-primary">
+                    <span className="font-semibold text-accent">Early Access Program pricing:</span>{" "}
+                    $299/month + a one-time $875 setup that includes your 1-year ISSA / CHHA membership.
+                  </p>
                 </div>
               </div>
 
               <div className="md:col-span-3 md:flex md:flex-col md:border-l md:border-border md:pl-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  What's included
+                  Apply to join
                 </div>
-                <ul className="mt-4 space-y-3 text-xs sm:text-sm">
-                  {[
-                    "Daily AI-sourced sales opportunities in your service area",
-                    "Easily create professional estimates, backed by ISSA Canada and CHHA expertise",
-                    "Weekday support available to keep your AI running",
-                    "Access to a growing library of custom skills for your AI",
-                    "Your data stays yours. Private by design.",
-                    "1-year ISSA / CHHA membership included with setup",
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-primary">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={3} />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-4 md:mt-auto">
-                  <p className="text-sm text-primary">
-                    <span className="font-semibold text-accent">Active ISSA Canada member?</span>{" "}
-                    Ask us for your promo code to reduce the one-time setup fee from $875 to $575.
-                  </p>
-                </div>
+                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
+                  Tell us about your business
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Spots in the Early Access Program are limited. Share a few details and our team will reach out to confirm next steps.
+                </p>
+                <ApplyForm />
               </div>
 
             </div>
