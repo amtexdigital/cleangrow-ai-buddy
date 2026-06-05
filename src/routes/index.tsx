@@ -497,10 +497,10 @@ function LandingPage() {
 
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">
-              Sign Up Today <ArrowRight className="h-5 w-5" />
+              Apply to Join <ArrowRight className="h-5 w-5" />
             </CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Limited-time offer for active ISSA Canada members.
+              Early Access Program · Limited spots for active ISSA Canada members.
             </p>
           </div>
         </div>
