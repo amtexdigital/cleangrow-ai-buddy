@@ -408,7 +408,7 @@ function LandingPage() {
                     "AI hunts down daily cleaning opportunities in your service area",
                     "Competitor intel on who's bidding around you",
                     "Smarter quotes powered by ISSA & CHHA expertise",
-                    "Turn winning quotes faster and close more deals",
+                    "Create client winning quotes faster and close more deals",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
@@ -528,17 +528,17 @@ function LandingPage() {
           <div className="flex flex-col items-start gap-4">
             <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
-              The AI sales assistant built for Canadian cleaning businesses. Powered
-              by Order of Work.
+              The AI sales assistant built for Canadian cleaning businesses.{" "}
+              <a
+                href={OW_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition hover:text-primary"
+              >
+                Powered by Order of Work
+              </a>
+              .
             </p>
-            <a
-              href={OW_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-sm text-muted-foreground transition hover:text-primary"
-            >
-              <img src={owLogo.url} alt="Order of Work" className="h-10 w-auto" />
-            </a>
           </div>
 
           {/* Right column: partnership */}
