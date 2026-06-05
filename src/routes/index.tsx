@@ -368,10 +368,10 @@ function LandingPage() {
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> In partnership with ISSA Canada
             </a>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Win more cleaning contracts every month, without chasing leads.
+              Apply to join the Early Access Program
             </h2>
             <p className="mt-3 text-muted-foreground">
-              One simple price. Your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership, all included.
+              Tell us about your cleaning business and we'll be in touch to confirm your spot. Includes your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership.
             </p>
           </div>
 
