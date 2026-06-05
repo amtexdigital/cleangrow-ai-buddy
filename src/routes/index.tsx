@@ -201,7 +201,7 @@ function LandingPage() {
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              In partnership with ISSA Canada
+              Early Access Program · In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -214,7 +214,7 @@ function LandingPage() {
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">
-                Sign Up Today <ArrowRight className="h-5 w-5" />
+                Apply to Join <ArrowRight className="h-5 w-5" />
               </CTAButton>
               <a
                 href="#features"
@@ -224,7 +224,7 @@ function LandingPage() {
               </a>
             </div>
             <p className="mt-5 text-xs text-white/60">
-              Limited-time ISSA Canada member offer: $299/month + setup.
+              Early Access Program · Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
 
           </div>
