@@ -383,42 +383,7 @@ function LandingPage() {
             </div>
 
             <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-5 md:p-10">
-              <div className="md:col-span-2">
-                <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Monthly subscription
-                </div>
-                <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-5xl font-black text-primary sm:text-6xl">$299</span>
-                  <span className="text-sm text-muted-foreground">/month</span>
-                </div>
-                <div className="mt-2 text-xs font-medium text-muted-foreground">
-                  Regularly $875/month
-                </div>
-
-                <div className="mt-6 rounded-xl bg-secondary/80 p-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    One-time setup
-                  </div>
-                  <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-primary sm:text-6xl">$875</span>
-                  </div>
-                  <div className="mt-1 text-xs font-medium text-muted-foreground">
-                    Regularly $1,750
-                  </div>
-                  <div className="mt-2 text-sm font-semibold text-accent">
-                    Includes a 1-year ISSA / CHHA membership
-                  </div>
-                </div>
-
-                <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-4">
-                  <p className="text-sm text-primary">
-                    <span className="font-semibold text-accent">Early Access Program pricing:</span>{" "}
-                    $299/month + a one-time $875 setup that includes your 1-year ISSA / CHHA membership.
-                  </p>
-                </div>
-              </div>
-
-              <div className="md:col-span-3 md:flex md:flex-col md:border-l md:border-border md:pl-10">
+              <div className="md:col-span-3 md:flex md:flex-col md:pr-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   Apply to join
                 </div>
@@ -429,6 +394,55 @@ function LandingPage() {
                   Spots in the Early Access Program are limited. Share a few details and our team will reach out to confirm next steps.
                 </p>
                 <ApplyForm />
+              </div>
+
+              <div className="md:col-span-2 md:border-l md:border-border md:pl-10">
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
+                  What's Included
+                </div>
+                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
+                  Everything to win more contracts
+                </h3>
+                <ul className="mt-5 space-y-3">
+                  {[
+                    "AI hunts down daily cleaning opportunities in your service area",
+                    "Competitor intel on who's bidding around you",
+                    "Smarter quotes powered by ISSA & CHHA expertise",
+                    "Turn winning quotes faster and close more deals",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                        <Check className="h-3 w-3" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm font-medium text-primary">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 space-y-3">
+                  <div className="rounded-xl bg-secondary/80 p-4">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Program cost
+                    </div>
+                    <div className="mt-1 flex items-baseline gap-2">
+                      <span className="text-3xl font-black text-primary">$299</span>
+                      <span className="text-sm text-muted-foreground">/month</span>
+                    </div>
+                    <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
+                      Regularly $875/month
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
+                    <p className="text-sm text-primary">
+                      <span className="font-semibold text-accent">One-time setup:</span>{" "}
+                      $875 (includes 1-year ISSA / CHHA membership)
+                    </p>
+                    <p className="mt-2 text-xs text-primary/80">
+                      Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
+                    </p>
+                  </div>
+                </div>
               </div>
 
             </div>
