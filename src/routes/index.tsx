@@ -550,3 +550,187 @@ function LandingPage() {
     </div>
   );
 }
+
+type ApplyFormState = {
+  business_name: string;
+  contact_name: string;
+  email: string;
+  phone: string;
+  cities_serviced: string;
+  number_of_employees: string;
+  why_consider: string;
+};
+
+const INITIAL_FORM: ApplyFormState = {
+  business_name: "",
+  contact_name: "",
+  email: "",
+  phone: "",
+  cities_serviced: "",
+  number_of_employees: "",
+  why_consider: "",
+};
+
+function ApplyForm() {
+  const submit = useServerFn(submitContactApplication);
+  const [form, setForm] = useState<ApplyFormState>(INITIAL_FORM);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  function update<K extends keyof ApplyFormState>(key: K) {
+    return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [key]: e.target.value }));
+  }
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("submitting");
+    setError(null);
+    try {
+      await submit({ data: form });
+      setStatus("success");
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="mt-6 rounded-2xl border border-accent/40 bg-accent/10 p-6 text-center">
+        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
+          <Check className="h-6 w-6" strokeWidth={3} />
+        </div>
+        <h4 className="mt-4 text-lg font-bold text-primary">Application received</h4>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Thanks! We'll review your application and reach out shortly to confirm next steps.
+        </p>
+      </div>
+    );
+  }
+
+  const inputClass =
+    "w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-primary shadow-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20";
+
+  return (
+    <form onSubmit={onSubmit} className="mt-5 grid gap-3 sm:grid-cols-2">
+      <Field label="Business name" required>
+        <input
+          required
+          maxLength={200}
+          value={form.business_name}
+          onChange={update("business_name")}
+          className={inputClass}
+        />
+      </Field>
+      <Field label="Your name" required>
+        <input
+          required
+          maxLength={200}
+          value={form.contact_name}
+          onChange={update("contact_name")}
+          className={inputClass}
+        />
+      </Field>
+      <Field label="Your email" required>
+        <input
+          required
+          type="email"
+          maxLength={255}
+          value={form.email}
+          onChange={update("email")}
+          className={inputClass}
+        />
+      </Field>
+      <Field label="Your phone" required>
+        <input
+          required
+          type="tel"
+          maxLength={40}
+          value={form.phone}
+          onChange={update("phone")}
+          className={inputClass}
+        />
+      </Field>
+      <Field label="Canadian cities you service" required className="sm:col-span-2">
+        <input
+          required
+          maxLength={500}
+          value={form.cities_serviced}
+          onChange={update("cities_serviced")}
+          placeholder="e.g. Toronto, Mississauga, Hamilton"
+          className={inputClass}
+        />
+      </Field>
+      <Field label="Number of employees" required>
+        <input
+          required
+          maxLength={50}
+          value={form.number_of_employees}
+          onChange={update("number_of_employees")}
+          placeholder="e.g. 12"
+          className={inputClass}
+        />
+      </Field>
+      <div className="hidden sm:block" />
+      <Field label="Why we should consider you" required className="sm:col-span-2">
+        <textarea
+          required
+          maxLength={2000}
+          rows={4}
+          value={form.why_consider}
+          onChange={update("why_consider")}
+          className={inputClass}
+        />
+      </Field>
+
+      {error && (
+        <p className="text-sm text-destructive sm:col-span-2">{error}</p>
+      )}
+
+      <div className="sm:col-span-2">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-accent-foreground shadow-[var(--shadow-accent)] transition-all hover:brightness-110 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {status === "submitting" ? (
+            <>
+              <Loader2 className="h-5 w-5 animate-spin" /> Submitting…
+            </>
+          ) : (
+            <>
+              Apply to Join <ArrowRight className="h-5 w-5" />
+            </>
+          )}
+        </button>
+        <p className="mt-3 text-center text-xs text-muted-foreground">
+          We'll only use your details to follow up about the Early Access Program.
+        </p>
+      </div>
+    </form>
+  );
+}
+
+function Field({
+  label,
+  required,
+  className = "",
+  children,
+}: {
+  label: string;
+  required?: boolean;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label className={`flex flex-col gap-1.5 ${className}`}>
+      <span className="text-xs font-semibold text-primary">
+        {label}
+        {required && <span className="text-accent"> *</span>}
+      </span>
+      {children}
+    </label>
+  );
+}
