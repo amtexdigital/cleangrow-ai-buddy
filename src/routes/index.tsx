@@ -120,7 +120,7 @@ function LandingPage() {
               className="hidden items-center gap-2 md:flex"
             >
               <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Partnered with
+                In Partnership With
               </span>
               <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
             </a>
