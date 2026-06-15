@@ -2,13 +2,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   CheckCircle,
   ArrowLeft,
-  ClipboardList,
   Mail,
+  Calendar,
+  Video,
   Zap,
   HelpCircle,
   Sparkles,
   FileText,
+  Clock,
+  Check,
 } from "lucide-react";
+
+import issaLogo from "@/assets/issa-canada.png.asset.json";
+import owIcon from "@/assets/ow-icon.png.asset.json";
 
 export const Route = createFileRoute("/payment-received")({
   head: () => ({
@@ -33,11 +39,12 @@ export const Route = createFileRoute("/payment-received")({
   component: PaymentReceivedPage,
 });
 
-import owIcon from "@/assets/ow-icon.png.asset.json";
+const OW_URL = "https://orderofwork.com";
+const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 
 function Wordmark({ className = "", withTagline = false }: { className?: string; withTagline?: boolean }) {
   return (
-    <div className="inline-flex flex-col items-center gap-1">
+    <div className="inline-flex flex-col items-start gap-1">
       <span
         className={`font-black uppercase tracking-[-0.04em] leading-none ${className}`}
       >
@@ -47,7 +54,7 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
       </span>
       {withTagline && (
         <a
-          href="https://orderofwork.com"
+          href={OW_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 transition hover:opacity-80"
@@ -62,6 +69,33 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
   );
 }
 
+const ONBOARDING_DATE = "June 22nd, 2026";
+const ONBOARDING_TIME = "Noon EST";
+
+const TIMELINE_STEPS = [
+  {
+    icon: Mail,
+    title: "Onboarding email arrives",
+    body: "Within one business day, you'll receive an email with your personalized onboarding form. Set aside about an hour to complete it thoroughly — the more detail you provide, the better your AI Sales Assistant will perform.",
+  },
+  {
+    icon: FileText,
+    title: "Complete your onboarding form",
+    body: "Share your service list, service areas, ideal customer profile, pricing approach, and any existing sales materials. This information trains your assistant to sound like you and sell like you.",
+  },
+  {
+    icon: Video,
+    title: "Join your onboarding call",
+    body: `On ${ONBOARDING_DATE} at ${ONBOARDING_TIME}, join our live onboarding session. We'll walk through how to use your agent, where to find leads, how to create quotes, and how to get the most out of every feature.`,
+    highlight: true,
+  },
+  {
+    icon: Zap,
+    title: "Your agent goes live",
+    body: "After the call, your AI Sales Assistant will be activated and ready to monitor your service area, surface opportunities, and help you respond faster than the competition.",
+  },
+];
+
 const PREP_ITEMS = [
   "Business logo",
   "Business website URL",
@@ -73,44 +107,44 @@ const PREP_ITEMS = [
   "Competitor list with websites",
 ];
 
-const TIMELINE_STEPS = [
-  {
-    icon: Mail,
-    title: "Onboarding email",
-    body: "You will receive a detailed questionnaire by email. Set aside about an hour to complete it thoroughly — the more detail you provide, the better your custom agent will perform.",
-    accent: "bg-[var(--brand-blue-bright)]/10 text-[var(--brand-blue-soft)]",
-  },
-  {
-    icon: FileText,
-    title: "We build & train your agent",
-    body: "Once you submit your questionnaire, our team will configure and train your custom AI Sales Assistant. This takes up to 2 business days.",
-    accent: "bg-[var(--brand-blue)]/10 text-[var(--brand-blue-soft)]",
-  },
-  {
-    icon: Zap,
-    title: "Your agent goes live",
-    body: "Your AI Sales Assistant is ready to engage. It will start monitoring your service area, surfacing opportunities, and helping you respond faster than the competition.",
-    accent: "bg-white/10 text-[var(--brand-blue-soft)]",
-  },
-];
-
 function PaymentReceivedPage() {
   const search = Route.useSearch() as { session_id?: string };
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* Header */}
-      <header className="border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-5 sm:px-6 sm:py-6">
-          <Link to="/">
-            <Wordmark className="text-3xl sm:text-5xl" withTagline />
-          </Link>
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <div className="flex items-center gap-3 sm:gap-5">
+            <Link to="/">
+              <Wordmark className="text-lg sm:text-3xl" />
+            </Link>
+            <div className="hidden h-8 w-px bg-border md:block" />
+            <a
+              href={ISSA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden items-center gap-2 md:flex"
+            >
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                In Partnership With
+              </span>
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
+            </a>
+          </div>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <Link
+              to="/"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
+            >
+              Back to Home
+            </Link>
+          </div>
         </div>
       </header>
 
-      {/* Hero success section — matches main site hero colour scheme */}
+      {/* Hero success section */}
       <section className="relative overflow-hidden bg-[var(--brand-navy)] text-paper">
-        {/* Layered background: deep navy base, aurora glows, dot grid, diagonal sheen */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -119,7 +153,6 @@ function PaymentReceivedPage() {
               "radial-gradient(60% 80% at 85% 10%, color-mix(in oklab, var(--brand-blue-bright) 55%, transparent), transparent 70%), radial-gradient(45% 60% at 10% 90%, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 65%), linear-gradient(160deg, var(--brand-navy) 0%, oklch(0.18 0.10 258) 60%, var(--brand-navy) 100%)",
           }}
         />
-        {/* Dot grid */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
@@ -131,7 +164,6 @@ function PaymentReceivedPage() {
               "radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 80%)",
           }}
         />
-        {/* Soft floating orbs */}
         <div
           aria-hidden
           className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
@@ -142,7 +174,6 @@ function PaymentReceivedPage() {
           className="pointer-events-none absolute right-1/3 bottom-0 h-80 w-80 rounded-full opacity-40 blur-3xl"
           style={{ background: "color-mix(in oklab, var(--brand-blue) 60%, transparent)" }}
         />
-        {/* Diagonal sheen line */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -151,7 +182,6 @@ function PaymentReceivedPage() {
               "linear-gradient(115deg, transparent 35%, color-mix(in oklab, white 6%, transparent) 50%, transparent 65%)",
           }}
         />
-        {/* Bottom fade into next section */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
@@ -161,7 +191,7 @@ function PaymentReceivedPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-3xl px-4 pt-12 pb-10 text-center sm:px-6 sm:pt-20 sm:pb-16">
+        <div className="relative mx-auto max-w-3xl px-4 pt-14 pb-10 text-center sm:px-6 sm:pt-20 sm:pb-16">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
             Welcome to CleaningBusiness.ai
@@ -175,25 +205,30 @@ function PaymentReceivedPage() {
             Payment Received
           </h1>
           <p className="mt-3 text-xl font-semibold text-[var(--brand-blue-soft)] sm:text-2xl">
-            What to expect next
+            You're in. Let's get your AI Sales Assistant ready.
           </p>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">
             Thank you for joining{" "}
             <span className="font-semibold text-white">CleaningBusiness.ai</span>.
-            Your payment was successful, your ISSA / CHHA membership is included, and your AI Sales Assistant is being prepared.
+            Your payment was successful, your ISSA / CHHA membership is included, and your AI Sales Assistant is being prepared. Our team will be with you every step of the way.
           </p>
         </div>
       </section>
 
-      {/* Timeline / next steps */}
+      {/* Next steps */}
       <main className="flex flex-1 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto w-full max-w-2xl">
-          <h2 className="text-center text-2xl font-bold text-primary">
-            Your setup timeline
-          </h2>
-          <p className="mx-auto mt-2 max-w-md text-center text-sm text-muted-foreground">
-            Here is exactly what happens now — and how long each step takes.
-          </p>
+          <div className="text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              What happens next
+            </div>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+              Your setup timeline
+            </h2>
+            <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
+              Here's exactly what to expect now — and how to prepare for your onboarding call.
+            </p>
+          </div>
 
           <div className="mt-8 space-y-6">
             {TIMELINE_STEPS.map((step, i) => {
@@ -201,10 +236,18 @@ function PaymentReceivedPage() {
               return (
                 <div
                   key={step.title}
-                  className="relative flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm sm:gap-5 sm:p-6"
+                  className={`relative flex items-start gap-4 rounded-2xl border p-5 shadow-sm transition-all hover:-translate-y-0.5 sm:gap-5 sm:p-6 ${
+                    step.highlight
+                      ? "border-accent bg-accent/5 shadow-[var(--shadow-accent)]"
+                      : "border-border bg-card hover:border-accent/40 hover:shadow-[var(--shadow-elegant)]"
+                  }`}
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-12 sm:w-12">
-                    <Icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
+                  <div
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full sm:h-12 sm:w-12 ${
+                      step.highlight ? "bg-accent text-accent-foreground" : "bg-primary/10"
+                    }`}
+                  >
+                    <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${step.highlight ? "" : "text-primary"}`} />
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2">
@@ -224,18 +267,46 @@ function PaymentReceivedPage() {
             })}
           </div>
 
+          {/* Onboarding call highlight card */}
+          <div className="mt-8 overflow-hidden rounded-2xl border border-accent bg-gradient-to-br from-accent/10 to-accent/5 p-6 shadow-[var(--shadow-accent)] sm:p-8">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+                  Save the date
+                </p>
+                <p className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
+                  {ONBOARDING_DATE} at {ONBOARDING_TIME}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Your onboarding call is the fastest way to get up and running. We'll cover how to find leads, write quotes, manage conversations, and customize your agent so it works the way you do.
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-medium text-primary">
+                    <Clock className="h-3.5 w-3.5" /> Add to your calendar
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-medium text-primary">
+                    <Video className="h-3.5 w-3.5" /> Video link will be emailed
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Prep checklist */}
-          <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+          <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                <ClipboardList className="h-5 w-5 text-primary" />
+                <Check className="h-5 w-5 text-primary" />
               </div>
               <h2 className="text-lg font-bold text-primary">
                 While you wait, gather these items
               </h2>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              You will need these details for the onboarding questionnaire. Having them ready will save you time.
+              Having these ready before you fill out the onboarding form will save you time and help us build a better agent for your business.
             </p>
             <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
               {PREP_ITEMS.map((item) => (
@@ -256,7 +327,7 @@ function PaymentReceivedPage() {
               <HelpCircle className="h-5 w-5 text-primary" />
             </div>
             <div>
-              <p className="font-semibold text-primary">Have a Question or Need Support?</p>
+              <p className="font-semibold text-primary">Have a question or need support?</p>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Contact{" "}
                 <a
@@ -275,24 +346,32 @@ function PaymentReceivedPage() {
               Reference: {search.session_id}
             </p>
           )}
-
-          {/* Back link */}
-          <div className="mt-8 text-center">
-            <Link
-              to="/"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
-          </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-6">
-        <div className="mx-auto max-w-7xl px-4 text-center text-xs text-muted-foreground sm:px-6">
-          &copy; {new Date().getFullYear()} CleaningBusiness.ai. In partnership with ISSA Canada.
+      <footer className="border-t border-border bg-background">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2">
+          <div className="flex flex-col items-start gap-4">
+            <Wordmark className="text-3xl sm:text-4xl" withTagline />
+            <p className="max-w-sm text-sm text-muted-foreground">
+              Built with over a 100 years of industry expertise to help members grow
+              profitable cleaning businesses.
+            </p>
+          </div>
+          <div className="flex flex-col items-start gap-4 md:items-end md:text-right">
+            <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              In partnership with
+            </div>
+            <a href={ISSA_URL} target="_blank" rel="noopener noreferrer" className="transition hover:opacity-80">
+              <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
+            </a>
+          </div>
+        </div>
+        <div className="border-t border-border">
+          <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-muted-foreground sm:px-6">
+            © {new Date().getFullYear()} Order of Work. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>
