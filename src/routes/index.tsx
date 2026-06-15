@@ -10,6 +10,8 @@ import {
   Library,
   ArrowRight,
   Zap,
+  Phone,
+  Mail,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
@@ -438,6 +440,28 @@ function LandingPage() {
                     <p className="mt-2 text-xs text-primary/80">
                       Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
                     </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 rounded-xl border border-primary/10 bg-secondary/40 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Questions or need support?
+                  </p>
+                  <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                    <a
+                      href="tel:+13436333018"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent"
+                    >
+                      <Phone className="h-4 w-4 text-accent" />
+                      +1 (343) 633 - 3018
+                    </a>
+                    <a
+                      href="mailto:cleaningbusinessai@orderofwork.com"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent"
+                    >
+                      <Mail className="h-4 w-4 text-accent" />
+                      cleaningbusinessai@orderofwork.com
+                    </a>
                   </div>
                 </div>
 
