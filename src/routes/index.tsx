@@ -13,7 +13,7 @@ import {
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owIcon from "@/assets/ow-icon.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
-import blackCleanerPhone from "@/assets/black-cleaner-phone.png.asset.json";
+
 
 const SIGNUP_URL = "https://book.stripe.com/bJe3cx2SsdJC5ea1oH8bS06";
 const OW_URL = "https://orderofwork.com";
@@ -363,21 +363,8 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12 sm:mt-12">
-            <div className="relative order-2 flex justify-center lg:order-1">
-              <div className="relative aspect-[4/5] w-full max-w-xs sm:max-w-sm lg:max-w-md">
-                <img
-                  src={blackCleanerPhone.url}
-                  alt="Professional cleaner reviewing opportunities on his phone"
-                  className="relative h-full w-full scale-110 object-contain object-bottom drop-shadow-2xl sm:scale-100"
-                  loading="lazy"
-                  width={1024}
-                  height={1536}
-                />
-              </div>
-            </div>
-
-            <div className="order-1 overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] lg:order-2">
+          <div className="mx-auto mt-10 max-w-2xl sm:mt-12">
+            <div className="overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)]">
               <div className="p-6 sm:p-8 md:p-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                   What's Included
