@@ -528,7 +528,7 @@ function LandingPage() {
           <div className="flex flex-col items-start gap-4">
             <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
-              Built with industry expertise from ISSA Canada to help members grow
+              Built with over a 100 years of industry expertise to help members grow
               profitable cleaning businesses.
             </p>
           </div>
