@@ -1,8 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import {
-  ArrowRight,
   Check,
   Radar,
   FileText,
@@ -11,19 +8,15 @@ import {
   MessageCircle,
   GraduationCap,
   Library,
-  Loader2,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
-
 import owIcon from "@/assets/ow-icon.png.asset.json";
-import { submitContactApplication } from "@/lib/contact.functions";
-
-const OW_URL = "https://orderofwork.com";
-const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 import ownerPortrait from "@/assets/owner-portrait.png";
 
-const APPLY_ANCHOR = "#apply";
+const SIGNUP_URL = "https://book.stripe.com/bJe3cx2SsdJC5ea1oH8bS06";
+const OW_URL = "https://orderofwork.com";
+const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
@@ -69,7 +62,9 @@ function CTAButton({
   };
   return (
     <a
-      href={APPLY_ANCHOR}
+      href={SIGNUP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap bg-accent text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 ${sizes[size]} ${className}`}
     >
       {children}
@@ -137,9 +132,7 @@ function LandingPage() {
                 </a>
               ))}
             </nav>
-            <CTAButton size="lg">
-              Apply to Join <ArrowRight className="h-4 w-4" />
-            </CTAButton>
+            <CTAButton size="lg">Sign Up</CTAButton>
           </div>
         </div>
       </header>
@@ -201,7 +194,7 @@ function LandingPage() {
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Early Access Program · In partnership with ISSA Canada
+              Cohort 1 · In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -213,9 +206,7 @@ function LandingPage() {
               Find local leads, create profitable estimates, and close more cleaning contracts — with an AI agent built for the cleaning industry.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
-              <CTAButton size="xl">
-                Apply to Join <ArrowRight className="h-5 w-5" />
-              </CTAButton>
+              <CTAButton size="xl">Sign Up</CTAButton>
               <a
                 href="#features"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
@@ -224,11 +215,9 @@ function LandingPage() {
               </a>
             </div>
             <p className="mt-5 text-xs text-white/60">
-              Early Access Program · Limited-time ISSA Canada member offer: $299/month + setup.
+              Cohort 1 is now open · Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
-
           </div>
-
 
           {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-6 lg:-mb-56 xl:-mb-64 xl:col-span-6">
@@ -246,7 +235,6 @@ function LandingPage() {
       {/* (Why section moved below Pricing) */}
       <div id="why" />
 
-
       {/* FEATURES */}
       <section id="features" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
@@ -259,7 +247,6 @@ function LandingPage() {
           <p className="mt-4 text-base text-muted-foreground">
             Knows your market, knows your industry, and works only for you to grow your business.
           </p>
-
         </div>
 
         <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
@@ -368,83 +355,76 @@ function LandingPage() {
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> In partnership with ISSA Canada
             </a>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Apply to join the Early Access Program
+              Cohort 1 is now open for sign ups
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Tell us about your cleaning business and we'll be in touch to confirm your spot. Includes your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership.
+              Join the Early Access Program and get your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership.
             </p>
           </div>
 
-          <div id="apply" className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-6 py-4 sm:px-7">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <Sparkles className="h-4 w-4" /> Early Access Program
+                <Sparkles className="h-4 w-4" /> Cohort 1 · Limited spots
               </div>
             </div>
 
-            <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-5 md:p-10">
-              <div className="md:col-span-3 md:flex md:flex-col md:pr-10">
-                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  Apply to join
+            <div className="p-6 sm:p-8 md:p-10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-accent">
+                What's Included
+              </div>
+              <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
+                Everything to win more contracts
+              </h3>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "AI hunts down daily cleaning opportunities in your service area",
+                  "Competitor intel on who's bidding around you",
+                  "Smarter quotes powered by ISSA & CHHA expertise",
+                  "Create client winning quotes faster and close more deals",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                      <Check className="h-3 w-3" strokeWidth={3} />
+                    </div>
+                    <span className="text-sm font-medium text-primary">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 space-y-3">
+                <div className="rounded-xl bg-secondary/80 p-4">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Program cost
+                  </div>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="text-3xl font-black text-primary">$299</span>
+                    <span className="text-sm text-muted-foreground">/month</span>
+                  </div>
+                  <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
+                    Regularly $875/month
+                  </div>
                 </div>
-                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
-                  Tell us about your business
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Spots in the Early Access Program are limited. Share a few details and our team will reach out to confirm next steps.
+
+                <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
+                  <p className="text-sm text-primary">
+                    <span className="font-semibold text-accent">One-time setup:</span>{" "}
+                    $875 (includes 1-year ISSA / CHHA membership)
+                  </p>
+                  <p className="mt-2 text-xs text-primary/80">
+                    Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <CTAButton size="xl" className="w-full">
+                  Sign Up
+                </CTAButton>
+                <p className="mt-3 text-center text-xs text-muted-foreground">
+                  Early Access Program · Limited-time offer for active ISSA Canada members.
                 </p>
-                <ApplyForm />
               </div>
-
-              <div className="md:col-span-2 md:border-l md:border-border md:pl-10">
-                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  What's Included
-                </div>
-                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
-                  Everything to win more contracts
-                </h3>
-                <ul className="mt-5 space-y-3">
-                  {[
-                    "AI hunts down daily cleaning opportunities in your service area",
-                    "Competitor intel on who's bidding around you",
-                    "Smarter quotes powered by ISSA & CHHA expertise",
-                    "Create client winning quotes faster and close more deals",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                        <Check className="h-3 w-3" strokeWidth={3} />
-                      </div>
-                      <span className="text-sm font-medium text-primary">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-6 space-y-3">
-                  <div className="rounded-xl bg-secondary/80 p-4">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Program cost
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-primary">$299</span>
-                      <span className="text-sm text-muted-foreground">/month</span>
-                    </div>
-                    <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
-                      Regularly $875/month
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
-                    <p className="text-sm text-primary">
-                      <span className="font-semibold text-accent">One-time setup:</span>{" "}
-                      $875 (includes 1-year ISSA / CHHA membership)
-                    </p>
-                    <p className="mt-2 text-xs text-primary/80">
-                      Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -510,16 +490,13 @@ function LandingPage() {
           </div>
 
           <div className="mt-12 flex flex-col items-center gap-3">
-            <CTAButton size="xl">
-              Apply to Join <ArrowRight className="h-5 w-5" />
-            </CTAButton>
+            <CTAButton size="xl">Sign Up</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Early Access Program · Limited spots for active ISSA Canada members.
+              Cohort 1 · Limited spots for active ISSA Canada members.
             </p>
           </div>
         </div>
       </section>
-
 
       {/* FOOTER — 2 columns */}
       <footer className="border-t border-border bg-background">
@@ -550,189 +527,5 @@ function LandingPage() {
         </div>
       </footer>
     </div>
-  );
-}
-
-type ApplyFormState = {
-  business_name: string;
-  contact_name: string;
-  email: string;
-  phone: string;
-  cities_serviced: string;
-  number_of_employees: string;
-  why_consider: string;
-};
-
-const INITIAL_FORM: ApplyFormState = {
-  business_name: "",
-  contact_name: "",
-  email: "",
-  phone: "",
-  cities_serviced: "",
-  number_of_employees: "",
-  why_consider: "",
-};
-
-function ApplyForm() {
-  const submit = useServerFn(submitContactApplication);
-  const [form, setForm] = useState<ApplyFormState>(INITIAL_FORM);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-  const [error, setError] = useState<string | null>(null);
-
-  function update<K extends keyof ApplyFormState>(key: K) {
-    return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-      setForm((f) => ({ ...f, [key]: e.target.value }));
-  }
-
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("submitting");
-    setError(null);
-    try {
-      await submit({ data: form });
-      setStatus("success");
-      setForm(INITIAL_FORM);
-    } catch (err) {
-      setStatus("error");
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-    }
-  }
-
-  if (status === "success") {
-    return (
-      <div className="mt-6 rounded-2xl border border-accent/40 bg-accent/10 p-6 text-center">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
-          <Check className="h-6 w-6" strokeWidth={3} />
-        </div>
-        <h4 className="mt-4 text-lg font-bold text-primary">Application received</h4>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Thanks! We'll review your application and reach out shortly to confirm next steps.
-        </p>
-      </div>
-    );
-  }
-
-  const inputClass =
-    "w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-primary shadow-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20";
-
-  return (
-    <form onSubmit={onSubmit} className="mt-5 grid gap-3 sm:grid-cols-2">
-      <Field label="Business name" required>
-        <input
-          required
-          maxLength={200}
-          value={form.business_name}
-          onChange={update("business_name")}
-          className={inputClass}
-        />
-      </Field>
-      <Field label="Your name" required>
-        <input
-          required
-          maxLength={200}
-          value={form.contact_name}
-          onChange={update("contact_name")}
-          className={inputClass}
-        />
-      </Field>
-      <Field label="Your email" required>
-        <input
-          required
-          type="email"
-          maxLength={255}
-          value={form.email}
-          onChange={update("email")}
-          className={inputClass}
-        />
-      </Field>
-      <Field label="Your phone" required>
-        <input
-          required
-          type="tel"
-          maxLength={40}
-          value={form.phone}
-          onChange={update("phone")}
-          className={inputClass}
-        />
-      </Field>
-      <Field label="Canadian cities you service" required className="sm:col-span-2">
-        <input
-          required
-          maxLength={500}
-          value={form.cities_serviced}
-          onChange={update("cities_serviced")}
-          placeholder="e.g. Toronto, Mississauga, Hamilton"
-          className={inputClass}
-        />
-      </Field>
-      <Field label="Number of employees" required>
-        <input
-          required
-          maxLength={50}
-          value={form.number_of_employees}
-          onChange={update("number_of_employees")}
-          placeholder="e.g. 12"
-          className={inputClass}
-        />
-      </Field>
-      <div className="hidden sm:block" />
-      <Field label="Why we should consider you" required className="sm:col-span-2">
-        <textarea
-          required
-          maxLength={2000}
-          rows={4}
-          value={form.why_consider}
-          onChange={update("why_consider")}
-          className={inputClass}
-        />
-      </Field>
-
-      {error && (
-        <p className="text-sm text-destructive sm:col-span-2">{error}</p>
-      )}
-
-      <div className="sm:col-span-2">
-        <button
-          type="submit"
-          disabled={status === "submitting"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-accent-foreground shadow-[var(--shadow-accent)] transition-all hover:brightness-110 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
-        >
-          {status === "submitting" ? (
-            <>
-              <Loader2 className="h-5 w-5 animate-spin" /> Submitting…
-            </>
-          ) : (
-            <>
-              Apply to Join <ArrowRight className="h-5 w-5" />
-            </>
-          )}
-        </button>
-        <p className="mt-3 text-center text-xs text-muted-foreground">
-          We'll only use your details to follow up about the Early Access Program.
-        </p>
-      </div>
-    </form>
-  );
-}
-
-function Field({
-  label,
-  required,
-  className = "",
-  children,
-}: {
-  label: string;
-  required?: boolean;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <label className={`flex flex-col gap-1.5 ${className}`}>
-      <span className="text-xs font-semibold text-primary">
-        {label}
-        {required && <span className="text-accent"> *</span>}
-      </span>
-      {children}
-    </label>
   );
 }
