@@ -13,6 +13,7 @@ import {
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owIcon from "@/assets/ow-icon.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
+import blackCleanerPhone from "@/assets/black-cleaner-phone.png.asset.json";
 
 const SIGNUP_URL = "https://book.stripe.com/bJe3cx2SsdJC5ea1oH8bS06";
 const OW_URL = "https://orderofwork.com";
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada. Find daily opportunities, send professional estimates, and own your data.",
+          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada. Find local opportunities, send professional estimates, and own your data.",
       },
       { property: "og:title", content: "CleaningBusiness.ai · AI Sales Assistant for Cleaning Businesses" },
       {
@@ -194,7 +195,7 @@ function LandingPage() {
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Cohort 1 · In partnership with ISSA Canada
+              In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -215,7 +216,7 @@ function LandingPage() {
               </a>
             </div>
             <p className="mt-5 text-xs text-white/60">
-              Cohort 1 is now open · Limited-time ISSA Canada member offer: $299/month + setup.
+              NOW OPEN FOR SIGN UPS · Limited-time ISSA Canada member offer: $299/month + setup.
             </p>
           </div>
 
@@ -281,7 +282,7 @@ function LandingPage() {
             },
             {
               icon: GraduationCap,
-              title: "Daily Support Calls",
+              title: "Live Support Calls",
               body:
                 "Join live sessions designed to help you tune, prompt, and improve your AI assistant. Learn best practices from other cleaning business owners and get hands-on guidance from our team.",
               proof: "Keep your assistant sharp.",
@@ -344,7 +345,7 @@ function LandingPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <a
               href={ISSA_URL}
@@ -355,75 +356,84 @@ function LandingPage() {
               <img src={issaLogo.url} alt="" className="h-5 w-auto" /> In partnership with ISSA Canada
             </a>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Cohort 1 is now open for sign ups
+              NOW OPEN FOR SIGN UPS
             </h2>
             <p className="mt-3 text-muted-foreground">
               Join the Early Access Program and get your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership.
             </p>
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] sm:mt-12">
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-accent/30 bg-accent/10 px-6 py-4 sm:px-7">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <Sparkles className="h-4 w-4" /> Cohort 1 · Limited spots
+          <div className="mx-auto mt-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12 sm:mt-12">
+            <div className="relative order-2 flex justify-center lg:order-1">
+              <div className="relative aspect-[4/5] w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <img
+                  src={blackCleanerPhone.url}
+                  alt="Professional cleaner reviewing opportunities on his phone"
+                  className="relative h-full w-full scale-110 object-contain object-bottom drop-shadow-2xl sm:scale-100"
+                  loading="lazy"
+                  width={1024}
+                  height={1536}
+                />
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 md:p-10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                What's Included
-              </div>
-              <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
-                Everything to win more contracts
-              </h3>
-              <ul className="mt-5 space-y-3">
-                {[
-                  "AI hunts down daily cleaning opportunities in your service area",
-                  "Competitor intel on who's bidding around you",
-                  "Smarter quotes powered by ISSA & CHHA expertise",
-                  "Create client winning quotes faster and close more deals",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                      <Check className="h-3 w-3" strokeWidth={3} />
+            <div className="order-1 overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)] lg:order-2">
+              <div className="p-6 sm:p-8 md:p-10">
+                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
+                  What's Included
+                </div>
+                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
+                  Everything to win more contracts
+                </h3>
+                <ul className="mt-5 space-y-3">
+                  {[
+                    "AI hunts down cleaning opportunities in your service area",
+                    "Competitor intel on who's bidding around you",
+                    "Smarter quotes powered by ISSA & CHHA expertise",
+                    "Daily support to ensure your success",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                        <Check className="h-3 w-3" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm font-medium text-primary">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 space-y-3">
+                  <div className="rounded-xl bg-secondary/80 p-4">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Program cost
                     </div>
-                    <span className="text-sm font-medium text-primary">{item}</span>
-                  </li>
-                ))}
-              </ul>
+                    <div className="mt-1 flex items-baseline gap-2">
+                      <span className="text-3xl font-black text-primary">$299</span>
+                      <span className="text-sm text-muted-foreground">/month</span>
+                    </div>
+                    <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
+                      Regularly $875/month
+                    </div>
+                  </div>
 
-              <div className="mt-6 space-y-3">
-                <div className="rounded-xl bg-secondary/80 p-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Program cost
-                  </div>
-                  <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-3xl font-black text-primary">$299</span>
-                    <span className="text-sm text-muted-foreground">/month</span>
-                  </div>
-                  <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
-                    Regularly $875/month
+                  <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
+                    <p className="text-sm text-primary">
+                      <span className="font-semibold text-accent">One-time setup:</span>{" "}
+                      $875 (includes 1-year ISSA / CHHA membership)
+                    </p>
+                    <p className="mt-2 text-xs text-primary/80">
+                      Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
+                    </p>
                   </div>
                 </div>
 
-                <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
-                  <p className="text-sm text-primary">
-                    <span className="font-semibold text-accent">One-time setup:</span>{" "}
-                    $875 (includes 1-year ISSA / CHHA membership)
-                  </p>
-                  <p className="mt-2 text-xs text-primary/80">
-                    Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
+                <div className="mt-6">
+                  <CTAButton size="xl" className="w-full">
+                    Sign Up
+                  </CTAButton>
+                  <p className="mt-3 text-center text-xs text-muted-foreground">
+                    Early Access Program · Limited-time offer for active ISSA Canada members.
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-6">
-                <CTAButton size="xl" className="w-full">
-                  Sign Up
-                </CTAButton>
-                <p className="mt-3 text-center text-xs text-muted-foreground">
-                  Early Access Program · Limited-time offer for active ISSA Canada members.
-                </p>
               </div>
             </div>
           </div>
@@ -450,7 +460,7 @@ function LandingPage() {
               More Wins.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-              Your AI Assistant works daily to uncover sales opportunities in your service
+              Your AI Assistant works to uncover sales opportunities in your service
               area and help you take action faster.
             </p>
           </div>
@@ -459,7 +469,7 @@ function LandingPage() {
             {[
               {
                 strike: "Guessing where to look.",
-                replace: "AI scans your service area every day.",
+                replace: "AI scans your service area for new opportunities.",
               },
               {
                 strike: "Missing potential contracts.",
@@ -492,7 +502,7 @@ function LandingPage() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Sign Up</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Cohort 1 · Limited spots for active ISSA Canada members.
+              Limited spots for active ISSA Canada members.
             </p>
           </div>
         </div>
