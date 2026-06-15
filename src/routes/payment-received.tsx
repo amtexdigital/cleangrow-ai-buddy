@@ -284,9 +284,14 @@ function PaymentReceivedPage() {
                   Your onboarding call is the fastest way to get up and running. We'll cover how to find leads, write quotes, manage conversations, and customize your agent so it works the way you do.
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-medium text-primary">
-                    <Clock className="h-3.5 w-3.5" /> Add to your calendar
-                  </span>
+                  <a
+                    href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N2JjajYzZTAyOWw4NnJzdnIxaTMxbjlramsgZnJhbmt6QG9yZGVyb2Z3b3JrLmNvbQ&tmsrc=frankz%40orderofwork.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <Calendar className="h-3.5 w-3.5" /> Add to Google Calendar
+                  </a>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-medium text-primary">
                     <Video className="h-3.5 w-3.5" /> Video link will be emailed
                   </span>
