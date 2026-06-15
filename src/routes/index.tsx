@@ -111,7 +111,7 @@ function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3 sm:gap-5">
-            <Wordmark className="text-lg sm:text-3xl" withTagline />
+            <Wordmark className="text-lg sm:text-3xl" />
             <div className="hidden h-8 w-px bg-border md:block" />
             <a
               href={ISSA_URL}
@@ -120,7 +120,7 @@ function LandingPage() {
               className="hidden items-center gap-2 md:flex"
             >
               <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Partnered with
+                In Partnership With
               </span>
               <img src={issaLogo.url} alt="ISSA Canada" className="h-10 w-auto" />
             </a>
