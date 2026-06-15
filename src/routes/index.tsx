@@ -277,7 +277,7 @@ function LandingPage() {
               icon: ShieldCheck,
               title: "Your data stays your own",
               body:
-                "This is an AI you own. Your opportunities, your customers, and your pricing never get pooled, resold, or shared with competitors.",
+                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data — only what you choose to share — to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
               proof: "Private by design. Yours by default.",
             },
             {
