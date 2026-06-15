@@ -541,10 +541,6 @@ function LandingPage() {
             <a href={ISSA_URL} target="_blank" rel="noopener noreferrer" className="transition hover:opacity-80">
               <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
             </a>
-            <p className="max-w-sm text-sm text-muted-foreground">
-              Built with industry expertise from ISSA Canada to help members grow
-              profitable cleaning businesses.
-            </p>
           </div>
         </div>
         <div className="border-t border-border">
