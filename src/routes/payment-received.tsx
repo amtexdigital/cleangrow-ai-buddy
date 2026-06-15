@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   CheckCircle,
-  ArrowLeft,
   Mail,
   Calendar,
   Video,
@@ -9,7 +8,6 @@ import {
   HelpCircle,
   Sparkles,
   FileText,
-  Clock,
   Check,
 } from "lucide-react";
 
