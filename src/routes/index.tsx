@@ -8,6 +8,8 @@ import {
   MessageCircle,
   GraduationCap,
   Library,
+  ArrowRight,
+  Zap,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
@@ -346,21 +348,47 @@ function LandingPage() {
         />
 
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <a
-              href={ISSA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/80 px-3 py-1 text-base font-semibold uppercase tracking-wider text-accent backdrop-blur transition hover:bg-card"
-            >
-              <img src={issaLogo.url} alt="" className="h-5 w-auto" /> In partnership with ISSA Canada
-            </a>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              NOW OPEN FOR SIGN UPS
-            </h2>
-            <p className="mt-3 text-muted-foreground">
-              Join the Early Access Program and get your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership.
-            </p>
+          {/* CONVERSION BANNER */}
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-accent/20 bg-primary text-primary-foreground shadow-[var(--shadow-elegant)]">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-60"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 80% 0%, color-mix(in oklab, var(--brand-blue-bright) 55%, transparent), transparent 55%), radial-gradient(ellipse at 20% 100%, color-mix(in oklab, var(--accent) 45%, transparent), transparent 55%)",
+              }}
+            />
+            <div className="relative px-6 py-10 text-center sm:px-10 sm:py-14">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--brand-blue-soft)] opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--brand-blue-soft)]" />
+                </span>
+                Now Open for Sign Ups
+              </div>
+              <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+                Secure Your AI Sales Agent{" "}
+                <span className="italic text-accent">Before Spots Close</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
+                Join the Early Access Program. Get your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership — all for a limited-time member price.
+              </p>
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href={SIGNUP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-bold text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 sm:px-9 sm:py-4 sm:text-lg"
+                >
+                  <Zap className="h-5 w-5" />
+                  Sign Up Now
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+                <p className="text-xs font-medium text-primary-foreground/70">
+                  Limited to active ISSA Canada members · Offer ends soon
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="mx-auto mt-10 max-w-2xl sm:mt-12">
