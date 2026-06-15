@@ -528,16 +528,8 @@ function LandingPage() {
           <div className="flex flex-col items-start gap-4">
             <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
-              The AI sales assistant built for Canadian cleaning businesses.{" "}
-              <a
-                href={OW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition hover:text-primary"
-              >
-                Powered by Order of Work
-              </a>
-              .
+              Built with industry expertise from ISSA Canada to help members grow
+              profitable cleaning businesses.
             </p>
           </div>
 
@@ -549,10 +541,6 @@ function LandingPage() {
             <a href={ISSA_URL} target="_blank" rel="noopener noreferrer" className="transition hover:opacity-80">
               <img src={issaLogo.url} alt="ISSA Canada" className="h-14 w-auto" />
             </a>
-            <p className="max-w-sm text-sm text-muted-foreground">
-              Built with industry expertise from ISSA Canada to help members grow
-              profitable cleaning businesses.
-            </p>
           </div>
         </div>
         <div className="border-t border-border">
