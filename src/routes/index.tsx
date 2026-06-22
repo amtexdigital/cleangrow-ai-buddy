@@ -116,11 +116,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What does \"one company per municipality\" mean?",
-    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early — if it isn't, you can request to be added to the waitlist.",
+    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early, if it isn't, you can request to be added to the waitlist.",
   },
   {
     q: "Who is this built for?",
-    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators — not solo experimenters looking for a generic chatbot.",
+    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators, not solo experimenters looking for a generic chatbot.",
   },
   {
     q: "How do I apply?",
@@ -314,7 +314,7 @@ function LandingPage() {
               icon: MessageCircle,
               title: "An AI Company in your corner",
               body:
-                "You don't just get software. You get an AI Company working closely with you to ensure success — onboarding, tuning, and ongoing strategy from people who know cleaning.",
+                "You don't just get software. You get an AI Company working closely with you to ensure success, onboarding, tuning, and ongoing strategy from people who know cleaning.",
               proof: "Real humans + real AI, on your side.",
             },
             {
@@ -328,7 +328,7 @@ function LandingPage() {
               icon: ShieldCheck,
               title: "Your data stays your own",
               body:
-                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data — only what you choose to share — to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
+                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data, only what you choose to share, to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
               proof: "Private by design. Yours by default.",
             },
             {
@@ -342,7 +342,7 @@ function LandingPage() {
               icon: Users,
               title: "A peer group of operators",
               body:
-                "Join a private group of other cleaning business owners in the program — share what's working, swap tactics, and learn from operators who've already grown.",
+                "Join a private group of other cleaning business owners in the program, share what's working, swap tactics, and learn from operators who've already grown.",
               proof: "You're not building alone.",
             },
             {
@@ -363,7 +363,7 @@ function LandingPage() {
               icon: MapPin,
               title: "One per municipality",
               body:
-                "We accept only one cleaning company per municipality. Once your area is taken, it's closed — so being early matters.",
+                "We accept only one cleaning company per municipality. Once your area is taken, it's closed, so being early matters.",
               proof: "Exclusive market access.",
             },
           ].map((f) => (
