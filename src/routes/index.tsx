@@ -116,11 +116,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What does \"one company per municipality\" mean?",
-    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early — if it isn't, you can request to be added to the waitlist.",
+    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early, if it isn't, you can request to be added to the waitlist.",
   },
   {
     q: "Who is this built for?",
-    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators — not solo experimenters looking for a generic chatbot.",
+    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators, not solo experimenters looking for a generic chatbot.",
   },
   {
     q: "How do I apply?",
@@ -132,7 +132,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How much does it cost?",
-    a: "The program is $299 CAD per month with a one-time setup fee of $875. There's no contract — stay because it's working, not because you're locked in.",
+    a: "The program is $299 CAD per month with a one-time setup fee of $875. There's no contract, so you can stay as long as it's working for you.",
   },
 ];
 
@@ -234,7 +234,9 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners. <span className="font-semibold text-white">Now accepting applications.</span>
+              AI Assistant program for Canadian cleaning business owners.
+              <br />
+              <span className="font-semibold text-white">Now accepting applications.</span>
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -272,7 +274,27 @@ function LandingPage() {
             What members get
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your Own AI, Working Only For Your Cleaning Business.
+            Your Own AI, Working Only For{" "}
+            <span
+              className="relative inline-block"
+            >
+              <span className="relative z-10">Your</span>
+              <svg
+                aria-hidden
+                viewBox="0 0 120 14"
+                preserveAspectRatio="none"
+                className="absolute left-0 right-0 -bottom-2 h-3 w-full text-accent"
+              >
+                <path
+                  d="M2 8 C 25 2, 60 12, 118 6"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </span>{" "}
+            Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
             Knows your market, knows your industry, and only works in your municipality.
@@ -292,7 +314,7 @@ function LandingPage() {
               icon: MessageCircle,
               title: "An AI Company in your corner",
               body:
-                "You don't just get software. You get an AI Company working closely with you to ensure success — onboarding, tuning, and ongoing strategy from people who know cleaning.",
+                "You don't just get software. You get an AI Company working closely with you to ensure success, onboarding, tuning, and ongoing strategy from people who know cleaning.",
               proof: "Real humans + real AI, on your side.",
             },
             {
@@ -306,7 +328,7 @@ function LandingPage() {
               icon: ShieldCheck,
               title: "Your data stays your own",
               body:
-                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data — only what you choose to share — to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
+                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data, only what you choose to share, to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
               proof: "Private by design. Yours by default.",
             },
             {
@@ -320,7 +342,7 @@ function LandingPage() {
               icon: Users,
               title: "A peer group of operators",
               body:
-                "Join a private group of other cleaning business owners in the program — share what's working, swap tactics, and learn from operators who've already grown.",
+                "Join a private group of other cleaning business owners in the program, share what's working, swap tactics, and learn from operators who've already grown.",
               proof: "You're not building alone.",
             },
             {
@@ -341,7 +363,7 @@ function LandingPage() {
               icon: MapPin,
               title: "One per municipality",
               body:
-                "We accept only one cleaning company per municipality. Once your area is taken, it's closed — so being early matters.",
+                "We accept only one cleaning company per municipality. Once your area is taken, it's closed, so being early matters.",
               proof: "Exclusive market access.",
             },
           ].map((f) => (
@@ -417,7 +439,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators.
+                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators helping you grow your business.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
