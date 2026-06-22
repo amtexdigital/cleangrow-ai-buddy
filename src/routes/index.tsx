@@ -439,7 +439,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators.
+                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators helping you grow your business.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
