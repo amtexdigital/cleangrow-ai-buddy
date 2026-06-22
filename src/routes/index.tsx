@@ -128,7 +128,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What happens after I apply?",
-    a: "You'll hear back from our team to confirm fit, walk through what's included, and get you onboarded with your AI agent, your resources, and your peer group.",
+    a: "You'll hear back from our team within 1 business day to confirm fit, walk through what's included, and get you onboarded with your AI agent, your resources, and your peer group.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "The program is $299 CAD per month with a one-time setup fee of $875. There's no contract — stay because it's working, not because you're locked in.",
   },
 ];
 
@@ -230,7 +234,7 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              An invite-only program for Canadian cleaning business owners. We work with <span className="font-semibold text-white">one company per municipality</span> — so the AI agent, the opportunities, and the peer expertise are exclusive to you.
+              AI Assistant program for Canadian cleaning business owners. <span className="font-semibold text-white">Now accepting applications.</span>
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -268,7 +272,7 @@ function LandingPage() {
             What members get
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your Own AI Company, Working Only For You.
+            Your Own AI, Working Only For Your Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
             Knows your market, knows your industry, and only works in your municipality.
@@ -409,11 +413,11 @@ function LandingPage() {
                 Now Accepting Applications
               </div>
               <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-                Claim Your Municipality{" "}
-                <span className="italic text-accent">Before Someone Else Does</span>
+                Don't Let This Opportunity{" "}
+                <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                One cleaning company per municipality. Apply to join, and if your area is still open you'll get your AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators.
+                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
