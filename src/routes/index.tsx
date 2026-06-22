@@ -20,7 +20,7 @@ import owIcon from "@/assets/ow-icon.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
 
 
-const SIGNUP_URL = "https://orderofwork.com/cleaningbusinessai";
+const SIGNUP_URL = "https://orderofwork.com/cleaningbusinessai.html";
 const OW_URL = "https://orderofwork.com";
 const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 
