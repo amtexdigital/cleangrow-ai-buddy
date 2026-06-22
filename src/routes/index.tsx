@@ -234,7 +234,9 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners. <span className="font-semibold text-white">Now accepting applications.</span>
+              AI Assistant program for Canadian cleaning business owners.
+              <br />
+              <span className="font-semibold text-white">Now accepting applications.</span>
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
