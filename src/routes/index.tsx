@@ -274,7 +274,27 @@ function LandingPage() {
             What members get
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your Own AI, Working Only For Your Cleaning Business.
+            Your Own AI, Working Only For{" "}
+            <span
+              className="relative inline-block"
+            >
+              <span className="relative z-10">Your</span>
+              <svg
+                aria-hidden
+                viewBox="0 0 120 14"
+                preserveAspectRatio="none"
+                className="absolute left-0 right-0 -bottom-2 h-3 w-full text-accent"
+              >
+                <path
+                  d="M2 8 C 25 2, 60 12, 118 6"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </span>{" "}
+            Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
             Knows your market, knows your industry, and only works in your municipality.
