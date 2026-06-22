@@ -30,25 +30,57 @@ const NAV_LINKS = [
   { label: "FAQs", href: "#faq" },
 ];
 
+const SITE_URL = "https://cleaningbusiness.ai";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const META_DESCRIPTION =
+  "Invite-only AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. One company per municipality. Now accepting applications.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CleaningBusiness.ai · Invite-Only AI Sales Agent for Canadian Cleaning Businesses" },
-      {
-        name: "description",
-        content:
-          "An invite-only AI sales agent for Canadian cleaning businesses, in partnership with ISSA Canada. One member per municipality. Apply to join.",
-      },
-      { property: "og:title", content: "CleaningBusiness.ai · Invite-Only AI Sales Agent for Cleaning Businesses" },
-      {
-        property: "og:description",
-        content:
-          "One cleaning company per municipality. Get an AI sales agent, exclusive resources, supplier discounts, and a peer group of operators. Apply to join.",
-      },
+      { title: "CleaningBusiness.ai · AI Sales Agent for Canadian Cleaning Businesses" },
+      { name: "description", content: META_DESCRIPTION },
+      { property: "og:title", content: "CleaningBusiness.ai · AI Sales Agent for Canadian Cleaning Businesses" },
+      { property: "og:description", content: META_DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "CleaningBusiness.ai — AI Sales Agent for Cleaning Businesses, in partnership with ISSA Canada" },
+      { name: "twitter:title", content: "CleaningBusiness.ai · AI Sales Agent for Canadian Cleaning Businesses" },
+      { name: "twitter:description", content: META_DESCRIPTION },
+      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:image:alt", content: "CleaningBusiness.ai — AI Sales Agent for Cleaning Businesses" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "CleaningBusiness.ai",
+          url: SITE_URL,
+          logo: `${SITE_URL}/og-image.jpg`,
+          description: META_DESCRIPTION,
+          areaServed: "CA",
+          sameAs: ["https://orderofwork.com/cleaningbusinessai"],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: LandingPage,
 });
