@@ -10,8 +10,9 @@ import {
   Library,
   ArrowRight,
   Zap,
-  Phone,
-  Mail,
+  MapPin,
+  Users,
+  Tag,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
@@ -19,30 +20,30 @@ import owIcon from "@/assets/ow-icon.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
 
 
-const SIGNUP_URL = "https://buy.stripe.com/dRm9AVgJigVObCyebt8bS05";
+const SIGNUP_URL = "https://orderofwork.com/cleaningbusinessai";
 const OW_URL = "https://orderofwork.com";
 const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
 
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#why" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "FAQs", href: "#faq" },
 ];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CleaningBusiness.ai · AI Sales Assistant for Canadian Cleaning Businesses" },
+      { title: "CleaningBusiness.ai · Invite-Only AI Sales Agent for Canadian Cleaning Businesses" },
       {
         name: "description",
         content:
-          "An AI sales assistant built for Canadian cleaning businesses. In partnership with ISSA Canada. Find local opportunities, send professional estimates, and own your data.",
+          "An invite-only AI sales agent for Canadian cleaning businesses, in partnership with ISSA Canada. One member per municipality. Apply to join.",
       },
-      { property: "og:title", content: "CleaningBusiness.ai · AI Sales Assistant for Cleaning Businesses" },
+      { property: "og:title", content: "CleaningBusiness.ai · Invite-Only AI Sales Agent for Cleaning Businesses" },
       {
         property: "og:description",
         content:
-          "Exclusive ISSA Canada member pricing. AI monitors your service area for new cleaning opportunities so you can respond faster and win more contracts.",
+          "One cleaning company per municipality. Get an AI sales agent, exclusive resources, supplier discounts, and a peer group of operators. Apply to join.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -104,6 +105,33 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
   );
 }
 
+const FAQS: { q: string; a: string }[] = [
+  {
+    q: "Why is the program invite-only?",
+    a: "We work with one cleaning company per municipality so the AI agent, the leads it surfaces, and the peer expertise stay exclusive to you in your market. Spots are limited and reviewed on a rolling basis.",
+  },
+  {
+    q: "What do I actually get as a member?",
+    a: "Your own AI sales agent trained on ISSA & CHHA expertise, an AI Company working closely with you to ensure success, access to a private library of resources and playbooks, supplier discounts on products and equipment, and a peer group of other cleaning business owners in the program.",
+  },
+  {
+    q: "What does \"one company per municipality\" mean?",
+    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early — if it isn't, you can request to be added to the waitlist.",
+  },
+  {
+    q: "Who is this built for?",
+    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators — not solo experimenters looking for a generic chatbot.",
+  },
+  {
+    q: "How do I apply?",
+    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your municipality is still open, and follow up with next steps.",
+  },
+  {
+    q: "What happens after I apply?",
+    a: "You'll hear back from our team to confirm fit, walk through what's included, and get you onboarded with your AI agent, your resources, and your peer group.",
+  },
+];
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -137,14 +165,13 @@ function LandingPage() {
                 </a>
               ))}
             </nav>
-            <CTAButton size="lg">Sign Up</CTAButton>
+            <CTAButton size="lg">Apply to Join</CTAButton>
           </div>
         </div>
       </header>
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[var(--brand-navy)] text-paper">
-        {/* Layered background: deep navy base, aurora glows, dot grid, diagonal sheen */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -153,7 +180,6 @@ function LandingPage() {
               "radial-gradient(60% 80% at 85% 10%, color-mix(in oklab, var(--brand-blue-bright) 55%, transparent), transparent 70%), radial-gradient(45% 60% at 10% 90%, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 65%), linear-gradient(160deg, var(--brand-navy) 0%, oklch(0.18 0.10 258) 60%, var(--brand-navy) 100%)",
           }}
         />
-        {/* Dot grid */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
@@ -165,7 +191,6 @@ function LandingPage() {
               "radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 80%)",
           }}
         />
-        {/* Soft floating orbs */}
         <div
           aria-hidden
           className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
@@ -176,7 +201,6 @@ function LandingPage() {
           className="pointer-events-none absolute right-1/3 bottom-0 h-80 w-80 rounded-full opacity-40 blur-3xl"
           style={{ background: "color-mix(in oklab, var(--brand-blue) 60%, transparent)" }}
         />
-        {/* Diagonal sheen line */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -185,7 +209,6 @@ function LandingPage() {
               "linear-gradient(115deg, transparent 35%, color-mix(in oklab, white 6%, transparent) 50%, transparent 65%)",
           }}
         />
-        {/* Bottom fade into next section */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
@@ -195,11 +218,10 @@ function LandingPage() {
           }}
         />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
-          {/* Copy */}
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              In partnership with ISSA Canada
+              Invite-only · In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -208,10 +230,10 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              Find local leads, create profitable estimates, and close more cleaning contracts — with an AI agent built for the cleaning industry.
+              An invite-only program for Canadian cleaning business owners. We work with <span className="font-semibold text-white">one company per municipality</span> — so the AI agent, the opportunities, and the peer expertise are exclusive to you.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
-              <CTAButton size="xl">Sign Up</CTAButton>
+              <CTAButton size="xl">Apply to Join</CTAButton>
               <a
                 href="#features"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
@@ -219,12 +241,12 @@ function LandingPage() {
                 See what's included →
               </a>
             </div>
-            <p className="mt-5 text-xs text-white/60">
-              NOW OPEN FOR SIGN UPS · Limited-time ISSA Canada member offer: $299/month + setup.
+            <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
+              <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
+              Limited to one cleaning business per municipality · Applications reviewed weekly
             </p>
           </div>
 
-          {/* Image column, stays right of copy on desktop, below on mobile. Flush to bottom so feet touch next section. */}
           <div className="relative z-0 -mb-16 self-end lg:col-span-6 lg:-mb-56 xl:-mb-64 xl:col-span-6">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:ml-auto lg:max-w-none lg:scale-[1.47] xl:scale-[1.58] lg:origin-bottom-right lg:translate-x-[28%] xl:translate-x-[32%]">
               <img
@@ -237,20 +259,19 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* (Why section moved below Pricing) */}
       <div id="why" />
 
       {/* FEATURES */}
       <section id="features" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Built for cleaning businesses
+            What members get
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your Own AI Assistant for Your Cleaning Business.
+            Your Own AI Company, Working Only For You.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Knows your market, knows your industry, and works only for you to grow your business.
+            Knows your market, knows your industry, and only works in your municipality.
           </p>
         </div>
 
@@ -260,15 +281,15 @@ function LandingPage() {
               icon: Radar,
               title: "Monitors your service area",
               body:
-                "Your assistant watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
+                "Your AI agent watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
             },
             {
               icon: MessageCircle,
-              title: "Available 24/7 through Chat",
+              title: "An AI Company in your corner",
               body:
-                "Talk to your custom AI assistant any time, right from your preferred channel. Ask for leads, draft a quote, or get follow-up advice wherever you are.",
-              proof: "Always on. Always in your pocket.",
+                "You don't just get software. You get an AI Company working closely with you to ensure success — onboarding, tuning, and ongoing strategy from people who know cleaning.",
+              proof: "Real humans + real AI, on your side.",
             },
             {
               icon: FileText,
@@ -285,18 +306,39 @@ function LandingPage() {
               proof: "Private by design. Yours by default.",
             },
             {
-              icon: GraduationCap,
-              title: "Live Support Calls",
+              icon: Tag,
+              title: "Supplier discounts & resources",
               body:
-                "Join live sessions designed to help you tune, prompt, and improve your AI assistant. Learn best practices from other cleaning business owners and get hands-on guidance from our team.",
-              proof: "Keep your assistant sharp.",
+                "Members unlock product and equipment supplier discounts, plus a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
+              proof: "Exclusive perks, members only.",
+            },
+            {
+              icon: Users,
+              title: "A peer group of operators",
+              body:
+                "Join a private group of other cleaning business owners in the program — share what's working, swap tactics, and learn from operators who've already grown.",
+              proof: "You're not building alone.",
+            },
+            {
+              icon: GraduationCap,
+              title: "Live support calls",
+              body:
+                "Join live sessions designed to help you tune, prompt, and improve your AI agent. Hands-on guidance from our team and the wider member group.",
+              proof: "Keep your AI sharp.",
             },
             {
               icon: Library,
-              title: "Up skill your assistant",
+              title: "Members-only library",
               body:
-                "Unlock a members-only library of skills, prompts, and workflows updated weekly. Add new capabilities to your assistant as your business grows and your needs change.",
+                "Tap into a growing library of cleaning-specific sales scripts, pricing models, and AI skills built from ISSA & CHHA expertise.",
               proof: "New skills, every week.",
+            },
+            {
+              icon: MapPin,
+              title: "One per municipality",
+              body:
+                "We accept only one cleaning company per municipality. Once your area is taken, it's closed — so being early matters.",
+              proof: "Exclusive market access.",
             },
           ].map((f) => (
             <div
@@ -320,16 +362,15 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* PRICING */}
+      {/* APPLY BANNER + FAQ */}
       <section
-        id="pricing"
+        id="apply"
         className="relative overflow-hidden"
         style={{
           background:
             "linear-gradient(180deg, var(--paper) 0%, color-mix(in oklab, var(--brand-blue-soft) 75%, var(--paper)) 100%)",
         }}
       >
-        {/* Decorative blobs */}
         <div
           className="pointer-events-none absolute inset-0 opacity-70"
           style={{
@@ -337,7 +378,6 @@ function LandingPage() {
               "radial-gradient(circle at 12% 18%, color-mix(in oklab, var(--brand-blue-bright) 22%, transparent), transparent 45%), radial-gradient(circle at 88% 82%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 50%)",
           }}
         />
-        {/* Subtle grid */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -366,14 +406,14 @@ function LandingPage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--brand-blue-soft)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--brand-blue-soft)]" />
                 </span>
-                Now Open for Sign Ups
+                Now Accepting Applications
               </div>
               <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-                Secure Your AI Sales Agent{" "}
-                <span className="italic text-accent">Before Spots Close</span>
+                Claim Your Municipality{" "}
+                <span className="italic text-accent">Before Someone Else Does</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Join the Early Access Program. Get your AI sales assistant, ISSA-backed estimates, and a 1-year ISSA / CHHA membership — all for a limited-time member price.
+                One cleaning company per municipality. Apply to join, and if your area is still open you'll get your AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -383,103 +423,59 @@ function LandingPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-bold text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 sm:px-9 sm:py-4 sm:text-lg"
                 >
                   <Zap className="h-5 w-5" />
-                  Sign Up Now
+                  Apply to Join
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Limited to active ISSA Canada members · Offer ends soon
+                  Applications reviewed weekly · Spots close as municipalities fill
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-10 max-w-2xl sm:mt-12">
-            <div className="overflow-hidden rounded-3xl border-2 border-accent bg-card shadow-[var(--shadow-accent)]">
-              <div className="p-6 sm:p-8 md:p-10">
-                <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  What's Included
-                </div>
-                <h3 className="mt-1 text-2xl font-bold text-primary sm:text-3xl">
-                  Everything to win more contracts
-                </h3>
-                <ul className="mt-5 space-y-3">
-                  {[
-                    "AI hunts down cleaning opportunities in your service area",
-                    "Competitor intel on who's bidding around you",
-                    "Smarter quotes powered by ISSA & CHHA expertise",
-                    "Daily support to ensure your success",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                        <Check className="h-3 w-3" strokeWidth={3} />
-                      </div>
-                      <span className="text-sm font-medium text-primary">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-6 space-y-3">
-                  <div className="rounded-xl bg-secondary/80 p-4">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Program cost
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-primary">$299</span>
-                      <span className="text-sm text-muted-foreground">/month</span>
-                    </div>
-                    <div className="mt-1 text-xs font-medium text-muted-foreground line-through">
-                      Regularly $875/month
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
-                    <p className="text-sm text-primary">
-                      <span className="font-semibold text-accent">One-time setup:</span>{" "}
-                      $875 (includes 1-year ISSA / CHHA membership)
-                    </p>
-                    <p className="mt-2 text-xs text-primary/80">
-                      Active ISSA Canada member? Ask us for your promo code to reduce the setup fee from $875 to $575.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 rounded-xl border border-primary/10 bg-secondary/40 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Questions or need support?
-                  </p>
-                  <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                    <a
-                      href="tel:+13436333018"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent"
-                    >
-                      <Phone className="h-4 w-4 text-accent" />
-                      +1 (343) 633 - 3018
-                    </a>
-                    <a
-                      href="mailto:cleaningbusinessai@orderofwork.com"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent"
-                    >
-                      <Mail className="h-4 w-4 text-accent" />
-                      cleaningbusinessai@orderofwork.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <CTAButton size="xl" className="w-full">
-                    Sign Up
-                  </CTAButton>
-                  <p className="mt-3 text-center text-xs text-muted-foreground">
-                    Early Access Program · Limited-time offer for active ISSA Canada members.
-                  </p>
-                </div>
+          {/* FAQS */}
+          <div id="faq" className="mx-auto mt-14 max-w-3xl sm:mt-16">
+            <div className="text-center">
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                Frequently Asked
               </div>
+              <h3 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+                What members usually ask first
+              </h3>
+            </div>
+
+            <div className="mt-10 space-y-3">
+              {FAQS.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-border bg-card p-5 transition-all hover:border-accent/40 sm:p-6"
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                    <span className="text-base font-semibold text-primary sm:text-lg">
+                      {f.q}
+                    </span>
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-transform group-open:rotate-45">
+                      <span className="text-lg leading-none">+</span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {f.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <CTAButton size="xl">Apply to Join</CTAButton>
+              <p className="mt-3 text-xs text-muted-foreground">
+                One company per municipality · Reviewed weekly
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WHY / VALUE STRIP (below pricing) */}
+      {/* WHY / VALUE STRIP */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 opacity-40"
@@ -499,8 +495,7 @@ function LandingPage() {
               More Wins.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-              Your AI Assistant works to uncover sales opportunities in your service
-              area and help you take action faster.
+              Your AI agent and AI Company work together to uncover opportunities in your service area and help you act faster than anyone else in your market.
             </p>
           </div>
 
@@ -515,8 +510,8 @@ function LandingPage() {
                 replace: "Real-time alerts on new opportunities.",
               },
               {
-                strike: "Managing sales alone.",
-                replace: "A full AI sales assistant in your corner.",
+                strike: "Selling alone.",
+                replace: "An AI Company + peer group in your corner.",
               },
             ].map((item) => (
               <div
@@ -539,27 +534,24 @@ function LandingPage() {
           </div>
 
           <div className="mt-12 flex flex-col items-center gap-3">
-            <CTAButton size="xl">Sign Up</CTAButton>
+            <CTAButton size="xl">Apply to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Limited spots for active ISSA Canada members.
+              Invite-only · One cleaning company per municipality.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FOOTER — 2 columns */}
+      {/* FOOTER */}
       <footer className="border-t border-border bg-background">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2">
-          {/* Left column: brand */}
           <div className="flex flex-col items-start gap-4">
             <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
-              Built with over a 100 years of industry expertise to help members grow
-              profitable cleaning businesses.
+              An invite-only program built with over 100 years of industry expertise to help members grow profitable cleaning businesses.
             </p>
           </div>
 
-          {/* Right column: partnership */}
           <div className="flex flex-col items-start gap-4 md:items-end md:text-right">
             <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               In partnership with
