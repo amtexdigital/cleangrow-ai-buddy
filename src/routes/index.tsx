@@ -132,7 +132,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How much does it cost?",
-    a: "The program is $299 CAD per month with a one-time setup fee of $875. There's no contract — stay because it's working, not because you're locked in.",
+    a: "The program is $299 CAD per month with a one-time setup fee of $875. There's no contract, so you can stay as long as it's working for you.",
   },
 ];
 
