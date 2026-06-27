@@ -33,7 +33,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "Invite-only AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. One company per municipality. Now accepting applications.";
+  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,16 +139,16 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
 
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Why is the program invite-only?",
-    a: "We work with one cleaning company per municipality so the AI agent, the leads it surfaces, and the peer expertise stay exclusive to you in your market. Spots are limited and reviewed on a rolling basis.",
+    q: "Why is there an application process?",
+    a: "We review every application to make sure the program is a good fit for your business and that you can get the most value from the AI, the resources, and the peer group.",
   },
   {
     q: "What do I actually get as a member?",
     a: "Your own AI sales agent trained on ISSA & CHHA expertise, an AI Company working closely with you to ensure success, access to a private library of resources and playbooks, supplier discounts on products and equipment, and a peer group of other cleaning business owners in the program.",
   },
   {
-    q: "What does \"one company per municipality\" mean?",
-    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early, if it isn't, you can request to be added to the waitlist.",
+    q: "How do you handle multiple companies in the same area?",
+    a: "We focus on helping you win in your local market. If another cleaning business in your area joins, we keep your strategies, opportunities, and pricing data private and separate from theirs.",
   },
   {
     q: "Who is this built for?",
@@ -156,7 +156,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I apply?",
-    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your municipality is still open, and follow up with next steps.",
+    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your fit, and follow up with next steps.",
   },
   {
     q: "What happens after I apply?",
@@ -257,7 +257,7 @@ function LandingPage() {
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Invite-only · In partnership with ISSA Canada
+              In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -281,7 +281,7 @@ function LandingPage() {
             </div>
             <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Limited to one cleaning business per municipality · Applications reviewed weekly
+              Limited spots available · Applications reviewed weekly
             </p>
           </div>
 
@@ -329,7 +329,7 @@ function LandingPage() {
             Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Knows your market, knows your industry, and only works in your municipality.
+            Knows your market, knows your industry, and only works for your cleaning business.
           </p>
         </div>
 
@@ -393,10 +393,10 @@ function LandingPage() {
             },
             {
               icon: MapPin,
-              title: "One per municipality",
+              title: "Built exclusively for you",
               body:
-                "We accept only one cleaning company per municipality. Once your area is taken, it's closed, so being early matters.",
-              proof: "Exclusive market access.",
+                "Your AI agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
+              proof: "Truly yours, not shared.",
             },
           ].map((f) => (
             <div
@@ -485,7 +485,7 @@ function LandingPage() {
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Applications reviewed weekly · Spots close as municipalities fill
+                  Applications reviewed weekly · Limited spots available
                 </p>
               </div>
             </div>
@@ -526,7 +526,7 @@ function LandingPage() {
             <div className="mt-10 text-center">
               <CTAButton size="xl">Apply to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                One company per municipality · Reviewed weekly
+                Limited spots available · Reviewed weekly
               </p>
             </div>
           </div>
@@ -594,7 +594,7 @@ function LandingPage() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Apply to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Invite-only · One cleaning company per municipality.
+              Now accepting applications · Limited spots available
             </p>
           </div>
         </div>
