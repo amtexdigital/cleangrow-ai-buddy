@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Check,
   Radar,
@@ -25,6 +25,7 @@ const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#why" },
   { label: "FAQs", href: "#faq" },
+  { label: "For Suppliers", href: "/suppliers" },
 ];
 
 const SITE_URL = "https://cleaningbusiness.ai";
@@ -188,15 +189,25 @@ function LandingPage() {
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
             <nav className="hidden items-center gap-5 lg:flex">
-              {NAV_LINKS.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
-                >
-                  {l.label}
-                </a>
-              ))}
+              {NAV_LINKS.map((l) =>
+                l.href.startsWith("#") ? (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={l.href}
+                    to={l.href}
+                    className="text-sm font-semibold text-primary/80 transition-colors hover:text-accent"
+                  >
+                    {l.label}
+                  </Link>
+                )
+              )}
             </nav>
             <CTAButton size="lg">Apply to Join</CTAButton>
           </div>
