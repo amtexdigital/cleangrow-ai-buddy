@@ -239,7 +239,7 @@ function SuppliersPage() {
             </span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Partner with CleaningBusiness.ai to work with an AI assistant that helps Canadian cleaning operators apply your knowledge and product guidance when they need it most.
+            Partner with CleaningBusiness.ai to share your expertise and product guidance with Canadian cleaning operators, right when they need it.
             <br />
             <span className="font-semibold text-white">Now accepting supplier and expert partners.</span>
           </p>
