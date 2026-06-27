@@ -6,13 +6,10 @@ import {
   ShieldCheck,
   Sparkles,
   MessageCircle,
-  GraduationCap,
-  Library,
+  Tag,
+  MapPin,
   ArrowRight,
   Zap,
-  MapPin,
-  Users,
-  Tag,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
