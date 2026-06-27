@@ -6,13 +6,10 @@ import {
   ShieldCheck,
   Sparkles,
   MessageCircle,
-  GraduationCap,
-  Library,
+  Tag,
+  MapPin,
   ArrowRight,
   Zap,
-  MapPin,
-  Users,
-  Tag,
 } from "lucide-react";
 
 import issaLogo from "@/assets/issa-canada.png.asset.json";
@@ -367,29 +364,8 @@ function LandingPage() {
               icon: Tag,
               title: "Supplier discounts & resources",
               body:
-                "Members unlock product and equipment supplier discounts, plus a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
+                "Members unlock product and equipment supplier discounts, plus product mix reviews, WHMIS training resources, and a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
               proof: "Exclusive perks, members only.",
-            },
-            {
-              icon: Users,
-              title: "A peer group of operators",
-              body:
-                "Join a private group of other cleaning business owners in the program, share what's working, swap tactics, and learn from operators who've already grown.",
-              proof: "You're not building alone.",
-            },
-            {
-              icon: GraduationCap,
-              title: "Live support calls",
-              body:
-                "Join live sessions designed to help you tune, prompt, and improve your AI agent. Hands-on guidance from our team and the wider member group.",
-              proof: "Keep your AI sharp.",
-            },
-            {
-              icon: Library,
-              title: "Members-only library",
-              body:
-                "Tap into a growing library of cleaning-specific sales scripts, pricing models, and AI skills built from ISSA & CHHA expertise.",
-              proof: "New skills, every week.",
             },
             {
               icon: MapPin,
