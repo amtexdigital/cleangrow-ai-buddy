@@ -25,6 +25,7 @@ const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#why" },
   { label: "FAQs", href: "#faq" },
+  { label: "For Suppliers", href: "/suppliers" },
 ];
 
 const SITE_URL = "https://cleaningbusiness.ai";
