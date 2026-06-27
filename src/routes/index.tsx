@@ -257,7 +257,7 @@ function LandingPage() {
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Invite-only · In partnership with ISSA Canada
+              In partnership with ISSA Canada
             </div>
             <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
@@ -281,7 +281,7 @@ function LandingPage() {
             </div>
             <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Limited to one cleaning business per municipality · Applications reviewed weekly
+              Limited spots available · Applications reviewed weekly
             </p>
           </div>
 
@@ -329,7 +329,7 @@ function LandingPage() {
             Cleaning Business.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Knows your market, knows your industry, and only works in your municipality.
+            Knows your market, knows your industry, and only works for your cleaning business.
           </p>
         </div>
 
@@ -393,10 +393,10 @@ function LandingPage() {
             },
             {
               icon: MapPin,
-              title: "One per municipality",
+              title: "Built exclusively for you",
               body:
-                "We accept only one cleaning company per municipality. Once your area is taken, it's closed, so being early matters.",
-              proof: "Exclusive market access.",
+                "Your AI agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
+              proof: "Truly yours, not shared.",
             },
           ].map((f) => (
             <div
