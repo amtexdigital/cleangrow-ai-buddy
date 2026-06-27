@@ -33,7 +33,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "Invite-only AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. One company per municipality. Now accepting applications.";
+  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,16 +139,16 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
 
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Why is the program invite-only?",
-    a: "We work with one cleaning company per municipality so the AI agent, the leads it surfaces, and the peer expertise stay exclusive to you in your market. Spots are limited and reviewed on a rolling basis.",
+    q: "Why is there an application process?",
+    a: "We review every application to make sure the program is a good fit for your business and that you can get the most value from the AI, the resources, and the peer group.",
   },
   {
     q: "What do I actually get as a member?",
     a: "Your own AI sales agent trained on ISSA & CHHA expertise, an AI Company working closely with you to ensure success, access to a private library of resources and playbooks, supplier discounts on products and equipment, and a peer group of other cleaning business owners in the program.",
   },
   {
-    q: "What does \"one company per municipality\" mean?",
-    a: "Once a cleaning business in a given municipality is accepted, we close that area to new applicants. If your area is still open, you're early, if it isn't, you can request to be added to the waitlist.",
+    q: "How do you handle multiple companies in the same area?",
+    a: "We focus on helping you win in your local market. If another cleaning business in your area joins, we keep your strategies, opportunities, and pricing data private and separate from theirs.",
   },
   {
     q: "Who is this built for?",
@@ -156,7 +156,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I apply?",
-    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your municipality is still open, and follow up with next steps.",
+    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your fit, and follow up with next steps.",
   },
   {
     q: "What happens after I apply?",
