@@ -485,7 +485,7 @@ function LandingPage() {
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Applications reviewed weekly · Spots close as municipalities fill
+                  Applications reviewed weekly · Limited spots available
                 </p>
               </div>
             </div>
@@ -526,7 +526,7 @@ function LandingPage() {
             <div className="mt-10 text-center">
               <CTAButton size="xl">Apply to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                One company per municipality · Reviewed weekly
+                Limited spots available · Reviewed weekly
               </p>
             </div>
           </div>
@@ -594,7 +594,7 @@ function LandingPage() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Apply to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Invite-only · One cleaning company per municipality.
+              Now accepting applications · Limited spots available
             </p>
           </div>
         </div>
