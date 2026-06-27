@@ -405,14 +405,14 @@ function SuppliersPage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--brand-blue-soft)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--brand-blue-soft)]" />
                 </span>
-                Now Accepting Supplier Partners
+                Now Accepting Supplier & Expert Partners
               </div>
               <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl">
-                Be the supplier our{" "}
+                Be the expert our{" "}
                 <span className="italic text-accent">AI recommends</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Get your products, training, and offers in front of Canadian cleaning operators at the exact moment they're making buying decisions.
+                Get your expertise, training, and product guidance in front of Canadian cleaning operators at the exact moment they're making decisions.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
