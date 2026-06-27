@@ -262,7 +262,7 @@ function SuppliersPage() {
             Why partner with us
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your products,{" "}
+            Your expertise,{" "}
             <span className="relative inline-block">
               <span className="relative z-10">recommended</span>
               <svg
@@ -283,7 +283,7 @@ function SuppliersPage() {
             by the AI cleaners trust.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Reach operators where decisions get made, inside their AI assistant, their playbooks, and their product mix.
+            Reach operators where decisions get made, inside their AI assistant, their playbooks, and their product recommendations.
           </p>
         </div>
 
