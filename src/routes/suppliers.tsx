@@ -21,28 +21,28 @@ const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innova
 
 const SITE_URL = "https://cleaningbusiness.ai";
 const META_DESCRIPTION =
-  "Become a CleaningBusiness.ai supplier partner. Share your product and equipment expertise with Canadian cleaning businesses using AI to grow.";
+  "Share your cleaning industry expertise with Canadian cleaning companies through AI. Partner with CleaningBusiness.ai to help operators grow using your knowledge and product guidance.";
 
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Who is this for?",
-    a: "Canadian product manufacturers, equipment makers, chemical suppliers, distributors, and service vendors that sell to the commercial and residential cleaning industry.",
+    a: "Canadian cleaning industry experts, product manufacturers, equipment makers, chemical suppliers, distributors, and service vendors with knowledge to share with commercial and residential cleaning operators.",
   },
   {
     q: "What does it mean to be a supplier partner?",
-    a: "Your product knowledge, training materials, spec sheets, and recommended use cases are shared with cleaning businesses in the program through their AI assistant, so the right product gets recommended in the right situation.",
+    a: "Your expertise, product knowledge, training materials, and recommended use cases are shared with cleaning businesses in the program through their AI assistant, so the right guidance reaches the right operator at the right time.",
   },
   {
     q: "How is my knowledge used?",
-    a: "We ingest your approved materials so member AI assistants can reference your products when building quotes, product mixes, and recommendations. Your IP stays yours, members see attribution to your brand.",
+    a: "We integrate your approved materials so member AI assistants can reference your expertise and product recommendations when building quotes, product mixes, and staff guidance. Your IP stays yours, and members see attribution to your brand.",
   },
   {
     q: "Do members get supplier discounts?",
-    a: "Yes. Most supplier partners offer member-only pricing, sample programs, or bundled offers that we promote inside the program.",
+    a: "Yes. Many partners offer member-only pricing, sample programs, or bundled offers that we promote inside the program.",
   },
   {
     q: "What's expected of me as a supplier?",
-    a: "Share current product info, pricing or member offers, training and safety docs (SDS, WHMIS), and a point of contact for member questions. We handle the rest.",
+    a: "Share your expertise, current product info, member offers, training and safety docs (SDS, WHMIS), and a point of contact for member questions. We handle the AI integration.",
   },
   {
     q: "How do I apply?",
