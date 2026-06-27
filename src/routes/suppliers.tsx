@@ -230,18 +230,18 @@ function SuppliersPage() {
         <div className="relative mx-auto max-w-4xl px-4 pt-16 pb-20 text-center sm:px-6 sm:pt-24 sm:pb-28">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-            For Canadian cleaning industry suppliers
+            For Canadian cleaning industry experts & suppliers
           </div>
           <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Put Your Products{" "}
+            Share Your Expertise{" "}
             <span className="text-[var(--brand-blue-soft)] italic font-black">
-              Where Buyers Decide
+              Where Cleaning Companies Grow
             </span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Partner with CleaningBusiness.ai to share your expertise with Canadian cleaning operators using AI to grow.
+            Partner with CleaningBusiness.ai to work with an AI assistant that helps Canadian cleaning operators apply your knowledge and product guidance when they need it most.
             <br />
-            <span className="font-semibold text-white">Now accepting supplier applications.</span>
+            <span className="font-semibold text-white">Now accepting supplier and expert partners.</span>
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <CTAButton size="xl">Apply to Partner</CTAButton>
