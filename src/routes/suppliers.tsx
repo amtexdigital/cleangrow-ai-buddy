@@ -335,17 +335,17 @@ function SuppliersPage() {
               {
                 step: "01",
                 title: "Apply",
-                body: "Tell us about your company, your product categories, and what you'd like to offer members.",
+                body: "Tell us about your expertise, your product categories, and how you'd like to support cleaning companies in the program.",
               },
               {
                 step: "02",
                 title: "Onboard",
-                body: "We collect your product info, training docs, member offers, and recommended use cases, then integrate them into the program.",
+                body: "We collect your knowledge, training docs, product offers, and recommended use cases, then integrate them into the AI assistant.",
               },
               {
                 step: "03",
                 title: "Get recommended",
-                body: "Your products show up in member AI assistants, quotes, product mix reviews, and supplier directories.",
+                body: "Your expertise and product guidance show up in member AI assistants, quotes, recommendations, and product mix reviews.",
               },
             ].map((s) => (
               <div
