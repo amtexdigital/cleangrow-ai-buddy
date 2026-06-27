@@ -21,28 +21,28 @@ const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innova
 
 const SITE_URL = "https://cleaningbusiness.ai";
 const META_DESCRIPTION =
-  "Become a CleaningBusiness.ai supplier partner. Share your product and equipment expertise with Canadian cleaning businesses using AI to grow.";
+  "Share your cleaning industry expertise with Canadian cleaning companies through AI. Partner with CleaningBusiness.ai to help operators grow using your knowledge and product guidance.";
 
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Who is this for?",
-    a: "Canadian product manufacturers, equipment makers, chemical suppliers, distributors, and service vendors that sell to the commercial and residential cleaning industry.",
+    a: "Canadian cleaning industry experts, product manufacturers, equipment makers, chemical suppliers, distributors, and service vendors with knowledge to share with commercial and residential cleaning operators.",
   },
   {
     q: "What does it mean to be a supplier partner?",
-    a: "Your product knowledge, training materials, spec sheets, and recommended use cases are shared with cleaning businesses in the program through their AI assistant, so the right product gets recommended in the right situation.",
+    a: "Your expertise, product knowledge, training materials, and recommended use cases are shared with cleaning businesses in the program through their AI assistant, so the right guidance reaches the right operator at the right time.",
   },
   {
     q: "How is my knowledge used?",
-    a: "We ingest your approved materials so member AI assistants can reference your products when building quotes, product mixes, and recommendations. Your IP stays yours, members see attribution to your brand.",
+    a: "We integrate your approved materials so member AI assistants can reference your expertise and product recommendations when building quotes, product mixes, and staff guidance. Your IP stays yours, and members see attribution to your brand.",
   },
   {
     q: "Do members get supplier discounts?",
-    a: "Yes. Most supplier partners offer member-only pricing, sample programs, or bundled offers that we promote inside the program.",
+    a: "Yes. Many partners offer member-only pricing, sample programs, or bundled offers that we promote inside the program.",
   },
   {
     q: "What's expected of me as a supplier?",
-    a: "Share current product info, pricing or member offers, training and safety docs (SDS, WHMIS), and a point of contact for member questions. We handle the rest.",
+    a: "Share your expertise, current product info, member offers, training and safety docs (SDS, WHMIS), and a point of contact for member questions. We handle the AI integration.",
   },
   {
     q: "How do I apply?",
@@ -132,38 +132,38 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
 const BENEFITS = [
   {
     icon: Megaphone,
-    title: "Get in front of buyers",
-    body: "Your products show up when member AI assistants build quotes, recommend product mixes, and answer staff questions, right at the point of decision.",
-    proof: "Featured where buying happens.",
+    title: "Share expertise where operators need it",
+    body: "Your knowledge and product guidance show up when member AI assistants build quotes, recommend product mixes, and answer staff questions, right at the point of decision.",
+    proof: "Featured where decisions are made.",
   },
   {
     icon: GraduationCap,
-    title: "Train the industry on your products",
-    body: "Share spec sheets, SDS, WHMIS, dilution charts, and best-use guidance. Members learn your products the right way and use them correctly.",
+    title: "Train the industry with your knowledge",
+    body: "Share spec sheets, SDS, WHMIS, dilution charts, and best-use guidance. Members learn from your expertise and apply it correctly in their operations.",
     proof: "Knowledge that actually gets used.",
   },
   {
     icon: TrendingUp,
-    title: "Win the product mix",
-    body: "Member operators run regular product mix reviews with our team. Partner products get evaluated, recommended, and standardized across their accounts.",
-    proof: "From SKU to standard.",
+    title: "Shape smarter product choices",
+    body: "Member operators run regular product mix reviews with our team. Your expertise helps guide which products get evaluated, recommended, and standardized across their accounts.",
+    proof: "From insight to standard.",
   },
   {
     icon: Handshake,
-    title: "Member-only offers",
-    body: "Promote exclusive pricing, sample programs, bundles, or rebates to a curated group of Canadian cleaning operators actively growing their business.",
+    title: "Exclusive member offers",
+    body: "Promote member-only pricing, sample programs, bundles, or rebates to a curated group of Canadian cleaning operators actively growing their business.",
     proof: "Exclusive deals, qualified buyers.",
   },
   {
     icon: Users,
     title: "Direct line to operators",
-    body: "Join peer calls, contribute to playbooks, and answer member questions. Build relationships with the operators who specify and buy your category.",
+    body: "Join peer calls, contribute to playbooks, and answer member questions. Build relationships with the operators who rely on your category expertise.",
     proof: "Conversations, not cold outreach.",
   },
   {
     icon: Building2,
     title: "Industry-backed",
-    body: "Built in partnership with ISSA Canada and powered by Order of Work. Your brand sits alongside the standards and expertise members already trust.",
+    body: "Built in partnership with ISSA Canada and powered by Order of Work. Your expertise sits alongside the standards and knowledge members already trust.",
     proof: "Credible by association.",
   },
 ];
@@ -230,18 +230,18 @@ function SuppliersPage() {
         <div className="relative mx-auto max-w-4xl px-4 pt-16 pb-20 text-center sm:px-6 sm:pt-24 sm:pb-28">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-            For Canadian cleaning industry suppliers
+            For Canadian cleaning industry experts & suppliers
           </div>
           <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Put Your Products{" "}
+            Share Your Expertise{" "}
             <span className="text-[var(--brand-blue-soft)] italic font-black">
-              Where Buyers Decide
+              Where Cleaning Companies Grow
             </span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Partner with CleaningBusiness.ai to share your expertise with Canadian cleaning operators using AI to grow.
+            Partner with CleaningBusiness.ai to work with an AI assistant that helps Canadian cleaning operators apply your knowledge and product guidance when they need it most.
             <br />
-            <span className="font-semibold text-white">Now accepting supplier applications.</span>
+            <span className="font-semibold text-white">Now accepting supplier and expert partners.</span>
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <CTAButton size="xl">Apply to Partner</CTAButton>
@@ -262,7 +262,7 @@ function SuppliersPage() {
             Why partner with us
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your products,{" "}
+            Your expertise,{" "}
             <span className="relative inline-block">
               <span className="relative z-10">recommended</span>
               <svg
@@ -283,7 +283,7 @@ function SuppliersPage() {
             by the AI cleaners trust.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Reach operators where decisions get made, inside their AI assistant, their playbooks, and their product mix.
+            Reach operators where decisions get made, inside their AI assistant, their playbooks, and their product recommendations.
           </p>
         </div>
 
@@ -335,17 +335,17 @@ function SuppliersPage() {
               {
                 step: "01",
                 title: "Apply",
-                body: "Tell us about your company, your product categories, and what you'd like to offer members.",
+                body: "Tell us about your expertise, your product categories, and how you'd like to support cleaning companies in the program.",
               },
               {
                 step: "02",
                 title: "Onboard",
-                body: "We collect your product info, training docs, member offers, and recommended use cases, then integrate them into the program.",
+                body: "We collect your knowledge, training docs, product offers, and recommended use cases, then integrate them into the AI assistant.",
               },
               {
                 step: "03",
                 title: "Get recommended",
-                body: "Your products show up in member AI assistants, quotes, product mix reviews, and supplier directories.",
+                body: "Your expertise and product guidance show up in member AI assistants, quotes, recommendations, and product mix reviews.",
               },
             ].map((s) => (
               <div
@@ -405,14 +405,14 @@ function SuppliersPage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--brand-blue-soft)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--brand-blue-soft)]" />
                 </span>
-                Now Accepting Supplier Partners
+                Now Accepting Supplier & Expert Partners
               </div>
               <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl">
-                Be the supplier our{" "}
+                Be the expert our{" "}
                 <span className="italic text-accent">AI recommends</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Get your products, training, and offers in front of Canadian cleaning operators at the exact moment they're making buying decisions.
+                Get your expertise, training, and product guidance in front of Canadian cleaning operators at the exact moment they're making decisions.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
