@@ -82,6 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "CleaningBusiness.ai" },
       { property: "og:locale", content: "en_CA" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Cleaning Business AI" },
+      { property: "og:title", content: "Cleaning Business AI" },
+      { name: "twitter:title", content: "Cleaning Business AI" },
+      { name: "description", content: "AI Sales Agent for Cleaning Businesses. Backed by over 100 years of industry expertise in partnership with ISSA Canada." },
+      { property: "og:description", content: "AI Sales Agent for Cleaning Businesses. Backed by over 100 years of industry expertise in partnership with ISSA Canada." },
+      { name: "twitter:description", content: "AI Sales Agent for Cleaning Businesses. Backed by over 100 years of industry expertise in partnership with ISSA Canada." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FU8b6j9doNOIuzAYvmeWzjsDEgt1/social-images/social-1782761026217-CleaningBusiness-X-Ad.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FU8b6j9doNOIuzAYvmeWzjsDEgt1/social-images/social-1782761026217-CleaningBusiness-X-Ad.webp" },
     ],
     links: [
       {
