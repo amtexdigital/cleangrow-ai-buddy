@@ -351,18 +351,25 @@ function LandingPage() {
               proof: "Be the first one in the door.",
             },
             {
-              icon: MessageCircle,
-              title: "An AI Company in your corner",
-              body:
-                "You don't just get software. You get an AI Company working closely with you to ensure success, onboarding, tuning, and ongoing strategy from people who know cleaning.",
-              proof: "Real humans + real AI, on your side.",
-            },
-            {
               icon: FileText,
               title: "Professional, profitable estimates",
               body:
                 "Generate clean, professional estimates priced for your business, backed by ISSA Canada expertise on scope, productivity rates, and margin standards.",
               proof: "Quote with confidence, every time.",
+            },
+            {
+              icon: MapPin,
+              title: "Built exclusively for you",
+              body:
+                "Your AI agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
+              proof: "Truly yours, not shared.",
+            },
+            {
+              icon: MessageCircle,
+              title: "An AI Company in your corner",
+              body:
+                "You don't just get software. You get an AI Company working closely with you to ensure success, onboarding, tuning, and ongoing strategy from people who know cleaning.",
+              proof: "Real humans + real AI, on your side.",
             },
             {
               icon: ShieldCheck,
@@ -377,13 +384,6 @@ function LandingPage() {
               body:
                 "Members unlock product and equipment supplier discounts, plus product mix reviews, WHMIS training resources, and a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
               proof: "Exclusive perks, members only.",
-            },
-            {
-              icon: MapPin,
-              title: "Built exclusively for you",
-              body:
-                "Your AI agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
-              proof: "Truly yours, not shared.",
             },
           ].map((f) => (
             <div
