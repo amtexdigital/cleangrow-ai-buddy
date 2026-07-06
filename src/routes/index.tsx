@@ -275,7 +275,7 @@ function LandingPage() {
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-5 text-7xl font-black uppercase leading-[0.9] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+            <h1 className="mt-5 text-6xl font-black uppercase leading-[0.9] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
               <span className="text-[var(--brand-blue-soft)] italic font-black">
                 Cleaning Businesses
