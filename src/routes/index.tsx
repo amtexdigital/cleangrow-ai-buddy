@@ -269,7 +269,7 @@ function LandingPage() {
               "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand-navy) 70%, transparent))",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-2 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-0 pt-14 pb-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pt-28 lg:pb-24">
           <div className="relative z-10 lg:col-span-6 xl:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
