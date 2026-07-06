@@ -31,7 +31,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications.";
+  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting 60 spots for the August Cohort.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,7 +154,15 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I apply?",
-    a: "Tap Apply to Join and complete the short application. We review every submission, confirm your fit, and follow up with next steps.",
+    a: "Tap Apply to Join and complete the short application. We have 60 spots available for the August Cohort, offered on a first-come, first-served basis, and applications close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
+  },
+  {
+    q: "How many spots are available?",
+    a: "We're accepting 60 cleaning businesses across Canada into the August Cohort. Spots are first-come, first-served, and applications close July 27th at 11PM EST.",
+  },
+  {
+    q: "Will I get one-on-one support?",
+    a: "Yes. Every member in the August Cohort works one-on-one with our AI Company team across Canada to grow their business through AI.",
   },
   {
     q: "What happens after I apply?",
@@ -276,7 +284,8 @@ function LandingPage() {
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               AI Assistant program for Canadian cleaning business owners.
               <br />
-              <span className="font-semibold text-white">Now accepting applications.</span>
+              <span className="font-semibold text-white">60 spots available for the August Cohort.</span>{" "}
+              Work one-on-one with our AI Company team across Canada to grow your business through AI.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -289,7 +298,7 @@ function LandingPage() {
             </div>
             <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Limited spots available · Applications reviewed weekly
+              Applications close July 27th at 11PM EST · First come, first served · 60 spots
             </p>
           </div>
 
@@ -458,7 +467,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join and get your own AI sales agent, an AI Company working closely with you, supplier discounts, members-only resources, and a peer group of other cleaning operators helping you grow your business.
+                Apply to join the August Cohort — 60 spots available for cleaning businesses across Canada. Work one-on-one with our AI Company team to grow your business through AI and get your own AI sales agent, supplier discounts, members-only resources, and a peer group of other cleaning operators.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -472,7 +481,7 @@ function LandingPage() {
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Applications reviewed weekly · Limited spots available
+                  Applications close July 27th at 11PM EST · 60 spots · First come, first served
                 </p>
               </div>
             </div>
@@ -513,7 +522,7 @@ function LandingPage() {
             <div className="mt-10 text-center">
               <CTAButton size="xl">Apply to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                Limited spots available · Reviewed weekly
+                August Cohort — 60 spots · Applications close July 27th at 11PM EST
               </p>
             </div>
           </div>
@@ -581,7 +590,7 @@ function LandingPage() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Apply to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              Now accepting applications · Limited spots available
+              August Cohort: 60 spots · Applications close July 27th at 11PM EST
             </p>
           </div>
         </div>
