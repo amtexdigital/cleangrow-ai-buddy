@@ -275,17 +275,14 @@ function LandingPage() {
               <Sparkles className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               In partnership with ISSA Canada
             </div>
-            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+            <h1 className="mt-5 text-7xl font-black uppercase leading-[0.9] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
               AI Sales Agent for{" "}
               <span className="text-[var(--brand-blue-soft)] italic font-black">
                 Cleaning Businesses
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners.
-              <br />
-              <span className="font-semibold text-white">60 spots available for the August Cohort.</span>{" "}
-              Work one-on-one with our AI Company team across Canada to grow your business through AI.
+              AI Assistant program for Canadian cleaning business owners. 60 spots available for the August Cohort.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
