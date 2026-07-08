@@ -305,9 +305,13 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-medium text-white/90 backdrop-blur transition hover:bg-white/15"
+              className="mt-4 inline-flex w-fit items-center gap-2 overflow-visible rounded-full border border-white/15 bg-white/10 px-3 py-1.5 pl-5 text-xs font-medium text-white/90 backdrop-blur transition hover:bg-white/15"
             >
-              <img src={guaranteeSeal.url} alt="" className="h-5 w-auto" />
+              <img
+                src={guaranteeSeal.url}
+                alt=""
+                className="-ml-5 h-9 w-auto shrink-0 drop-shadow-lg"
+              />
               100% Money-Back Guarantee
             </a>
           </div>
@@ -654,9 +658,13 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:text-accent"
+              className="inline-flex items-center gap-2 overflow-visible rounded-full border border-border bg-muted/50 px-3 py-1.5 pl-5 text-xs font-medium text-muted-foreground transition hover:text-accent"
             >
-              <img src={guaranteeSeal.url} alt="" className="h-5 w-auto" />
+              <img
+                src={guaranteeSeal.url}
+                alt=""
+                className="-ml-5 h-9 w-auto shrink-0 drop-shadow-lg"
+              />
               100% Money-Back Guarantee
             </a>
           </div>
