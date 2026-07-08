@@ -31,7 +31,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications for the August Cohort. Limited space available.";
+  "AI Sales Agent for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications for the August Cohort. Limited space available.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -142,7 +142,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What do I actually get as a member?",
-    a: "Your own AI sales agent trained on ISSA & CHHA expertise, an AI Company working closely with you to ensure success, access to a private library of resources and playbooks, supplier discounts on products and equipment, and a peer group of other cleaning business owners in the program.",
+    a: "Your own AI Sales Agent trained on ISSA & CHHA expertise, an AI Company working closely with you to ensure success, access to a private library of resources and playbooks, supplier discounts on products and equipment, and a peer group of other cleaning business owners in the program.",
   },
   {
     q: "How do you handle multiple companies in the same area?",
@@ -166,11 +166,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What happens after I apply?",
-    a: "You'll hear back from our team within 1 business day to confirm fit, walk through what's included, and get you onboarded with your AI agent, your resources, and your peer group.",
+    a: "You'll hear back from our team within 1 business day to confirm fit, walk through what's included, and get you onboarded with your AI Sales Agent, your resources, and your peer group.",
   },
   {
     q: "When does onboarding start?",
-    a: "Once you join the program, onboarding starts the first week of August 2026. We'll schedule your kickoff, set up your AI agent, and introduce you to your peer group.",
+    a: "Once you join the program, onboarding starts the first week of August 2026. We'll schedule your kickoff, set up your AI Sales Agent, and introduce you to your peer group.",
   },
   {
     q: "How much does it cost?",
@@ -286,7 +286,7 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners ready to grow their cleaning business. Limited space available for the August Cohort.
+              AI Sales Agent program for Canadian cleaning businesses ready to grow. Limited space available for the August Cohort.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -357,7 +357,7 @@ function LandingPage() {
               icon: Radar,
               title: "Finds You New Customers",
               body:
-                "Your AI agent watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
+                "Your AI Sales Agent watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
             },
             {
@@ -369,28 +369,28 @@ function LandingPage() {
             },
             {
               icon: MapPin,
-              title: "Built exclusively for you",
+              title: "Built Exclusively For You",
               body:
-                "Your AI agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
+                "Your AI Sales Agent, your strategy, your opportunities. Everything is tuned to your business and kept separate from every other member in the program.",
               proof: "Truly yours, not shared.",
             },
             {
               icon: MessageCircle,
-              title: "An AI Company in your corner",
+              title: "An AI Company In Your Corner",
               body:
                 "You don't just get software. You get an AI Company working closely with you to grow your cleaning business — onboarding, tuning, and ongoing strategy from people who know cleaning.",
               proof: "Real humans + real AI, on your side.",
             },
             {
               icon: ShieldCheck,
-              title: "Your data stays your own",
+              title: "Your Data Stays Your Own",
               body:
-                "Your AI uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data, only what you choose to share, to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
+                "Your AI Sales Agent uses publicly available market information combined with ISSA/CHHA industry expertise. We don't collect private business data, only what you choose to share, to find opportunities, suggest pricing, and draft emails and phone scripts based on proven sales expertise.",
               proof: "Private by design. Yours by default.",
             },
             {
               icon: Tag,
-              title: "Supplier discounts & resources",
+              title: "Supplier Discounts & Resources",
               body:
                 "Members unlock product and equipment supplier discounts, plus product mix reviews, WHMIS training resources, and a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
               proof: "Exclusive perks, members only.",
@@ -468,7 +468,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join the August Cohort — limited space available for cleaning businesses across Canada. Work one-on-one with our AI Company team to grow your business through AI and get your own AI sales agent, supplier discounts, members-only resources, and a peer group of other cleaning operators.
+                Apply to join the August Cohort — limited space available. Get your own AI Sales Agent, supplier discounts, members-only resources, and a peer group of cleaning operators across Canada.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -550,7 +550,7 @@ function LandingPage() {
               More Wins.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base text-primary-foreground/75 sm:text-lg">
-              Your AI agent and AI Company work together to uncover opportunities in your service area and help you act faster than anyone else in your market.
+              Your AI Sales Agent and AI Company work together to uncover opportunities in your service area and help you act faster than anyone else in your market.
             </p>
           </div>
 
@@ -558,7 +558,7 @@ function LandingPage() {
             {[
               {
                 strike: "Guessing where to look.",
-                replace: "AI scans your service area for new opportunities.",
+                replace: "Your AI Sales Agent scans your service area for new opportunities.",
               },
               {
                 strike: "Missing potential contracts.",
