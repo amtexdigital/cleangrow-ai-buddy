@@ -287,9 +287,6 @@ function LandingPage() {
                 Cleaning Businesses
               </span>
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Sales Agent program for Canadian cleaning businesses ready to grow. Limited space available for the August Cohort.
-            </p>
             <p className="mt-3 inline-flex items-center gap-2 text-base font-bold text-[var(--brand-blue-soft)] sm:text-lg">
               <Tag className="h-5 w-5" />
               $299 CAD/mo + one-time setup fee
