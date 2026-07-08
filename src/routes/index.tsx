@@ -15,6 +15,7 @@ import {
 import issaLogo from "@/assets/issa-canada.png.asset.json";
 import owIcon from "@/assets/ow-icon.png.asset.json";
 import ownerPortrait from "@/assets/owner-portrait.png";
+import guaranteeSeal from "@/assets/guarantee-seal.png.asset.json";
 
 
 const SIGNUP_URL = "https://orderofwork.com/cleaningbusinessai.html";
