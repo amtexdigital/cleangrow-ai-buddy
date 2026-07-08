@@ -313,10 +313,7 @@ function LandingPage() {
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              <span className="flex flex-col">
-                <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
-                <span className="font-medium text-white/80">If you don't generate new cleaning business equal to or greater than the cost of the program, we'll refund 100% of your investment.</span>
-              </span>
+              <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
             </a>
           </div>
 
@@ -669,10 +666,7 @@ function LandingPage() {
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              <span className="flex flex-col">
-                <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
-                <span className="font-medium text-muted-foreground/80">If you don't generate new cleaning business equal to or greater than the cost of the program, we'll refund 100% of your investment.</span>
-              </span>
+              <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
             </a>
           </div>
 
