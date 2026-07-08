@@ -223,7 +223,7 @@ function LandingPage() {
                 )
               )}
             </nav>
-            <CTAButton size="lg">Apply to Join</CTAButton>
+            <CTAButton size="lg">Request to Join</CTAButton>
           </div>
         </div>
       </header>
@@ -290,8 +290,12 @@ function LandingPage() {
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               AI Sales Agent program for Canadian cleaning businesses ready to grow. Limited space available for the August Cohort.
             </p>
+            <p className="mt-3 inline-flex items-center gap-2 text-base font-bold text-[var(--brand-blue-soft)] sm:text-lg">
+              <Tag className="h-5 w-5" />
+              $299 CAD/mo + one-time setup fee
+            </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
-              <CTAButton size="xl">Apply to Join</CTAButton>
+              <CTAButton size="xl">Request to Join</CTAButton>
               <a
                 href="#features"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/90 hover:text-[var(--brand-blue-soft)]"
@@ -301,7 +305,7 @@ function LandingPage() {
             </div>
             <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Applications close July 27th at 11PM EST · First come, first served · Limited space available
+              Requests close July 27th at 11PM EST · First come, first served · Limited space available
             </p>
             <a
               href="#guarantee"
@@ -507,19 +511,19 @@ function LandingPage() {
               }}
             />
             <div className="relative px-6 py-10 text-center sm:px-10 sm:py-14">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--brand-blue-soft)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--brand-blue-soft)]" />
                 </span>
-                Now Accepting Applications
+                Limited Availability Launch
               </div>
               <h2 className="mt-5 text-3xl font-black uppercase leading-[0.95] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
                 Don't Let This Opportunity{" "}
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join the August Cohort - limited space available. Get your own AI Sales Agent, supplier discounts, members-only resources, and a peer group of cleaning operators across Canada.
+                Request to join the August Cohort - limited space available. Get your own AI Sales Agent, supplier discounts, members-only resources, and a peer group of cleaning operators across Canada.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -529,11 +533,11 @@ function LandingPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-bold text-accent-foreground shadow-[var(--shadow-accent)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 sm:px-9 sm:py-4 sm:text-lg"
                 >
                   <Zap className="h-5 w-5" />
-                  Apply to Join
+                  Request to Join
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Applications close July 27th at 11PM EST · Limited space available · First come, first served
+                  Requests close July 27th at 11PM EST · Limited space available · First come, first served
                 </p>
               </div>
             </div>
@@ -572,9 +576,9 @@ function LandingPage() {
             </div>
 
             <div className="mt-10 text-center">
-              <CTAButton size="xl">Apply to Join</CTAButton>
+              <CTAButton size="xl">Request to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                August Cohort - Limited space available · Applications close July 27th at 11PM EST
+                August Cohort - Limited space available · Requests close July 27th at 11PM EST
               </p>
             </div>
           </div>
@@ -640,9 +644,9 @@ function LandingPage() {
           </div>
 
           <div className="mt-12 flex flex-col items-center gap-3">
-            <CTAButton size="xl">Apply to Join</CTAButton>
+            <CTAButton size="xl">Request to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              August Cohort: Limited space available · Applications close July 27th at 11PM EST
+              August Cohort: Limited space available · Requests close July 27th at 11PM EST
             </p>
           </div>
         </div>
