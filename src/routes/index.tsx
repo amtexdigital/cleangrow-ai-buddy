@@ -324,7 +324,7 @@ function LandingPage() {
             What members get
           </div>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary sm:text-5xl">
-            Your Own AI, Working Only For{" "}
+            Your Own AI Sales Agent, Working Only For{" "}
             <span
               className="relative inline-block"
             >
@@ -392,7 +392,7 @@ function LandingPage() {
               icon: Tag,
               title: "Supplier Discounts & Resources",
               body:
-                "Members unlock product and equipment supplier discounts, plus product mix reviews, WHMIS training resources, and a private library of skills, playbooks, and workflows updated regularly so your AI keeps getting sharper.",
+                "Members unlock product and equipment supplier discounts, plus product mix reviews, WHMIS training resources, and a private library of skills, playbooks, and workflows updated regularly so your AI Sales Agent keeps getting sharper.",
               proof: "Exclusive perks, members only.",
             },
           ].map((f) => (
