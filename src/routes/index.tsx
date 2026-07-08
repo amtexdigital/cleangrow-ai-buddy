@@ -306,14 +306,17 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="mt-4 inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm font-semibold text-white/95 transition hover:text-white sm:text-base"
+              className="mt-4 inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm text-white/95 transition hover:text-white sm:text-base"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
+              <span className="flex flex-col">
+                <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
+                <span className="font-medium text-white/80">If you don't generate new cleaning business equal to or greater than the cost of the program, we'll refund 100% of your investment.</span>
+              </span>
             </a>
           </div>
 
@@ -450,10 +453,10 @@ function LandingPage() {
                 Our Promise
               </div>
               <h2 className="mt-3 text-3xl font-black uppercase tracking-[-0.025em] text-primary sm:text-4xl">
-                Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
+                Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                If this program doesn't bring you enough new cleaning business to cover your investment and then some, we'll refund 100% of your program fee.
+                If you don't generate new cleaning business equal to or greater than the cost of the program, we'll refund 100% of your investment.
               </p>
               <a
                 href={TERMS_URL}
@@ -659,14 +662,17 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm font-semibold text-muted-foreground transition hover:text-accent sm:text-base"
+              className="inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm text-muted-foreground transition hover:text-accent sm:text-base"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
+              <span className="flex flex-col">
+                <span className="font-bold">Win New Cleaning Contracts Worth More Than Your Investment—Guaranteed.</span>
+                <span className="font-medium text-muted-foreground/80">If you don't generate new cleaning business equal to or greater than the cost of the program, we'll refund 100% of your investment.</span>
+              </span>
             </a>
           </div>
 
