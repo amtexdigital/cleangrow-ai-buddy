@@ -33,7 +33,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "AI Sales Agent for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications for the August Cohort. Limited space available.";
+  "AI Sales Agent for Canadian cleaning businesses. In partnership with ISSA Canada. Limited Availability Launch for the August Cohort. Limited space available.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
