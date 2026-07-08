@@ -139,8 +139,8 @@ function Wordmark({ className = "", withTagline = false }: { className?: string;
 
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Why is there an application process?",
-    a: "We review every application to make sure the program is a good fit for your business and that you can get the most value from the AI, the resources, and the peer group.",
+    q: "Why is there a request process?",
+    a: "We review every request to make sure the program is a good fit for your business and that you can get the most value from the AI, the resources, and the peer group.",
   },
   {
     q: "What do I actually get as a member?",
@@ -155,19 +155,19 @@ const FAQS: { q: string; a: string }[] = [
     a: "If you're ready to grow your cleaning business by winning more customers and earning more profit from your services, this program is for you.",
   },
   {
-    q: "How do I apply?",
-    a: "Tap Apply to Join and complete the short application. We have limited space available for the August Cohort, offered on a first-come, first-served basis, and applications close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
+    q: "How do I request to join?",
+    a: "Tap Request to Join and complete the short request form. We have limited space available for the August Cohort, offered on a first-come, first-served basis, and requests close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
   },
   {
     q: "How many spots are available?",
-    a: "We have limited space available for the August Cohort. Spots are first-come, first-served, and applications close July 27th at 11PM EST.",
+    a: "We have limited space available for the August Cohort. Spots are first-come, first-served, and requests close July 27th at 11PM EST.",
   },
   {
     q: "Will I get one-on-one support?",
     a: "Yes. Every member in the August Cohort works one-on-one with our AI Company team across Canada to grow their business through AI.",
   },
   {
-    q: "What happens after I apply?",
+    q: "What happens after I request to join?",
     a: "You'll hear back from our team within 1 business day to confirm fit, walk through what's included, and get you onboarded with your AI Sales Agent, your resources, and your peer group.",
   },
   {
