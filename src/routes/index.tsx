@@ -47,11 +47,11 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "CleaningBusiness.ai — AI Sales Agent for Cleaning Businesses, in partnership with ISSA Canada" },
+      { property: "og:image:alt", content: "CleaningBusiness.ai - AI Sales Agent for Cleaning Businesses, in partnership with ISSA Canada" },
       { name: "twitter:title", content: "CleaningBusiness.ai · AI Sales Agent for Canadian Cleaning Businesses" },
       { name: "twitter:description", content: META_DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
-      { name: "twitter:image:alt", content: "CleaningBusiness.ai — AI Sales Agent for Cleaning Businesses" },
+      { name: "twitter:image:alt", content: "CleaningBusiness.ai - AI Sales Agent for Cleaning Businesses" },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
@@ -303,6 +303,13 @@ function LandingPage() {
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
               Applications close July 27th at 11PM EST · First come, first served · Limited space available
             </p>
+            <a
+              href="#guarantee"
+              className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-medium text-white/90 backdrop-blur transition hover:bg-white/15"
+            >
+              <img src={guaranteeSeal.url} alt="" className="h-5 w-auto" />
+              100% Money-Back Guarantee
+            </a>
           </div>
 
           <div className="relative z-0 -mb-16 self-end lg:col-span-6 lg:-mb-56 xl:-mb-64 xl:col-span-6">
@@ -380,7 +387,7 @@ function LandingPage() {
               icon: MessageCircle,
               title: "An AI Company In Your Corner",
               body:
-                "You don't just get software. You get an AI Company working closely with you to grow your cleaning business — onboarding, tuning, and ongoing strategy from people who know cleaning.",
+                "You don't just get software. You get an AI Company working closely with you to grow your cleaning business - onboarding, tuning, and ongoing strategy from people who know cleaning.",
               proof: "Real humans + real AI, on your side.",
             },
             {
@@ -441,7 +448,7 @@ function LandingPage() {
                 100% Money-Back Guarantee
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                If you don't see at least enough new cleaning business from this program to cover the cost — and more — we'll refund your program fee 100%.
+                If this program doesn't bring you enough new cleaning business to cover your investment and then some, we'll refund your program fee 100%.
               </p>
               <a
                 href={TERMS_URL}
@@ -508,7 +515,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join the August Cohort — limited space available. Get your own AI Sales Agent, supplier discounts, members-only resources, and a peer group of cleaning operators across Canada.
+                Apply to join the August Cohort - limited space available. Get your own AI Sales Agent, supplier discounts, members-only resources, and a peer group of cleaning operators across Canada.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -563,7 +570,7 @@ function LandingPage() {
             <div className="mt-10 text-center">
               <CTAButton size="xl">Apply to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                August Cohort — Limited space available · Applications close July 27th at 11PM EST
+                August Cohort - Limited space available · Applications close July 27th at 11PM EST
               </p>
             </div>
           </div>
@@ -645,6 +652,13 @@ function LandingPage() {
             <p className="max-w-sm text-sm text-muted-foreground">
               AI for Canadian cleaning businesses built with over 100 years of industry expertise to help accepted members grow faster.
             </p>
+            <a
+              href="#guarantee"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:text-accent"
+            >
+              <img src={guaranteeSeal.url} alt="" className="h-5 w-auto" />
+              100% Money-Back Guarantee
+            </a>
           </div>
 
           <div className="flex flex-col items-start gap-4 md:items-end md:text-right">
