@@ -150,7 +150,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Who is this built for?",
-    a: "Established Canadian cleaning business owners who want to grow with structured sales support, modern AI tooling, and a community of operators, not solo experimenters looking for a generic chatbot.",
+    a: "If you're looking for more cleaning customers and earning more profits from your cleaning services, this program is for you.",
   },
   {
     q: "How do I apply?",
@@ -355,14 +355,14 @@ function LandingPage() {
           {[
             {
               icon: Radar,
-              title: "Monitors your service area",
+              title: "Finds You New Customers",
               body:
                 "Your AI agent watches your local market 24/7, picking up postings, signals, and conversations from people looking for cleaning. Respond faster than the competition.",
               proof: "Be the first one in the door.",
             },
             {
               icon: FileText,
-              title: "Professional, profitable estimates",
+              title: "saves you time creating estimates",
               body:
                 "Generate clean, professional estimates priced for your business, backed by ISSA Canada expertise on scope, productivity rates, and margin standards.",
               proof: "Quote with confidence, every time.",
