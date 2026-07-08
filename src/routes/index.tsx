@@ -21,6 +21,7 @@ import guaranteeSeal from "@/assets/guarantee-seal.png.asset.json";
 const SIGNUP_URL = "https://orderofwork.com/cleaningbusinessai.html";
 const OW_URL = "https://orderofwork.com";
 const ISSA_URL = "https://www.issa-canada.com/en/955-issa-canada-launches-innovative-new-member-benefit";
+const TERMS_URL = "https://orderofwork.com/cbterms.html";
 
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
