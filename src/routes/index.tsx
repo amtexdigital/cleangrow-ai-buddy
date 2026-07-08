@@ -156,11 +156,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I request to join?",
-    a: "Tap Request to Join and complete the short request form. We have limited space available for the August Cohort, offered on a first-come, first-served basis, and requests close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
+    a: "Tap Request to Join and complete the short request form. We have limited space available for the August Cohort, and requests close August 3rd at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
   },
   {
     q: "How many spots are available?",
-    a: "We have limited space available for the August Cohort. Spots are first-come, first-served, and requests close July 27th at 11PM EST.",
+    a: "We have limited space available for the August Cohort. Requests close August 3rd at 11PM EST.",
   },
   {
     q: "Will I get one-on-one support?",
@@ -300,20 +300,20 @@ function LandingPage() {
                 See what's included →
               </a>
             </div>
-            <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
-              <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Requests close July 27th at 11PM EST · First come, first served · Limited space available
+            <p className="mt-5 inline-flex items-center gap-2 text-base text-white/80 sm:text-lg">
+              <MapPin className="h-4 w-4 text-[var(--brand-blue-soft)]" />
+              Requests close August 3rd at 11PM EST · Limited space available
             </p>
             <a
               href="#guarantee"
-              className="mt-4 inline-flex w-fit items-center gap-2 overflow-visible pl-5 text-xs font-medium text-white/90 transition hover:text-white"
+              className="mt-4 inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm font-semibold text-white/95 transition hover:text-white sm:text-base"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              100% Money-Back Guarantee
+              Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
             </a>
           </div>
 
@@ -450,7 +450,7 @@ function LandingPage() {
                 Our Promise
               </div>
               <h2 className="mt-3 text-3xl font-black uppercase tracking-[-0.025em] text-primary sm:text-4xl">
-                100% Money-Back Guarantee
+                Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 If this program doesn't bring you enough new cleaning business to cover your investment and then some, we'll refund 100% of your program fee.
@@ -533,8 +533,8 @@ function LandingPage() {
                   Request to Join
                   <ArrowRight className="h-5 w-5" />
                 </a>
-                <p className="text-xs font-medium text-primary-foreground/70">
-                  Requests close July 27th at 11PM EST · Limited space available · First come, first served
+                <p className="text-sm font-medium text-primary-foreground/80 sm:text-base">
+                  Requests close August 3rd at 11PM EST · Limited space available
                 </p>
               </div>
             </div>
@@ -574,8 +574,8 @@ function LandingPage() {
 
             <div className="mt-10 text-center">
               <CTAButton size="xl">Request to Join</CTAButton>
-              <p className="mt-3 text-xs text-muted-foreground">
-                August Cohort - Limited space available · Requests close July 27th at 11PM EST
+              <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+                August Cohort - Limited space available · Requests close August 3rd at 11PM EST
               </p>
             </div>
           </div>
@@ -642,8 +642,8 @@ function LandingPage() {
 
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Request to Join</CTAButton>
-            <p className="text-xs text-primary-foreground/70">
-              August Cohort: Limited space available · Requests close July 27th at 11PM EST
+            <p className="text-sm text-primary-foreground/80 sm:text-base">
+              August Cohort: Limited space available · Requests close August 3rd at 11PM EST
             </p>
           </div>
         </div>
@@ -659,14 +659,14 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="inline-flex items-center gap-2 overflow-visible pl-5 text-xs font-medium text-muted-foreground transition hover:text-accent"
+              className="inline-flex w-fit max-w-md items-center gap-2 overflow-visible pl-5 text-sm font-semibold text-muted-foreground transition hover:text-accent sm:text-base"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
                 className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
-              100% Money-Back Guarantee
+              Guaranteed new cleaning business of equal or greater value of the program cost or your money back!
             </a>
           </div>
 
