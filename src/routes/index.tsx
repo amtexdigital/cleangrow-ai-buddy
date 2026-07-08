@@ -305,12 +305,12 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="mt-4 inline-flex w-fit items-center gap-2 overflow-visible rounded-full border border-white/15 bg-white/10 px-3 py-1.5 pl-5 text-xs font-medium text-white/90 backdrop-blur transition hover:bg-white/15"
+              className="mt-4 inline-flex w-fit items-center gap-2 overflow-visible pl-5 text-xs font-medium text-white/90 transition hover:text-white"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
-                className="-ml-5 h-9 w-auto shrink-0 drop-shadow-lg"
+                className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
               100% Money-Back Guarantee
             </a>
@@ -452,7 +452,7 @@ function LandingPage() {
                 100% Money-Back Guarantee
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                If this program doesn't bring you enough new cleaning business to cover your investment and then some, we'll refund your program fee 100%.
+                If this program doesn't bring you enough new cleaning business to cover your investment and then some, we'll refund 100% of your program fee.
               </p>
               <a
                 href={TERMS_URL}
@@ -658,12 +658,12 @@ function LandingPage() {
             </p>
             <a
               href="#guarantee"
-              className="inline-flex items-center gap-2 overflow-visible rounded-full border border-border bg-muted/50 px-3 py-1.5 pl-5 text-xs font-medium text-muted-foreground transition hover:text-accent"
+              className="inline-flex items-center gap-2 overflow-visible pl-5 text-xs font-medium text-muted-foreground transition hover:text-accent"
             >
               <img
                 src={guaranteeSeal.url}
                 alt=""
-                className="-ml-5 h-9 w-auto shrink-0 drop-shadow-lg"
+                className="-ml-5 h-[4.5rem] w-auto shrink-0 drop-shadow-lg"
               />
               100% Money-Back Guarantee
             </a>
