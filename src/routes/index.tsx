@@ -156,11 +156,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I request to join?",
-    a: "Tap Request to Join and complete the short request form. We have limited space available for the August Cohort, offered on a first-come, first-served basis, and requests close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
+    a: "Tap Request to Join and complete the short request form. We have limited space available for the August Cohort, and requests close August 3rd at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
   },
   {
     q: "How many spots are available?",
-    a: "We have limited space available for the August Cohort. Spots are first-come, first-served, and requests close July 27th at 11PM EST.",
+    a: "We have limited space available for the August Cohort. Requests close August 3rd at 11PM EST.",
   },
   {
     q: "Will I get one-on-one support?",
@@ -574,8 +574,8 @@ function LandingPage() {
 
             <div className="mt-10 text-center">
               <CTAButton size="xl">Request to Join</CTAButton>
-              <p className="mt-3 text-xs text-muted-foreground">
-                August Cohort - Limited space available · Requests close July 27th at 11PM EST
+              <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+                August Cohort - Limited space available · Requests close August 3rd at 11PM EST
               </p>
             </div>
           </div>
