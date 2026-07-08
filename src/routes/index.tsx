@@ -419,6 +419,44 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* MONEY-BACK GUARANTEE */}
+      <section id="guarantee" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-accent/20 bg-card shadow-[var(--shadow-elegant)]">
+          <div className="grid items-center gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:gap-12 lg:p-14">
+            <div className="flex justify-center">
+              <img
+                src={guaranteeSeal.url}
+                alt="100% Money Back Guarantee seal"
+                width={224}
+                height={224}
+                loading="lazy"
+                className="h-44 w-44 drop-shadow-xl sm:h-52 sm:w-52 lg:h-56 lg:w-56"
+              />
+            </div>
+            <div className="text-center lg:text-left">
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                Our Promise
+              </div>
+              <h2 className="mt-3 text-3xl font-black uppercase tracking-[-0.025em] text-primary sm:text-4xl">
+                100% Money-Back Guarantee
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                If you don't see at least enough new cleaning business from this program to cover the cost — and more — we'll refund your program fee 100%.
+              </p>
+              <a
+                href={TERMS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-accent hover:underline sm:text-base"
+              >
+                Learn more about our guarantee
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* APPLY BANNER + FAQ */}
       <section
         id="apply"
