@@ -31,7 +31,7 @@ const NAV_LINKS = [
 const SITE_URL = "https://cleaningbusiness.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const META_DESCRIPTION =
-  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting 60 spots for the August Cohort.";
+  "AI sales assistant for Canadian cleaning businesses. In partnership with ISSA Canada. Now accepting applications for the August Cohort. Limited space available.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,11 +154,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I apply?",
-    a: "Tap Apply to Join and complete the short application. We have 60 spots available for the August Cohort, offered on a first-come, first-served basis, and applications close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
+    a: "Tap Apply to Join and complete the short application. We have limited space available for the August Cohort, offered on a first-come, first-served basis, and applications close July 27th at 11PM EST. We review every submission, confirm fit, and follow up with next steps.",
   },
   {
     q: "How many spots are available?",
-    a: "We're accepting 60 cleaning businesses across Canada into the August Cohort. Spots are first-come, first-served, and applications close July 27th at 11PM EST.",
+    a: "We have limited space available for the August Cohort. Spots are first-come, first-served, and applications close July 27th at 11PM EST.",
   },
   {
     q: "Will I get one-on-one support?",
@@ -167,6 +167,10 @@ const FAQS: { q: string; a: string }[] = [
   {
     q: "What happens after I apply?",
     a: "You'll hear back from our team within 1 business day to confirm fit, walk through what's included, and get you onboarded with your AI agent, your resources, and your peer group.",
+  },
+  {
+    q: "When does onboarding start?",
+    a: "Once you join the program, onboarding starts the first week of August 2026. We'll schedule your kickoff, set up your AI agent, and introduce you to your peer group.",
   },
   {
     q: "How much does it cost?",
@@ -282,7 +286,7 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners. 60 spots available for the August Cohort.
+              AI Assistant program for Canadian cleaning business owners. Limited space available for the August Cohort.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -295,7 +299,7 @@ function LandingPage() {
             </div>
             <p className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-blue-soft)]" />
-              Applications close July 27th at 11PM EST · First come, first served · 60 spots
+              Applications close July 27th at 11PM EST · First come, first served · Limited space available
             </p>
           </div>
 
@@ -464,7 +468,7 @@ function LandingPage() {
                 <span className="italic text-accent">Pass You By</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-                Apply to join the August Cohort — 60 spots available for cleaning businesses across Canada. Work one-on-one with our AI Company team to grow your business through AI and get your own AI sales agent, supplier discounts, members-only resources, and a peer group of other cleaning operators.
+                Apply to join the August Cohort — limited space available for cleaning businesses across Canada. Work one-on-one with our AI Company team to grow your business through AI and get your own AI sales agent, supplier discounts, members-only resources, and a peer group of other cleaning operators.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -478,7 +482,7 @@ function LandingPage() {
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="text-xs font-medium text-primary-foreground/70">
-                  Applications close July 27th at 11PM EST · 60 spots · First come, first served
+                  Applications close July 27th at 11PM EST · Limited space available · First come, first served
                 </p>
               </div>
             </div>
@@ -519,7 +523,7 @@ function LandingPage() {
             <div className="mt-10 text-center">
               <CTAButton size="xl">Apply to Join</CTAButton>
               <p className="mt-3 text-xs text-muted-foreground">
-                August Cohort — 60 spots · Applications close July 27th at 11PM EST
+                August Cohort — Limited space available · Applications close July 27th at 11PM EST
               </p>
             </div>
           </div>
@@ -587,7 +591,7 @@ function LandingPage() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <CTAButton size="xl">Apply to Join</CTAButton>
             <p className="text-xs text-primary-foreground/70">
-              August Cohort: 60 spots · Applications close July 27th at 11PM EST
+              August Cohort: Limited space available · Applications close July 27th at 11PM EST
             </p>
           </div>
         </div>
