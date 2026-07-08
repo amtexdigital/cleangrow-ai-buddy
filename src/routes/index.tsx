@@ -150,7 +150,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Who is this built for?",
-    a: "If you're looking for more cleaning customers and earning more profits from your cleaning services, this program is for you.",
+    a: "If you're ready to grow your cleaning business by winning more customers and earning more profit from your services, this program is for you.",
   },
   {
     q: "How do I apply?",
@@ -286,7 +286,7 @@ function LandingPage() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              AI Assistant program for Canadian cleaning business owners. Limited space available for the August Cohort.
+              AI Assistant program for Canadian cleaning business owners ready to grow their cleaning business. Limited space available for the August Cohort.
             </p>
             <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton size="xl">Apply to Join</CTAButton>
@@ -362,7 +362,7 @@ function LandingPage() {
             },
             {
               icon: FileText,
-              title: "saves you time creating estimates",
+              title: "Saves You Time Creating Estimates",
               body:
                 "Generate clean, professional estimates priced for your business, backed by ISSA Canada expertise on scope, productivity rates, and margin standards.",
               proof: "Quote with confidence, every time.",
@@ -378,7 +378,7 @@ function LandingPage() {
               icon: MessageCircle,
               title: "An AI Company in your corner",
               body:
-                "You don't just get software. You get an AI Company working closely with you to ensure success, onboarding, tuning, and ongoing strategy from people who know cleaning.",
+                "You don't just get software. You get an AI Company working closely with you to grow your cleaning business — onboarding, tuning, and ongoing strategy from people who know cleaning.",
               proof: "Real humans + real AI, on your side.",
             },
             {
@@ -603,7 +603,7 @@ function LandingPage() {
           <div className="flex flex-col items-start gap-4">
             <Wordmark className="text-3xl sm:text-4xl" withTagline />
             <p className="max-w-sm text-sm text-muted-foreground">
-              AI for Canadian Cleaning Business built with over 100 years of industry expertise to help members grow faster.
+              AI for Canadian cleaning businesses built with over 100 years of industry expertise to help accepted members grow faster.
             </p>
           </div>
 
